@@ -1,0 +1,31 @@
+.intro {
+  padding-top: 279px;
+}
+
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__descrip {
+  max-width: 63rem;
+
+  h2 {
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 3rem;
+
+    span {
+      color: $color-red-alpha;
+    }
+  }
+}
+
+.intro__text {
+  margin-bottom: 6rem;
+
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}

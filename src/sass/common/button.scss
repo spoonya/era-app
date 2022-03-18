@@ -1,0 +1,35 @@
+.button {
+  position: relative;
+
+  padding: 1.25em 1.625em;
+
+  background-color: $color-white-secondary;
+  border: 2px solid;
+  border-bottom-right-radius: 20px;
+
+  margin-left: 8px;
+
+  &:before {
+    z-index: -1;
+
+    position: absolute;
+    content: '';
+    background: $color-black-alpha;
+    bottom: 4px;
+    left: -8px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+  }
+
+  span {
+    margin-right: 10px;
+
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-family: $font-secondary;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}

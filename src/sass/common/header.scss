@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 165px;
+}
+
+.header__group {
+  display: flex;
+  align-items: center;
+}
+
+.header__lang {
+  display: flex;
+  align-items: center;
+
+  margin-right: 35px;
+
+  & > img {
+    max-width: 22px;
+  }
+}
+
+.header__lang-list {
+  a {
+    font-weight: 600;
+    font-size: 20px;
+    color: $color-black-alpha;
+  }
+
+  & > li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & > a {
+      margin: 0 8px;
+    }
+  }
+
+  ul {
+    display: none;
+  }
+}

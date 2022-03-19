@@ -1,7 +1,3 @@
-.solution {
-  background-color: $color-white-alpha;
-}
-
 .solution__img {
   max-width: 609px;
 
@@ -15,7 +11,7 @@
   }
 }
 
-.soluition__content {
+.solution__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +60,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #f0f2f9;
+  background-color: $color-white-psi;
 
   padding: 2.9rem;
   padding-left: 42.3rem;

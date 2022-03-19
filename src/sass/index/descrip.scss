@@ -1,0 +1,19 @@
+.descrip__inner {
+  padding: 3.6rem 17.2rem;
+  margin: 6rem 0 8rem;
+
+  background-image: url('../img/png/noise.png');
+  background-color: $color-white-psi;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 40px;
+  border: 1px solid;
+
+  .title {
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}

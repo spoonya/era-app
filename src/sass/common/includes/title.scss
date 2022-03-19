@@ -21,13 +21,13 @@
     line-height: inherit;
     font-size: inherit;
     color: inherit;
+  }
 
-    span:first-of-type {
-      color: $color-red-alpha;
-    }
+  span:first-of-type {
+    color: $color-red-alpha;
+  }
 
-    span {
-      color: $color-yellow-alpha;
-    }
+  span {
+    color: $color-yellow-alpha;
   }
 }

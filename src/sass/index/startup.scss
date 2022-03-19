@@ -1,0 +1,37 @@
+.startup {
+  margin-bottom: 23.6rem;
+}
+
+.startup__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .text {
+    margin-bottom: 4.4rem;
+  }
+
+  h2 {
+    @include text-triangle-mark;
+
+    margin-bottom: 3rem;
+
+    line-height: 1;
+    font-weight: 700;
+    font-size: 3.8rem;
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  img {
+    max-width: 461px;
+    margin-right: 20px;
+  }
+}
+
+.startup__descrip {
+  max-width: 59.6rem;
+  width: 100%;
+}

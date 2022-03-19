@@ -50,7 +50,7 @@ block content
     //Solution
     section.solution
       .container
-        .soluition__content
+        .solution__content
           .solution__descrip
             .title
               h2
@@ -119,5 +119,102 @@ block content
           .title.title--light
             h2
               |Создать лучший продукт для вашего бизнеса -&nbsp;
+              br
               span наша главная цель
           +link('Подробнее', '#', 'button--secondary')
+
+    //Benefits
+    section.benefits
+      .container
+        .benefits__list
+          div
+            img(src="assets/img/svg/benefits-1.svg", width="285", height="240", alt="")
+            h3 Наша команда сильна в своей области и использует только передовые технологии
+          div
+            img(src="assets/img/svg/benefits-2.svg", width="285", height="240", alt="")
+            h3 Мы открыты перед всем миром. Наш процесс разработки прозрачен для клиента.
+          div
+            img(src="assets/img/svg/benefits-3.svg", width="285", height="240", alt="")
+            h3 Мы становимся одной командой с клиентом. В процессе работы мы консультируем, предлагаем идеи и подсказываем
+
+    //Descrip
+    section.descrip
+      .container
+        .descrip__inner
+          .title
+            h2
+              |Мы отлично владеем IT-технологиями и готовы подобрать и воплотить&nbsp;
+              span любое подходящее вам решение!
+
+    //Startup
+    section.startup
+      .container
+        .startup__inner
+          img(src="assets/img/svg/startup.svg", width="461", height="580", alt="")
+          .startup__descrip
+            h2 Услуги стартапа
+            .text
+              p Если вы смелый стартап с идеей и хотите ее протестировать, мы поможем вам воплотить ее в жизнь. Как компания по разработке ПО, мы имеем глубокий опыт создания проектов MVP, чтобы сократить время выхода на рынок.
+            +button('Поделиться своей идеей')
+
+    .sections-wrapper
+      //Join
+      section.join
+        .container
+          .join__list
+            .join__item
+              .join__item-img
+                img(src="assets/img/svg/join-1.svg", width="60", height="60", alt="")
+              .join__item-descrip
+                h3 Стремление
+                .text
+                  p Оставайся любопытным, задавай вопросы о возможностях и расширяй границы своей личной и профессиональной жизни
+            .join__item
+              .join__item-img
+                img(src="assets/img/svg/join-2.svg", width="60", height="60", alt="")
+              .join__item-descrip
+                h3 Страсть
+                .text
+                  p Делай все ради любви, а не славы. Вдохновляйся нашим стремлением к совершенству и активно заботьтесь о других
+            .join__item
+              .join__item-img
+                img(src="assets/img/svg/join-3.svg", width="60", height="60", alt="")
+              .join__item-descrip
+                h3 Подход
+                .text
+                  p Оставьте свое Эго у двери. Слушайте, учитесь, справляйтесь с неудачами, радуйтесь успехам и будьте мужественными.
+            .join__item
+              .join__item-img
+                img(src="assets/img/svg/join-4.svg", width="60", height="60", alt="")
+              .join__item-descrip
+                h3 Честность
+                .text
+                  p Будь честен, открыт и ясно озвучивай мысль. Делай то, что лучше всего подходит всем, а не только тебе
+            .join__item
+              .join__item-img
+                img(src="assets/img/svg/join-5.svg", width="60", height="60", alt="")
+              .join__item-descrip
+                h3 Развлечение
+                .text
+                  p Хихикай. Найслаждайся тем, что мы делаем и чего стремимся достичь. Смех заразителен, заставь мир улыбнуться
+            .join__descrip
+              .title.title--light
+                h3 Присоединяйся к нам!
+              .text.text--light
+                p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
+              +link('Наши вакансии', '#', 'button--secondary')
+
+      //Start
+      section.start
+        .container
+          .start__inner
+            .start__content
+              .title.title--light
+                h2
+                  |Начните свой проект&nbsp;
+                  span вместе
+                  br
+                  span с нами
+              form(action="#", method="POST", name="")
+            .start__img
+              img(src="assets/img/svg/start.svg", alt="")

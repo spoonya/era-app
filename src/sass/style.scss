@@ -3,11 +3,15 @@
 
 @import 'mixins/media';
 @import 'mixins/outline';
-
-@import 'index/intro';
+@import 'mixins/text-triangle-mark';
 
 @import 'common/global';
 @import 'common/burger-btn';
-@import 'common/button';
 @import 'common/header';
+@import 'common/text';
 @import 'common/footer';
+@import 'common/includes/button';
+@import 'common/includes/title';
+
+@import 'index/intro';
+@import 'index/spec';

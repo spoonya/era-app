@@ -24,12 +24,12 @@
     padding: 1.25em 1.625em;
 
     background-color: $color-white-beta;
-    border: 2px solid;
+    border: 2px solid $color-black-alpha;
     border-bottom-right-radius: 20px;
 
     span {
       margin-right: 10px;
-
+      color: $color-black-alpha;
       font-weight: 600;
       font-size: 1.8rem;
       font-family: $font-secondary;

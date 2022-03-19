@@ -7,13 +7,42 @@ block content
       .container
         .intro__inner
           .intro__descrip
-            h2
-              |Наша команда проложит вам путь к&nbsp;
-              span цифровому будущему
-            .intro__text
+            .title
+              h2
+                |Наша команда проложит вам путь к&nbsp;
+                span цифровому будущему
+            .text
               p Мы являемся компанией по разработке веб-приложений и мобильных приложений полного цикла, создающей индивидуальные решения.
               p Наша команда дизайнеров использует новейшие практики UI/UX дизайна
             +button('Оценить проект')
           .intro__img
             img(src="assets/img/png/intro-phones.png", width="418", height="644", alt="")
             img.intro__img-text(src="assets/img/svg/text.svg",  width="196", height="196", alt="")
+
+    //Specialization
+    section.spec
+      .container
+        .spec__inner
+          .spec__services
+            ul.spec__services-list
+              li Цифровая стратегия
+              li Оптимизация магазина приложений
+              li UI UX Дизайн
+              li Поддержка, хостинг и управление
+              li Разработка Web-приложений
+              li Motion дизайн
+              li Поддержка, хостинг и управление
+              li Услуги Dev Ops
+              li Тестирование
+            img(src="assets/img/svg/gear.svg", width="142", height="143", alt="")
+          .spec__descrip
+            .title
+              h2
+                |Мы специализируемся на&nbsp;
+                br
+                span 9 услугах&nbsp;
+                |в&nbsp;
+                span 8 отраслях
+            .text
+              p Мы создадим для вас решение, которое определит и решит ваши бизнес-задачи, продукт достигнет соответствия рынку и технологическим тенденциям
+            +link('Наши услуги', '#')

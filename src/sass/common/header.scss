@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 8;
   top: 0;
   left: 0;
@@ -19,6 +19,7 @@
 .header__group {
   display: flex;
   align-items: center;
+  margin-right: 4rem;
 }
 
 .header__lang {
@@ -37,6 +38,7 @@
     font-weight: 600;
     font-size: 20px;
     color: $color-black-alpha;
+    font-family: $font-secondary;
   }
 
   & > li {

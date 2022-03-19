@@ -46,3 +46,78 @@ block content
             .text
               p Мы создадим для вас решение, которое определит и решит ваши бизнес-задачи, продукт достигнет соответствия рынку и технологическим тенденциям
             +link('Наши услуги', '#')
+
+    //Solution
+    section.solution
+      .container
+        .soluition__content
+          .solution__descrip
+            .title
+              h2
+                |Мы разрабатываем решение&nbsp;
+                br
+                span для любой ниши
+                |,&nbsp;
+                br
+                |которая нуждается в нас
+            .solution__list
+              div
+                img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="")
+                h3 Образование и здравохранение
+              div
+                img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="")
+                h3 Торговля и коммерция
+              div
+                img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="")
+                h3 Туризм и логистика
+              div
+                img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="")
+                h3 Здоровье и спорт
+              div
+                img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="")
+                h3 Еда и рестораны
+              div
+                img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="")
+                h3 Социальные сети
+          figure.solution__img
+            img(src="assets/img/svg/tree.svg", width="609", height="609", alt="")
+            figcaption Technology stack
+        .solution__offer
+          img(src="assets/img/svg/hero.svg", width="423", height="385", alt="")
+          .solution__offer-descrip
+            .title
+              h3
+                |Ваш бизнес из другой отрасли? Это не проблема! Наши сотрудники&nbsp;
+                span настоящие профессионалы&nbsp;
+                |и справятся с любой поставленной задачей
+            .solution__offer-bot
+              .text
+                p Наши специалисты подготовят персональное предложение для вас!
+              +button('Получить предложение')
+
+    //Projects
+    section.projects
+      .container
+        .title.title--light
+          h2 Наши проекты
+        .projects__content
+          .projects__item
+            img(src="assets/img/png/projects-1.png", width="460", height="452", alt="Vino&vino")
+            .projects__item-descrip
+              h3 Vino&vino
+              .text.text--light
+                p Приложение для контроля финансов и осуществления денежных переводов
+              +link('Подробнее', '#', 'button--secondary')
+          .projects__item
+            img(src="assets/img/png/projects-2.png", width="460", height="452", alt="LawDoc")
+            .projects__item-descrip
+              h3 LawDoc
+              .text.text--light
+                p Приложение для контроля финансов и осуществления денежных переводов
+              +link('Подробнее', '#', 'button--secondary')
+        .projects__descrip
+          .title.title--light
+            h2
+              |Создать лучший продукт для вашего бизнеса -&nbsp;
+              span наша главная цель
+          +link('Подробнее', '#', 'button--secondary')

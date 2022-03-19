@@ -7,15 +7,20 @@
 
   margin-left: 8px;
 
+  background-color: $color-white-beta;
+  border: 2px solid;
+  border-color: $color-black-alpha;
+  border-bottom-right-radius: 20px;
+
   &:before {
     z-index: -1;
 
     position: absolute;
     content: '';
-    background: $color-black-alpha;
+    background-color: $color-black-alpha;
     bottom: 4px;
     left: -8px;
-    width: calc(100% + 2px);
+    width: 100%;
     height: calc(100% + 4px);
   }
 
@@ -23,20 +28,36 @@
   button {
     padding: 1.25em 1.625em;
 
-    background-color: $color-white-beta;
-    border: 2px solid $color-black-alpha;
-    border-bottom-right-radius: 20px;
+    background-color: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  span {
+    margin-right: 10px;
+    color: $color-black-alpha;
+    font: 600 1.8rem $font-secondary;
+  }
+
+  svg {
+    vertical-align: middle;
+    fill: $color-black-alpha;
+  }
+
+  &--secondary {
+    background-color: $color-black-alpha;
+    border-color: $color-yellow-alpha;
+
+    &::before {
+      background-color: $color-yellow-alpha;
+    }
 
     span {
-      margin-right: 10px;
-      color: $color-black-alpha;
-      font-weight: 600;
-      font-size: 1.8rem;
-      font-family: $font-secondary;
+      font: 400 1.8rem $font-primary;
+      color: $color-white-alpha;
     }
 
     svg {
-      vertical-align: middle;
+      fill: $color-white-alpha;
     }
   }
 }

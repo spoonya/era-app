@@ -1,8 +1,14 @@
 .text {
   margin-bottom: 6.4rem;
+  line-height: 1.5;
+  font-size: 18px;
+
+  &--light {
+    color: $color-white-alpha;
+  }
 
   p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: inherit;
+    line-height: inherit;
   }
 }

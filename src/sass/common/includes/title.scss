@@ -1,8 +1,26 @@
 .title {
-  h2 {
-    font-weight: 700;
-    font-size: 44px;
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $color-black-alpha;
+
+  &--light {
+    color: $color-white-alpha;
+    font-weight: 600;
+
+    h2,
+    h3 {
+      color: $color-white-beta;
+    }
+  }
+
+  h2,
+  h3 {
+    font-weight: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    color: inherit;
 
     span:first-of-type {
       color: $color-red-alpha;

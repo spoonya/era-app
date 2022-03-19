@@ -1,0 +1,101 @@
+.solution {
+  background-color: $color-white-alpha;
+}
+
+.solution__img {
+  max-width: 609px;
+
+  figcaption {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 5px;
+  }
+}
+
+.soluition__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 11.2rem;
+}
+
+.solution__descrip {
+  max-width: 66.5rem;
+  width: 100%;
+  margin-right: 20px;
+
+  .title {
+    margin-bottom: 4rem;
+  }
+}
+
+.solution__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 4rem;
+
+  max-width: 59rem;
+  width: 100%;
+
+  img {
+    max-width: 80px;
+    margin: 0 auto 5px;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+}
+
+.solution__offer {
+  position: relative;
+
+  background-image: url('../img/png/noise.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #f0f2f9;
+
+  padding: 2.9rem;
+  padding-left: 42.3rem;
+  margin-bottom: -15rem;
+
+  border-radius: 40px;
+  border: 1px solid;
+
+  img {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    max-width: 42.3rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+}
+
+.solution__offer-bot {
+  display: flex;
+  align-items: flex-start;
+
+  .text {
+    margin-right: 20px;
+  }
+}

@@ -7,56 +7,94 @@
 
   margin-left: 8px;
 
-  background-color: $color-white-beta;
-
-  border-color: $color-black-alpha;
-  border-bottom-right-radius: 20px;
-
   &:before {
     z-index: -1;
 
     position: absolute;
     content: '';
     background-color: $color-black-alpha;
-    bottom: 4px;
+    bottom: 8px;
     left: -8px;
     width: 100%;
-    height: calc(100% + 4px);
+    height: 100%;
 
     border-bottom-right-radius: 20px;
+  }
+
+  &:hover {
+    a,
+    button {
+      svg {
+        transform: rotate(-45deg) translateY(-2px);
+      }
+
+      span {
+        color: $color-red-alpha;
+      }
+
+      transform: translate(-8px, -8px);
+    }
   }
 
   a,
   button {
     border: 2px solid;
-    border-color: inherit;
 
     padding: 1.25em 1.625em;
 
-    background-color: inherit;
-    border-bottom-right-radius: inherit;
+    background-color: $color-white-beta;
+    border-color: $color-black-alpha;
+    border-bottom-right-radius: 20px;
+
+    transition: transform 0.15s ease;
+  }
+
+  a:active,
+  button:active {
+    span {
+      color: $color-black-alpha;
+    }
   }
 
   span {
     margin-right: 10px;
+
     color: $color-black-alpha;
     font: 600 1.8rem $font-secondary;
+
+    transition: color 0.15s ease;
   }
 
   svg {
     vertical-align: middle;
     fill: $color-black-alpha;
+
+    transition: transform 0.15s ease;
   }
 
   &--secondary,
   &--tertiary {
-    background-color: $color-black-alpha;
-    border-color: $color-yellow-alpha;
+    a,
+    button {
+      background-color: $color-black-alpha;
+    }
+
+    &:hover {
+      a,
+      button {
+        span {
+          color: $color-white-alpha;
+        }
+
+        transform: translate(-6px, -6px);
+      }
+    }
 
     &::before {
       background-color: $color-yellow-alpha;
       left: -6px;
-      height: calc(100% + 2px);
+      bottom: 6px;
+      height: 100%;
     }
 
     span {
@@ -69,7 +107,17 @@
     }
   }
 
+  &--secondary {
+    a,
+    button {
+      border-color: $color-yellow-alpha;
+    }
+  }
+
   &--tertiary {
-    border-color: $color-white-alpha;
+    a,
+    button {
+      border-color: $color-white-alpha;
+    }
   }
 }

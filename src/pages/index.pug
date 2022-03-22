@@ -16,7 +16,8 @@ block content
               p Наша команда дизайнеров использует новейшие практики UI/UX дизайна
             +button('Оценить проект')
           .intro__img
-            img(src="assets/img/png/intro-phones.png", width="418", height="644", alt="")
+            img(src="assets/img/svg/phone-1.svg", width="236", height="512", alt="")
+            img(src="assets/img/svg/phone-2.svg", width="209", height="525", alt="")
             img.intro__img-text(src="assets/img/svg/text.svg",  width="196", height="196", alt="")
 
     //Specialization
@@ -225,31 +226,31 @@ block content
                 .form__control.form__select
                   #service-container.form__options-container
                     .form__option
-                      input#digital-strategy(type="radio" name="service")
+                      input#digital-strategy(type="radio" name="service" value="digital-strategy")
                       label(for="digital-strategy") Цифровая стратегия
                     .form__option
-                      input#optimization(type="radio" name="service")
+                      input#optimization(type="radio" name="service" value="optimization")
                       label(for="optimization") Оптимизация магазина приложений
                     .form__option
-                      input#design(type="radio" name="service")
+                      input#design(type="radio" name="service" value="design")
                       label(for="design") UI/UX дизайн
                     .form__option
-                      input#dev-mobile(type="radio" name="service")
+                      input#dev-mobile(type="radio" name="service" value="dev-mobile")
                       label(for="dev-mobile") Разработка мобильных приложений
                     .form__option
-                      input#dev-web(type="radio" name="service")
+                      input#dev-web(type="radio" name="service" value="dev-web")
                       label(for="dev-web") Разработка  Web-приложений
                     .form__option
-                      input#motion(type="radio" name="service")
-                      label(for="motion") Motion дизайн
+                      input#design-motion(type="radio" name="service" value="design-motion")
+                      label(for="design-motion") Motion дизайн
                     .form__option
-                      input#support(type="radio" name="service")
+                      input#support(type="radio" name="service" value="support")
                       label(for="support") Поддержка, хостинг и управление
                     .form__option
-                      input#dev-ops(type="radio" name="service")
+                      input#dev-ops(type="radio" name="service" value="dev-ops")
                       label(for="dev-ops") Услуги Dev Ops
                     .form__option
-                      input#testing(type="radio" name="service")
+                      input#testing(type="radio" name="service" value="testing")
                       label(for="testing") Тестирование
                   #service-selected.form__option-selected.form__input Выберите услугу
                 .form__control.form__control--wide
@@ -259,7 +260,7 @@ block content
                     span.form__error
                     .form__upload-button-txt
                       span Прикрепить файл
-                      img(src="assets/img/png/attach.png", alt="")
+                      img(src="assets/img/png/attach.png", width="30", height="30", alt="")
                 .form__group
                   label.form__checkbox-wrapper
                     input.form__checkbox(name="agreement" type="checkbox" checked hidden)

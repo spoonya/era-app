@@ -45,6 +45,7 @@
 
   transition: transform 0.1s linear;
 
+  &.active,
   &:focus {
     transform: translate(-4px, 4px);
   }
@@ -138,6 +139,10 @@ textarea.form__input {
 }
 
 .form__option {
+  &.active {
+    font-weight: 600;
+  }
+
   label {
     cursor: pointer;
     font-size: 14px;

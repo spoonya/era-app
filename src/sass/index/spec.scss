@@ -42,6 +42,16 @@
   &-list {
     padding: 10rem 11rem 10rem 0;
 
+    a {
+      color: $color-black-alpha;
+
+      transition: color 0.1s linear;
+
+      &:hover {
+        color: $color-red-alpha;
+      }
+    }
+
     li {
       @include text-triangle-mark;
 

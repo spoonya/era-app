@@ -75,7 +75,7 @@ input,
 textarea {
   font: inherit;
 
-  color: $color-red-alpha;
+  color: $color-black-alpha;
 
   border: none;
   background: none;
@@ -90,8 +90,7 @@ input[type='button'] {
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
-  color: rgba($color: $color-white-alpha, $alpha: 0.5);
+  color: $color-black-alpha;
 }
 
 button {

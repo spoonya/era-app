@@ -202,7 +202,7 @@ block content
                 h3 Присоединяйся к нам!
               .text.text--light
                 p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
-              +link('Наши вакансии', '#', 'button--secondary')
+              +link('Наши вакансии', '#', 'button--tertiary')
 
       //Start
       section.start
@@ -215,6 +215,57 @@ block content
                   span вместе
                   br
                   span с нами
-              form(action="#", method="POST", name="")
+              form.form(action="#", method="POST", name="")
+                .form__control
+                  input.form__input(type="text", name="name", placeholder="Ваше имя*")
+                .form__control
+                  input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*")
+                .form__control
+                  input.form__input(type="text", name="company", placeholder="Ваша компания")
+                .form__control.form__select
+                  #service-container.form__options-container
+                    .form__option
+                      input#digital-strategy(type="radio" name="service")
+                      label(for="digital-strategy") Цифровая стратегия
+                    .form__option
+                      input#optimization(type="radio" name="service")
+                      label(for="optimization") Оптимизация магазина приложений
+                    .form__option
+                      input#design(type="radio" name="service")
+                      label(for="design") UI/UX дизайн
+                    .form__option
+                      input#dev-mobile(type="radio" name="service")
+                      label(for="dev-mobile") Разработка мобильных приложений
+                    .form__option
+                      input#dev-web(type="radio" name="service")
+                      label(for="dev-web") Разработка  Web-приложений
+                    .form__option
+                      input#motion(type="radio" name="service")
+                      label(for="motion") Motion дизайн
+                    .form__option
+                      input#support(type="radio" name="service")
+                      label(for="support") Поддержка, хостинг и управление
+                    .form__option
+                      input#dev-ops(type="radio" name="service")
+                      label(for="dev-ops") Услуги Dev Ops
+                    .form__option
+                      input#testing(type="radio" name="service")
+                      label(for="testing") Тестирование
+                  #service-selected.form__option-selected.form__input Выберите услугу
+                .form__control.form__control--wide
+                  textarea.form__input(name="message", placeholder="Расскажите коротко о вашем проекте" maxlength="250")
+                  label.form__upload-button
+                    input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files" data-form-upload)
+                    span.form__error
+                    .form__upload-button-txt
+                      span Прикрепить файл
+                      img(src="assets/img/png/attach.png", alt="")
+                .form__group
+                  label.form__checkbox-wrapper
+                    input.form__checkbox(name="agreement" type="checkbox" checked hidden)
+                    span.form__checkbox-styled
+                    span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+                  +button('Отправить', 'button--tertiary', 'submit')
+
             .start__img
               img(src="assets/img/svg/start.svg", alt="")

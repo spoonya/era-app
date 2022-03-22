@@ -8,7 +8,7 @@
   margin-left: 8px;
 
   background-color: $color-white-beta;
-  border: 2px solid;
+
   border-color: $color-black-alpha;
   border-bottom-right-radius: 20px;
 
@@ -22,10 +22,15 @@
     left: -8px;
     width: 100%;
     height: calc(100% + 4px);
+
+    border-bottom-right-radius: 20px;
   }
 
   a,
   button {
+    border: 2px solid;
+    border-color: inherit;
+
     padding: 1.25em 1.625em;
 
     background-color: inherit;
@@ -43,12 +48,15 @@
     fill: $color-black-alpha;
   }
 
-  &--secondary {
+  &--secondary,
+  &--tertiary {
     background-color: $color-black-alpha;
     border-color: $color-yellow-alpha;
 
     &::before {
       background-color: $color-yellow-alpha;
+      left: -6px;
+      height: calc(100% + 2px);
     }
 
     span {
@@ -59,5 +67,9 @@
     svg {
       fill: $color-white-alpha;
     }
+  }
+
+  &--tertiary {
+    border-color: $color-white-alpha;
   }
 }

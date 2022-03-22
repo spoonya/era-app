@@ -79,4 +79,15 @@
   bottom: 50px;
   left: -93px;
   max-width: 19.6rem;
+
+  animation: text-rotate 8s linear infinite;
+}
+
+@keyframes text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

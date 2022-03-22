@@ -1,5 +1,8 @@
 .solution__img {
-  max-width: 609px;
+  position: relative;
+
+  max-width: 60.9rem;
+  width: 100%;
 
   figcaption {
     text-align: center;
@@ -8,6 +11,69 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: 5px;
+  }
+}
+
+.solution__icon {
+  position: absolute;
+
+  max-width: 100%;
+  width: unset;
+
+  animation: icon-pulse 3s linear infinite alternate;
+
+  &--dark {
+    animation: icon-pulse 3s linear infinite alternate-reverse;
+  }
+
+  &--apple {
+    bottom: 39%;
+    left: 27%;
+  }
+
+  &--swift {
+    bottom: 45%;
+    left: 45%;
+  }
+
+  &--node {
+    bottom: 46%;
+    right: 23%;
+  }
+
+  &--csharp {
+    top: 33%;
+    left: 16%;
+  }
+
+  &--atom {
+    top: 13%;
+    left: 19%;
+  }
+
+  &--csharp {
+    top: 33%;
+    left: 16%;
+  }
+
+  &--js {
+    top: 23%;
+    left: 37%;
+  }
+
+  &--python {
+    top: 4%;
+    left: 44%;
+  }
+
+  &--php {
+    top: 13%;
+    left: 57%;
+  }
+
+  &--android {
+    top: 29%;
+    right: 15%;
   }
 }
 
@@ -93,5 +159,15 @@
 
   .text {
     margin-right: 20px;
+  }
+}
+
+@keyframes icon-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
   }
 }

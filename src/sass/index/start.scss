@@ -20,5 +20,65 @@
 }
 
 .start__img {
+  position: relative;
+
+  z-index: 1;
+
   max-width: 50.8rem;
+}
+
+.start__icon {
+  position: absolute;
+
+  max-width: 100%;
+  width: unset;
+
+  &--lamp {
+    top: 16%;
+    left: 47.5%;
+  }
+
+  &--mechanism {
+    top: 28.6%;
+    left: 46.6%;
+  }
+
+  &--graph {
+    top: 41.7%;
+    left: 47%;
+  }
+
+  &--target {
+    top: 52.7%;
+    left: 45.6%;
+  }
+}
+
+.start__cloud {
+  position: absolute;
+
+  z-index: -1;
+
+  animation: translate-down-up 3s ease-in-out infinite alternate;
+
+  &--1 {
+    max-width: 12.4rem;
+    top: 9%;
+    right: 0%;
+  }
+
+  &--2 {
+    top: 2%;
+    left: 7%;
+  }
+
+  &--3 {
+    top: 31%;
+    right: 24%;
+  }
+
+  &--2,
+  &--3 {
+    max-width: 8.1rem;
+  }
 }

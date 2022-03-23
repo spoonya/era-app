@@ -91,7 +91,6 @@ block content
                 h3 Социальные сети
           figure.solution__img
             img(src="assets/img/svg/tree.svg", width="609", height="609", alt="")
-            figcaption Technology stack
             img.solution__icon.solution__icon--apple.solution__icon--dark(src="assets/img/svg/apple.svg", width="75", height="75" alt="")
             img.solution__icon.solution__icon--swift(src="assets/img/svg/swift.svg", width="75", height="75" alt="")
             img.solution__icon.solution__icon--node.solution__icon--dark(src="assets/img/svg/node.svg", width="75", height="75" alt="")
@@ -101,6 +100,7 @@ block content
             img.solution__icon.solution__icon--python.solution__icon--dark(src="assets/img/svg/python.svg", width="75", height="75" alt="")
             img.solution__icon.solution__icon--php(src="assets/img/svg/php.svg", width="75", height="75" alt="")
             img.solution__icon.solution__icon--android(src="assets/img/svg/android.svg", width="75", height="75" alt="")
+            figcaption Technology stack
 
         .solution__offer
           img(src="assets/img/svg/hero.svg", width="423", height="385", alt="")
@@ -170,7 +170,17 @@ block content
     section.startup
       .container
         .startup__inner
-          img(src="assets/img/svg/startup.svg", width="461", height="580", alt="")
+          .startup__img
+            img(src="assets/img/svg/startup.svg", width="461", height="580", alt="")
+            img.startup__icon.startup__icon--insta(src="assets/img/svg/insta-dark.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--cloud.startup__icon--dark(src="assets/img/svg/cloud.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--lamp(src="assets/img/svg/lamp.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--play.startup__icon--dark(src="assets/img/svg/play.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--facebook(src="assets/img/svg/facebook-dark.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--location.startup__icon--dark(src="assets/img/svg/location.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--message(src="assets/img/svg/message.svg", width="52", height="52", alt="")
+            img.startup__icon.startup__icon--like.startup__icon--dark(src="assets/img/svg/like.svg", width="52", height="52", alt="")
+
           .startup__descrip
             h2 Услуги стартапа
             .text
@@ -235,7 +245,7 @@ block content
                   span вместе
                   br
                   span с нами
-              form.form(action="#", method="POST", name="")
+              form.form(action="#", method="POST")
                 .form__control
                   input.form__input(type="text", name="name", placeholder="Ваше имя*")
                 .form__control
@@ -277,7 +287,7 @@ block content
                   label.form__upload-button
                     input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files" data-form-upload)
                     span.form__error
-                    .form__upload-button-txt
+                    span.form__upload-button-txt
                       span Прикрепить файл
                       img(src="assets/img/png/attach.png", width="30", height="30", alt="")
                 .form__group
@@ -288,4 +298,12 @@ block content
                   +button('Отправить', 'button--tertiary', 'submit')
 
             .start__img
-              img(src="assets/img/svg/start.svg", alt="")
+              img(src="assets/img/svg/start.svg", width="508", height="486", alt="")
+              img.start__icon.start__icon--lamp(src="assets/img/svg/lamp-red.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="100")
+              img.start__icon.start__icon--mechanism(src="assets/img/svg/mechanism.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="600")
+              img.start__icon.start__icon--graph(src="assets/img/svg/graph.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1100")
+              img.start__icon.start__icon--target(src="assets/img/svg/target.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1600")
+              img.start__cloud.start__cloud--1(src="assets/img/svg/start-cloud.svg", width="124", height="135", alt="")
+              img.start__cloud.start__cloud--2(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
+              img.start__cloud.start__cloud--3(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
+

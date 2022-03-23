@@ -24,14 +24,75 @@
       top: 5px;
     }
   }
-
-  img {
-    max-width: 461px;
-    margin-right: 20px;
-  }
 }
 
 .startup__descrip {
   max-width: 59.6rem;
   width: 100%;
+}
+
+.startup__img {
+  position: relative;
+
+  max-width: 46.1rem;
+  margin-right: 20px;
+
+  img:first-child {
+    position: relative;
+
+    z-index: 1;
+  }
+}
+
+.startup__icon {
+  position: absolute;
+
+  max-width: 100%;
+  width: unset;
+
+  animation: icon-pulse 3s linear infinite alternate;
+
+  &--dark {
+    animation: icon-pulse 3s linear infinite alternate-reverse;
+  }
+
+  &--insta {
+    bottom: 31%;
+    left: 12%;
+  }
+
+  &--cloud {
+    bottom: 52%;
+    left: 0%;
+  }
+
+  &--lamp {
+    top: 9%;
+    left: 7%;
+  }
+
+  &--play {
+    top: 5%;
+    left: 32%;
+  }
+
+  &--facebook {
+    top: 5%;
+    right: 23%;
+  }
+
+  &--location {
+    top: 19%;
+    right: 7%;
+  }
+
+  &--message {
+    top: 39%;
+    right: -1%;
+  }
+
+  &--like {
+    bottom: 30%;
+    right: 13%;
+  }
 }

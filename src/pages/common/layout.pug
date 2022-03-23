@@ -11,13 +11,16 @@ html(lang="ru")
       link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
       link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet")
 
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer)
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer)
 
-      script(src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js")
+      script(src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js" defer)
 
       link(rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css")
-      script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+      script(src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer)
+
+      link(href="assets/fonts/Gilroy-Bold.woff2" as="font" rel="preload" type="font/woff2" crossorigin="anonymous")
+      link(href="assets/fonts/Gilroy-Regular.woff2" as="font" rel="preload" type="font/woff2" crossorigin="anonymous")
 
       link(rel="stylesheet" href="assets/css/style.min.css")
 
@@ -33,4 +36,4 @@ html(lang="ru")
         include footer
       #overlay.overlay
     block scripts
-      script(src='assets/js/main.js')
+      script(src='assets/js/main.js' defer)

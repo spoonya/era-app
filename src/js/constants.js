@@ -1,5 +1,6 @@
 export const CLASSES = {
   active: 'active',
+  hidden: 'hidden',
   loading: 'loading',
   scrollHidden: 'scroll-hidden',
   modal: 'modal',

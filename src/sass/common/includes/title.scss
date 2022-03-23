@@ -5,6 +5,10 @@
   line-height: 1.4;
   color: $color-black-alpha;
 
+  &.hidden {
+    opacity: 0;
+  }
+
   &--light {
     color: $color-white-alpha;
     font-weight: 600;

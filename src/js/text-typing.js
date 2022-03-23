@@ -1,3 +1,5 @@
+import { CLASSES } from './constants';
+
 export function typeIntroTitle() {
   const split = function (element) {
     const words = $(element).text().split('');
@@ -11,6 +13,7 @@ export function typeIntroTitle() {
   };
 
   const textify = function (element, method, delay) {
+    $('.intro .title').removeClass(CLASSES.hidden);
     split(element);
     $(`${element} span`).css('opacity', '0');
     $(`${element} span`).css('position', 'relative');

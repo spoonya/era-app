@@ -103,18 +103,14 @@ block content
             img.solution__icon.solution__icon--android(src="assets/img/svg/android.svg", width="75", height="75" alt="")
             figcaption Technology stack
 
-        .solution__offer
-          img(src="assets/img/svg/hero.svg", width="423", height="385", alt="")
-          .solution__offer-descrip
-            .title
-              h3
-                |Ваш бизнес из другой отрасли? Это не проблема! Наши сотрудники&nbsp;
-                span настоящие профессионалы&nbsp;
-                |и справятся с любой поставленной задачей
-            .solution__offer-bot
-              .text
-                p Наши специалисты подготовят персональное предложение для вас!
-              +button('Получить предложение')
+        +offer(
+          'hero',
+          'Хотите пообщаться?',
+          [
+          'Если вы хотите поговорить о технологиях, отправьте нам сообщение.',
+          'Вопросы, проблемы или идеи...!'
+          ]
+        )
 
     //Projects
     section.projects
@@ -301,7 +297,6 @@ block content
                     span.form__checkbox-styled
                     span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
                   +button('Отправить', 'button--secondary', 'submit')
-
             .start__img
               img(src="assets/img/svg/start.svg", width="508", height="486", alt="")
               img.start__icon.start__icon--lamp(src="assets/img/svg/lamp-red.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="100")

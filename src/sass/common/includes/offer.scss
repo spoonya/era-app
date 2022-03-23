@@ -1,0 +1,44 @@
+.offer {
+  position: relative;
+
+  background-image: url('../img/png/noise.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: $color-white-psi;
+
+  padding: 2.9rem;
+  padding-left: 42.3rem;
+  margin-bottom: -15rem;
+
+  border-radius: 40px;
+  border: 1px solid;
+
+  img {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    max-width: 42.3rem;
+  }
+
+  .title {
+    font-size: 4.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .text {
+    margin-bottom: 0;
+    max-width: 59rem;
+    width: 100%;
+  }
+}
+
+.offer__bot {
+  display: flex;
+  justify-content: flex-end;
+}

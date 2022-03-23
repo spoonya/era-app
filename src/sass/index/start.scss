@@ -5,6 +5,7 @@
 .start__inner {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .start__content {
@@ -34,22 +35,22 @@
   width: unset;
 
   &--lamp {
-    top: 16%;
-    left: 47.5%;
+    top: 19.5%;
+    left: 47.6%;
   }
 
   &--mechanism {
-    top: 28.6%;
+    top: 34.7%;
     left: 46.6%;
   }
 
   &--graph {
-    top: 41.7%;
+    top: 50.5%;
     left: 47%;
   }
 
   &--target {
-    top: 52.7%;
+    top: 64%;
     left: 45.6%;
   }
 }

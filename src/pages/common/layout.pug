@@ -25,11 +25,12 @@ html(lang="ru")
         title Era App
   body
     include ../mixins/common
-    block header
-      include header
-    block content
-    block footer
-      include footer
-    #overlay.overlay
+    .page
+      block header
+        include header
+      block content
+      block footer
+        include footer
+      #overlay.overlay
     block scripts
       script(src='assets/js/main.js')

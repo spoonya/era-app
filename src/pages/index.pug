@@ -148,13 +148,13 @@ block content
       .container
         .benefits__list
           div
-            img(src="assets/img/svg/benefits-1.svg", width="285", height="240", alt="")
+            img(src="assets/img/svg/benefits-1.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="0")
             h3 Наша команда сильна в своей области и использует только передовые технологии
           div
-            img(src="assets/img/svg/benefits-2.svg", width="285", height="240", alt="")
+            img(src="assets/img/svg/benefits-2.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="450")
             h3 Мы открыты перед всем миром. Наш процесс разработки прозрачен для клиента.
           div
-            img(src="assets/img/svg/benefits-3.svg", width="285", height="240", alt="")
+            img(src="assets/img/svg/benefits-3.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="900")
             h3 Мы становимся одной командой с клиентом. В процессе работы мы консультируем, предлагаем идеи и подсказываем
 
     //Descrip
@@ -232,7 +232,7 @@ block content
                 h3 Присоединяйся к нам!
               .text.text--light
                 p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
-              +link('Наши вакансии', '#', 'button--tertiary')
+              +link('Наши вакансии', '#', 'button--secondary')
 
       //Start
       section.start
@@ -295,7 +295,7 @@ block content
                     input.form__checkbox(name="agreement" type="checkbox" checked hidden)
                     span.form__checkbox-styled
                     span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
-                  +button('Отправить', 'button--tertiary', 'submit')
+                  +button('Отправить', 'button--secondary', 'submit')
 
             .start__img
               img(src="assets/img/svg/start.svg", width="508", height="486", alt="")
@@ -306,4 +306,3 @@ block content
               img.start__cloud.start__cloud--1(src="assets/img/svg/start-cloud.svg", width="124", height="135", alt="")
               img.start__cloud.start__cloud--2(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
               img.start__cloud.start__cloud--3(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
-

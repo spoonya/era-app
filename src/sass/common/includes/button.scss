@@ -72,8 +72,7 @@
     transition: transform 0.15s ease;
   }
 
-  &--secondary,
-  &--tertiary {
+  &--secondary {
     a,
     button {
       background-color: $color-black-alpha;
@@ -111,13 +110,6 @@
     a,
     button {
       border-color: $color-yellow-alpha;
-    }
-  }
-
-  &--tertiary {
-    a,
-    button {
-      border-color: $color-white-alpha;
     }
   }
 }

@@ -161,7 +161,7 @@ textarea.form__input {
   top: calc(100% - 5px);
   left: 4px;
 
-  max-height: 26.3rem;
+  max-height: 27.3rem;
   width: 100%;
 
   padding: 5px 0;
@@ -235,6 +235,12 @@ textarea.form__input {
 }
 
 .form__option {
-  padding: 10px 25px;
+  padding: 5px 25px;
   line-height: normal;
+
+  transition: color 0.1s linear;
+
+  &:hover {
+    color: $color-red-alpha;
+  }
 }

@@ -30,4 +30,21 @@
   span {
     color: $color-yellow-alpha;
   }
+
+  div {
+    display: inline;
+  }
+
+  &-fade {
+    span:first-of-type,
+    span {
+      color: $color-black-alpha;
+    }
+  }
+
+  &-bounce {
+    span {
+      color: $color-red-alpha;
+    }
+  }
 }

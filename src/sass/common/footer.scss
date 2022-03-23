@@ -107,8 +107,14 @@
   display: flex;
 
   li {
+    transition: transform 0.15s linear;
+
     &:not(:last-child) {
       margin-right: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.17);
     }
   }
 }

@@ -7,9 +7,11 @@ export class Spoiler {
   }
 
   _onToggle(event) {
+    if (!isMediaBreakpoint()) return;
+
     const detailsOpened = this.spoilers.filter((el) => el.hasAttribute('open'));
 
-    if (!detailsOpened.length || !isMediaBreakpoint()) return;
+    if (!detailsOpened.length) return;
 
     if (event.target.open) {
       detailsOpened.forEach((el) => {

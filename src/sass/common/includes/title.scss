@@ -1,6 +1,6 @@
 .title {
   margin-bottom: 3rem;
-  font-size: 44px;
+  font-size: 4.4rem;
   font-weight: 700;
   line-height: 1.4;
   color: $color-black-alpha;
@@ -19,6 +19,7 @@
     }
   }
 
+  h1,
   h2,
   h3 {
     font-weight: inherit;
@@ -33,5 +34,17 @@
 
   &__part-yellow {
     color: $color-yellow-alpha;
+  }
+
+  @include media-laptop {
+    font-size: 36px;
+  }
+
+  @include media-tablet-lg {
+    font-size: 32px;
+  }
+
+  @include media-tablet-lg-sm {
+    font-size: 26px;
   }
 }

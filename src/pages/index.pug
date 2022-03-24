@@ -8,7 +8,7 @@ block content
         .intro__inner
           .intro__descrip
             .title.hidden
-              h2
+              h1
                 span#title-fade Наша команда проложит вам путь к&nbsp;
                 span#title-bounce.title__part-red цифровому будущему
             .text
@@ -18,7 +18,7 @@ block content
           .intro__img
             img(src="assets/img/svg/phone-1.svg", width="236", height="512", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
             img(src="assets/img/svg/phone-2.svg", width="209", height="525", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="1000")
-            img.intro__img-text(src="assets/img/svg/text.svg",  width="196", height="196", alt="")
+            img.intro__img-text(src="assets/img/svg/text.svg",  width="196", height="196", alt="", loading="lazy")
 
     //Specialization
     section.spec
@@ -44,7 +44,7 @@ block content
                 a(href="#") Услуги Dev Ops
               li
                 a(href="#")  Тестирование
-            img.rellax(src="assets/img/svg/gear.svg", width="142", height="143", alt="", data-rellax-speed="-3")
+            img.rellax(src="assets/img/svg/gear.svg", width="142", height="143", loadig="lazy", alt="", data-rellax-speed="-3.5")
           .spec__descrip
             .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
               h2
@@ -73,34 +73,43 @@ block content
                 |которая нуждается в нас
             .solution__list(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
               div
-                img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Образование и здравохранение
               div
-                img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Торговля и коммерция
               div
-                img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Туризм и логистика
               div
-                img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Здоровье и спорт
               div
-                img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Еда и рестораны
               div
-                img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="")
+                img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="", loading="lazy")
                 h3 Социальные сети
           figure.solution__img
-            img(src="assets/img/svg/tree.svg", width="609", height="609", alt="")
-            img.solution__icon.solution__icon--apple.solution__icon--dark(src="assets/img/svg/apple.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--swift(src="assets/img/svg/swift.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--node.solution__icon--dark(src="assets/img/svg/node.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--csharp(src="assets/img/svg/csharp.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--atom(src="assets/img/svg/atom.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--js.solution__icon--dark(src="assets/img/svg/js.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--python.solution__icon--dark(src="assets/img/svg/python.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--php(src="assets/img/svg/php.svg", width="75", height="75" alt="")
-            img.solution__icon.solution__icon--android(src="assets/img/svg/android.svg", width="75", height="75" alt="")
+            img(src="assets/img/svg/tree.svg", width="609", height="609", alt="", loading="lazy")
+            .solution__icon.solution__icon--apple.solution__icon--dark
+              img(src="assets/img/svg/apple.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--swift
+              img(src="assets/img/svg/swift.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--node.solution__icon--dark
+              img(src="assets/img/svg/node.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--csharp
+              img(src="assets/img/svg/csharp.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--atom
+              img(src="assets/img/svg/atom.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--js.solution__icon--dark
+              img(src="assets/img/svg/js.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--python.solution__icon--dark
+              img(src="assets/img/svg/python.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--php
+              img(src="assets/img/svg/php.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--android
+              img(src="assets/img/svg/android.svg", width="75", height="75" alt="", loading="lazy")
             figcaption Technology stack
 
         +offer(
@@ -119,7 +128,7 @@ block content
           h2 Наши проекты
         .projects__content
           .projects__item
-            img(src="assets/img/png/projects-1.png", width="460", height="452", alt="Vino&vino")
+            img(src="assets/img/png/projects-1.png", width="460", height="452", alt="Vino&vino", loading="lazy")
             .projects__item-descrip
               h3(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Vino&vino
               div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
@@ -127,7 +136,7 @@ block content
                   p Приложение для контроля финансов и осуществления денежных переводов
                 +link('Подробнее', '#', 'button--secondary')
           .projects__item
-            img(src="assets/img/png/projects-2.png", width="460", height="452", alt="LawDoc")
+            img(src="assets/img/png/projects-2.png", width="460", height="452", alt="LawDoc", loading="lazy")
             .projects__item-descrip
               h3(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") LawDoc
               div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
@@ -147,13 +156,13 @@ block content
       .container
         .benefits__list
           div
-            img(src="assets/img/svg/benefits-1.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="0")
+            img(src="assets/img/svg/benefits-1.svg", width="285", height="240", alt="", loading="lazy", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="0")
             h3 Наша команда сильна в своей области и использует только передовые технологии
           div
-            img(src="assets/img/svg/benefits-2.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="450")
+            img(src="assets/img/svg/benefits-2.svg", width="285", height="240", alt="", loading="lazy", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="450")
             h3 Мы открыты перед всем миром. Наш процесс разработки прозрачен для клиента.
           div
-            img(src="assets/img/svg/benefits-3.svg", width="285", height="240", alt="", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="900")
+            img(src="assets/img/svg/benefits-3.svg", width="285", height="240", alt="", loading="lazy", data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300", data-aos-delay="900")
             h3 Мы становимся одной командой с клиентом. В процессе работы мы консультируем, предлагаем идеи и подсказываем
 
     //Descrip
@@ -170,16 +179,23 @@ block content
       .container
         .startup__inner
           .startup__img
-            img(src="assets/img/svg/startup.svg", width="461", height="580", alt="")
-            img.startup__icon.startup__icon--insta(src="assets/img/svg/insta-dark.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--cloud.startup__icon--dark(src="assets/img/svg/cloud.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--lamp(src="assets/img/svg/lamp.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--play.startup__icon--dark(src="assets/img/svg/play.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--facebook(src="assets/img/svg/facebook-dark.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--location.startup__icon--dark(src="assets/img/svg/location.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--message(src="assets/img/svg/message.svg", width="52", height="52", alt="")
-            img.startup__icon.startup__icon--like.startup__icon--dark(src="assets/img/svg/like.svg", width="52", height="52", alt="")
-
+            img(src="assets/img/svg/startup.svg", width="461", height="580", alt="", loading="lazy")
+            .startup__icon.startup__icon--insta
+              img(src="assets/img/svg/insta-dark.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--cloud.startup__icon--dark
+              img(src="assets/img/svg/cloud.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--lamp
+              img(src="assets/img/svg/lamp.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--play.startup__icon--dark
+              img(src="assets/img/svg/play.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--facebook
+              img(src="assets/img/svg/facebook-dark.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--location.startup__icon--dark
+              img(src="assets/img/svg/location.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--message
+              img(src="assets/img/svg/message.svg", width="52", height="52", alt="", loading="lazy")
+            .startup__icon.startup__icon--like.startup__icon--dark
+              img(src="assets/img/svg/like.svg", width="52", height="52", alt="", loading="lazy")
           .startup__descrip
             h2(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Услуги стартапа
             div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
@@ -194,35 +210,35 @@ block content
           .join__list
             .join__item
               .join__item-img
-                img(src="assets/img/svg/join-1.svg", width="60", height="60", alt="")
+                img(src="assets/img/svg/join-1.svg", width="60", height="60", alt="", loading="lazy")
               .join__item-descrip
                 h3 Стремление
                 .text
                   p Оставайся любопытным, задавай вопросы о возможностях и расширяй границы своей личной и профессиональной жизни
             .join__item
               .join__item-img
-                img(src="assets/img/svg/join-2.svg", width="60", height="60", alt="")
+                img(src="assets/img/svg/join-2.svg", width="60", height="60", alt="", loading="lazy")
               .join__item-descrip
                 h3 Страсть
                 .text
                   p Делай все ради любви, а не славы. Вдохновляйся нашим стремлением к совершенству и активно заботьтесь о других
             .join__item
               .join__item-img
-                img(src="assets/img/svg/join-3.svg", width="60", height="60", alt="")
+                img(src="assets/img/svg/join-3.svg", width="60", height="60", alt="", loading="lazy")
               .join__item-descrip
                 h3 Подход
                 .text
                   p Оставьте свое Эго у двери. Слушайте, учитесь, справляйтесь с неудачами, радуйтесь успехам и будьте мужественными.
             .join__item
               .join__item-img
-                img(src="assets/img/svg/join-4.svg", width="60", height="60", alt="")
+                img(src="assets/img/svg/join-4.svg", width="60", height="60", alt="", loading="lazy")
               .join__item-descrip
                 h3 Честность
                 .text
                   p Будь честен, открыт и ясно озвучивай мысль. Делай то, что лучше всего подходит всем, а не только тебе
             .join__item
               .join__item-img
-                img(src="assets/img/svg/join-5.svg", width="60", height="60", alt="")
+                img(src="assets/img/svg/join-5.svg", width="60", height="60", alt="", loading="lazy")
               .join__item-descrip
                 h3 Развлечение
                 .text
@@ -298,11 +314,18 @@ block content
                     span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
                   +button('Отправить', 'button--secondary', 'submit')
             .start__img
-              img(src="assets/img/svg/start.svg", width="508", height="486", alt="")
-              img.start__icon.start__icon--lamp(src="assets/img/svg/lamp-red.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="100")
-              img.start__icon.start__icon--mechanism(src="assets/img/svg/mechanism.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="600")
-              img.start__icon.start__icon--graph(src="assets/img/svg/graph.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1100")
-              img.start__icon.start__icon--target(src="assets/img/svg/target.svg", width="40", height="40", alt="", data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1600")
-              img.start__cloud.start__cloud--1(src="assets/img/svg/start-cloud.svg", width="124", height="135", alt="")
-              img.start__cloud.start__cloud--2(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
-              img.start__cloud.start__cloud--3(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="")
+              img(src="assets/img/svg/start.svg", width="508", height="486", alt="", loading="lazy")
+              .start__icon.start__icon--lamp(data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="100")
+                img(src="assets/img/svg/lamp-red.svg", width="40", height="40", alt="", loading="lazy")
+              .start__icon.start__icon--mechanism(data-aos="zoom-in", data-aos-duration="1200" data-aos-delay="600")
+                img(src="assets/img/svg/mechanism.svg", width="40", height="40", alt="", loading="lazy")
+              .start__icon.start__icon--graph(data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1100")
+                img(src="assets/img/svg/graph.svg", width="40", height="40", alt="", loading="lazy")
+              .start__icon.start__icon--target(data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="1600")
+                img(src="assets/img/svg/target.svg", width="40", height="40", alt="", loading="lazy")
+              .start__cloud.start__cloud--1
+                img(src="assets/img/svg/start-cloud.svg", width="124", height="135", alt="", loading="lazy")
+              .start__cloud.start__cloud--2
+                img(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="", loading="lazy")
+              .start__cloud.start__cloud--3
+                img(src="assets/img/svg/start-cloud.svg", width="81", height="23", alt="", loading="lazy")

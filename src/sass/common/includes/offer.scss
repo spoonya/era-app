@@ -26,7 +26,6 @@
   }
 
   .title {
-    font-size: 4.4rem;
     margin-bottom: 20px;
     font-weight: 600;
   }
@@ -35,6 +34,36 @@
     margin-bottom: 0;
     max-width: 59rem;
     width: 100%;
+  }
+
+  @include media-laptop {
+    img {
+      max-width: 306px;
+    }
+
+    .text {
+      margin-bottom: 30px;
+    }
+
+    padding-left: 310px;
+  }
+
+  @include media-tablet-sm {
+    img {
+      display: none;
+    }
+
+    padding: 20px 30px;
+  }
+}
+
+.offer__descrip {
+  display: flex;
+  flex-direction: column;
+
+  @include media-phone-lg {
+    align-items: center;
+    text-align: center;
   }
 }
 

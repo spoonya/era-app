@@ -15,12 +15,24 @@
 
 .header__logo {
   max-width: 22rem;
+
+  @include media-tablet-lg {
+    max-width: 140px;
+  }
+
+  @include media-phone-sm {
+    max-width: 95px;
+  }
 }
 
 .header__group {
   display: flex;
   align-items: center;
   margin-right: 4rem;
+
+  @include media-phone-lg {
+    margin-right: 25px;
+  }
 }
 
 .header__lang {
@@ -31,6 +43,10 @@
 
   & > img {
     max-width: 22px;
+  }
+
+  @include media-phone-sm {
+    margin-right: 20px;
   }
 }
 

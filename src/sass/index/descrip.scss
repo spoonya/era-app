@@ -1,6 +1,17 @@
+.descrip {
+  margin: 6rem 0 8rem;
+
+  @include media-tablet-lg {
+    margin: 60px 0;
+  }
+
+  @include media-tablet-sm {
+    margin: 40px 0;
+  }
+}
+
 .descrip__inner {
   padding: 3.6rem 17.2rem;
-  margin: 6rem 0 8rem;
 
   background-image: url('../img/png/noise.png');
   background-color: $color-white-psi;
@@ -15,5 +26,17 @@
     text-align: center;
     margin-bottom: 0;
     font-weight: 600;
+  }
+
+  @include media-tablet-lg {
+    padding: 36px 125px;
+  }
+
+  @include media-tablet-sm {
+    padding: 36px 70px;
+  }
+
+  @include media-phone-lg {
+    padding: 30px 20px;
   }
 }

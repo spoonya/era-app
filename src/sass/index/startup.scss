@@ -1,5 +1,9 @@
 .startup {
   margin-bottom: 23.6rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 170px;
+  }
 }
 
 .startup__inner {
@@ -24,6 +28,18 @@
       top: 5px;
     }
   }
+
+  @include media-tablet-lg {
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  @include media-phone-sm {
+    h2 {
+      font-size: 22px;
+    }
+  }
 }
 
 .startup__descrip {
@@ -35,18 +51,19 @@
   position: relative;
 
   max-width: 46.1rem;
-  margin-right: 20px;
+  margin-right: 40px;
 
   img:first-child {
     position: relative;
+  }
+
+  @include media-tablet-sm {
+    display: none;
   }
 }
 
 .startup__icon {
   position: absolute;
-
-  max-width: 100%;
-  width: unset;
 
   animation: icon-pulse 3s linear infinite alternate;
 
@@ -92,5 +109,11 @@
   &--like {
     bottom: 30%;
     right: 13%;
+  }
+
+  @include media-tablet-lg {
+    animation: none;
+
+    max-width: 45px;
   }
 }

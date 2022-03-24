@@ -2,12 +2,20 @@
   position: relative;
   bottom: 13.5rem;
   margin-bottom: -35px;
+
+  @include media-tablet-lg {
+    margin-bottom: -60px;
+  }
 }
 
 .join__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(43.5rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2.5rem;
+
+  @include media-tablet-sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .join__item {
@@ -63,5 +71,19 @@
 
   .text {
     margin-bottom: 30px;
+  }
+
+  @include media-tablet-lg {
+    .title {
+      font-size: 28px;
+    }
+  }
+
+  @include media-tablet-sm {
+    text-align: center;
+
+    .title {
+      font-size: 24px;
+    }
   }
 }

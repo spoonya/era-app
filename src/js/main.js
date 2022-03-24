@@ -7,7 +7,7 @@ initSpecParallax();
 controlDropwdown();
 
 AOS.init({
-  disable: 'phone',
+  disable: 'mobile',
   easing: 'ease',
   once: true
 });

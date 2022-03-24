@@ -16,7 +16,7 @@ mixin link(text, link, modif= null)
 
 mixin offer(img, title, textArr)
   .offer
-    img(src=`assets/img/svg/${img}.svg`, width="423", height="385", alt="")
+    img(src=`assets/img/svg/${img}.svg`, width="423", height="385", alt="", loading="lazy")
     .offer__descrip
       .offer__top
         .title

@@ -5,6 +5,10 @@
 .spec__inner {
   display: flex;
   justify-content: space-between;
+
+  @include media-tablet-sm {
+    flex-direction: column;
+  }
 }
 
 .spec__services {
@@ -12,7 +16,7 @@
 
   max-width: 54.6rem;
   width: 100%;
-  margin-right: 20px;
+  margin-right: 70px;
 
   border-bottom: 1px solid;
   border-right: 1px solid;
@@ -35,30 +39,65 @@
   img {
     position: absolute;
     max-width: 142px;
-    top: 30px;
-    right: -75px;
+    top: 3%;
+    right: -13%;
   }
 
-  &-list {
-    padding: 10rem 11rem 10rem 0;
-
-    a {
-      color: $color-black-alpha;
-
-      transition: color 0.1s linear;
-
-      &:hover {
-        color: $color-red-alpha;
-      }
+  @include media-laptop {
+    img {
+      max-width: 100px;
     }
+  }
 
-    li {
-      @include text-triangle-mark;
+  @include media-tablet-lg-sm {
+    margin-right: 25px;
 
-      &:not(:last-of-type) {
-        margin-bottom: 2rem;
-      }
+    img {
+      display: none;
     }
+  }
+
+  @include media-tablet-sm {
+    background-color: unset;
+    border: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.spec__services-list {
+  padding: 10rem 11rem 10rem 0;
+
+  a {
+    color: $color-black-alpha;
+
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: $color-red-alpha;
+    }
+  }
+
+  li {
+    @include text-triangle-mark;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include media-laptop {
+    padding: 60px 65px 60px 0;
+  }
+
+  @include media-tablet-lg-sm {
+    padding-right: 20px;
+  }
+
+  @include media-tablet-sm {
+    padding: 40px 0 20px 0;
   }
 }
 
@@ -66,4 +105,8 @@
   max-width: 63rem;
   width: 100%;
   padding-top: 16rem;
+
+  @include media-tablet-sm {
+    padding-top: 20px;
+  }
 }

@@ -1,6 +1,6 @@
 .form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
@@ -21,6 +21,12 @@
 
   &--wide {
     grid-area: auto / 1 / auto / 3;
+  }
+
+  @include media-phone-lg {
+    &--wide {
+      grid-area: auto;
+    }
   }
 }
 
@@ -52,16 +58,33 @@
 }
 
 textarea.form__input {
+  @include element-scroll;
+
   display: block;
   resize: none;
   min-height: 19rem;
   padding-bottom: 60px;
+
+  @include media-phone-lg {
+    min-height: 200px;
+  }
 }
 
 .form__group {
   display: flex;
   justify-content: space-between;
   grid-area: auto / 1 / auto / 3;
+
+  @include media-phone-lg {
+    grid-area: auto;
+
+    flex-direction: column;
+  }
+
+  .button {
+    margin-top: 30px;
+    align-self: center;
+  }
 }
 
 .form__checkbox-wrapper {
@@ -154,6 +177,8 @@ textarea.form__input {
 }
 
 .form__options-container {
+  @include element-scroll;
+
   position: absolute;
 
   z-index: 2;
@@ -161,7 +186,7 @@ textarea.form__input {
   top: calc(100% - 5px);
   left: 4px;
 
-  max-height: 27.3rem;
+  max-height: 273px;
   width: 100%;
 
   padding: 5px 0;
@@ -177,15 +202,6 @@ textarea.form__input {
   order: 1;
 
   transition: opacity 0.1s ease-in-out;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-    background: $color-white-alpha;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $color-yellow-alpha;
-  }
 
   &.active {
     opacity: 1;

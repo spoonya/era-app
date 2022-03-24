@@ -1,7 +1,12 @@
 .benefits__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
-  grid-gap: 4rem 7.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 
   img {
     max-width: 28.5rem;
@@ -13,5 +18,29 @@
     line-height: 1.67;
     max-width: 38rem;
     width: 100%;
+  }
+
+  @include media-laptop {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  @include media-tablet-lg-sm {
+    img {
+      max-width: 210px;
+    }
+  }
+
+  @include media-tablet-sm {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+
+    h3 {
+      max-width: unset;
+    }
+
+    div {
+      align-items: center;
+      text-align: center;
+    }
   }
 }

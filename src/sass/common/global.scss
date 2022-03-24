@@ -145,6 +145,8 @@ main {
 }
 
 html {
+  @include scroll-global;
+
   scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
@@ -152,7 +154,7 @@ html {
 
   font-size: 62.5%;
 
-  @include media-laptop {
+  @include media-desktop {
     font-size: 55%;
   }
 }
@@ -178,6 +180,10 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include media-tablet-lg {
+    padding: 0 15px;
+  }
 }
 
 .page {

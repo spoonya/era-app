@@ -26,3 +26,18 @@ mixin offer(img, title, textArr)
             p= txt
       .offer__bot
         +button('Связаться с нами')
+
+mixin joinItem(img, title, text)
+  .join__item
+    .join__item-header
+      .join__item-img
+        img(src=`assets/img/svg/${img}.svg`, width="60", height="60", alt="", loading="lazy")
+      h3= title
+    details(open)
+      summary
+        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.40539 1.25L8.7666 14L16.1278 1.25H1.40539Z" fill="#FFB700" stroke="#162A3C"></path>
+        </svg>
+      .join__item-descrip
+        .text
+          p= text

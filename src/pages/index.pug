@@ -207,42 +207,12 @@ block content
       //Join
       section.join
         .container
-          .join__list
-            .join__item
-              .join__item-img
-                img(src="assets/img/svg/join-1.svg", width="60", height="60", alt="", loading="lazy")
-              .join__item-descrip
-                h3 Стремление
-                .text
-                  p Оставайся любопытным, задавай вопросы о возможностях и расширяй границы своей личной и профессиональной жизни
-            .join__item
-              .join__item-img
-                img(src="assets/img/svg/join-2.svg", width="60", height="60", alt="", loading="lazy")
-              .join__item-descrip
-                h3 Страсть
-                .text
-                  p Делай все ради любви, а не славы. Вдохновляйся нашим стремлением к совершенству и активно заботьтесь о других
-            .join__item
-              .join__item-img
-                img(src="assets/img/svg/join-3.svg", width="60", height="60", alt="", loading="lazy")
-              .join__item-descrip
-                h3 Подход
-                .text
-                  p Оставьте свое Эго у двери. Слушайте, учитесь, справляйтесь с неудачами, радуйтесь успехам и будьте мужественными.
-            .join__item
-              .join__item-img
-                img(src="assets/img/svg/join-4.svg", width="60", height="60", alt="", loading="lazy")
-              .join__item-descrip
-                h3 Честность
-                .text
-                  p Будь честен, открыт и ясно озвучивай мысль. Делай то, что лучше всего подходит всем, а не только тебе
-            .join__item
-              .join__item-img
-                img(src="assets/img/svg/join-5.svg", width="60", height="60", alt="", loading="lazy")
-              .join__item-descrip
-                h3 Развлечение
-                .text
-                  p Хихикай. Найслаждайся тем, что мы делаем и чего стремимся достичь. Смех заразителен, заставь мир улыбнуться
+          #spoilers-join.join__list
+            +joinItem('join-1', 'Стремление', 'Оставайся любопытным, задавай вопросы о возможностях и расширяй границы своей личной и профессиональной жизни')
+            +joinItem('join-2', 'Страсть', 'Делай все ради любви, а не славы. Вдохновляйся нашим стремлением к совершенству и активно заботьтесь о других')
+            +joinItem('join-3', 'Подход', 'Оставьте свое Эго у двери. Слушайте, учитесь, справляйтесь с неудачами, радуйтесь успехам и будьте мужественными')
+            +joinItem('join-4', 'Честность', 'Будь честен, открыт и ясно озвучивай мысль. Делай то, что лучше всего подходит всем, а не только тебе')
+            +joinItem('join-5', 'Развлечение', 'Хихикай. Найслаждайся тем, что мы делаем и чего стремимся достичь. Смех заразителен, заставь мир улыбнуться')
             .join__descrip
               .title.title--light(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
                 h3 Присоединяйся к нам!

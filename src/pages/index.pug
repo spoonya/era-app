@@ -233,57 +233,7 @@ block content
                   span.title__part-yellow вместе
                   br
                   span.title__part-yellow с нами
-              form.form(action="#", method="POST")
-                .form__control
-                  input.form__input(type="text", name="name", placeholder="Ваше имя*")
-                .form__control
-                  input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*")
-                .form__control
-                  input.form__input(type="text", name="company", placeholder="Ваша компания")
-                .form__control.form__select
-                  #service-container.form__options-container
-                    .form__option
-                      input#digital-strategy(type="radio" name="service" value="digital-strategy")
-                      label(for="digital-strategy") Цифровая стратегия
-                    .form__option
-                      input#optimization(type="radio" name="service" value="optimization")
-                      label(for="optimization") Оптимизация магазина приложений
-                    .form__option
-                      input#design(type="radio" name="service" value="design")
-                      label(for="design") UI/UX дизайн
-                    .form__option
-                      input#dev-mobile(type="radio" name="service" value="dev-mobile")
-                      label(for="dev-mobile") Разработка мобильных приложений
-                    .form__option
-                      input#dev-web(type="radio" name="service" value="dev-web")
-                      label(for="dev-web") Разработка  Web-приложений
-                    .form__option
-                      input#design-motion(type="radio" name="service" value="design-motion")
-                      label(for="design-motion") Motion дизайн
-                    .form__option
-                      input#support(type="radio" name="service" value="support")
-                      label(for="support") Поддержка, хостинг и управление
-                    .form__option
-                      input#dev-ops(type="radio" name="service" value="dev-ops")
-                      label(for="dev-ops") Услуги Dev Ops
-                    .form__option
-                      input#testing(type="radio" name="service" value="testing")
-                      label(for="testing") Тестирование
-                  #service-selected.form__option-selected.form__input Выберите услугу
-                .form__control.form__control--wide
-                  textarea.form__input(name="message", placeholder="Расскажите коротко о вашем проекте" maxlength="250")
-                  label.form__upload-button
-                    input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files" data-form-upload)
-                    span.form__error
-                    span.form__upload-button-txt
-                      span Прикрепить файл
-                      img(src="assets/img/png/attach.png", width="30", height="30", alt="")
-                .form__group
-                  label.form__checkbox-wrapper
-                    input.form__checkbox(name="agreement" type="checkbox" checked hidden)
-                    span.form__checkbox-styled
-                    span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
-                  +button('Отправить', 'button--secondary', 'submit')
+              +contactForm
             .start__img
               img(src="assets/img/svg/start.svg", width="508", height="486", alt="", loading="lazy")
               .start__icon.start__icon--lamp(data-aos="zoom-in", data-aos-duration="1200", data-aos-delay="100")

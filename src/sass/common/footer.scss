@@ -50,15 +50,6 @@
   }
 }
 
-.footer__links {
-  justify-self: end;
-
-  @include media-tablet-lg-sm {
-    justify-self: unset;
-    align-self: flex-end;
-  }
-}
-
 .footer__menu-list {
   a {
     font-size: 20px;
@@ -160,48 +151,5 @@
 
   @include media-tablet-sm {
     flex-direction: column;
-  }
-}
-
-.footer__contacts {
-  a {
-    font-size: 16px;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: 30px;
-
-    &:not(:last-of-type) {
-      margin-bottom: 12px;
-    }
-  }
-
-  img {
-    max-width: 24px;
-    margin-right: 12px;
-  }
-}
-
-.footer__social {
-  display: flex;
-
-  a {
-    width: 27px;
-    height: 27px;
-  }
-
-  li {
-    transition: transform 0.15s linear;
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &:hover {
-      transform: scale(1.17);
-    }
   }
 }

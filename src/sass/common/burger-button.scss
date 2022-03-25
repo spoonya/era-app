@@ -1,4 +1,6 @@
-.burger-btn {
+.burger-button {
+  position: relative;
+
   align-items: center;
   justify-content: center;
 
@@ -8,6 +10,23 @@
 
   width: 42px;
   height: 30px;
+
+  &::before {
+    position: absolute;
+
+    display: none;
+
+    top: -10px;
+
+    content: '';
+
+    border: 2px solid $color-white-alpha;
+
+    width: 54px;
+    height: 54px;
+
+    border-bottom-right-radius: 25px;
+  }
 
   span {
     position: relative;
@@ -49,6 +68,10 @@
   }
 
   &.active {
+    &::before {
+      display: block;
+    }
+
     span {
       height: 0;
 

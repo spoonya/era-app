@@ -4,9 +4,43 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  &.open {
+    .header__inner {
+      padding-top: 80px;
+    }
+
+    .header__group {
+      margin-right: 0;
+    }
+
+    .header__logo {
+      img:first-child {
+        display: none;
+      }
+
+      img:last-child {
+        display: block;
+      }
+    }
+
+    .header__lang {
+      img {
+        filter: brightness(10);
+      }
+    }
+
+    .header__lang-list {
+      a {
+        color: $color-white-alpha;
+      }
+    }
+  }
 }
 
 .header__inner {
+  position: relative;
+  z-index: 9;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -16,12 +50,16 @@
 .header__logo {
   max-width: 22rem;
 
+  @include media-phone-sm {
+    max-width: 95px;
+  }
+
   @include media-tablet-lg {
     max-width: 140px;
   }
 
-  @include media-phone-sm {
-    max-width: 95px;
+  img:last-child {
+    display: none;
   }
 }
 
@@ -70,5 +108,124 @@
 
   ul {
     display: none;
+  }
+}
+
+.header__burger {
+  position: fixed;
+
+  display: none;
+
+  z-index: 8;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url('../img/png/burger-bg.png');
+
+  &.active {
+    display: block;
+  }
+
+  .form {
+    max-width: 708px;
+    width: 100%;
+  }
+}
+
+.header__burger-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-top: 28.4rem;
+}
+
+.header__burger-menu {
+  margin-bottom: 4rem;
+}
+
+.header__burger-list {
+  a {
+    color: $color-white-alpha;
+
+    transition: 0.1s linear, transform 0.2s linear;
+
+    &:hover {
+      color: $color-yellow-alpha;
+    }
+  }
+
+  ul {
+    display: none;
+
+    a {
+      color: $color-white-alpha;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 5px 0;
+    }
+  }
+
+  & > li {
+    & > a {
+      transform: translateX(-50px);
+    }
+
+    &:hover {
+      ul {
+        display: block;
+      }
+
+      a {
+        transform: translateX(0px);
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  & > li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  & > li > a {
+    @include text-triangle-mark;
+
+    font-size: 4.4rem;
+    font-weight: 700;
+
+    &::before {
+      opacity: 0;
+
+      background-image: url('../img/svg/triangle-shadowed-light.svg');
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: opacity 0.1s linear;
+    }
+  }
+}
+
+.header__burger-contact {
+  .button {
+    display: none;
+
+    margin-top: 4rem;
+  }
+
+  @include media-phone-lg {
+    .button {
+      display: inline-block;
+    }
   }
 }

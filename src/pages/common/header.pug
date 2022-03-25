@@ -1,11 +1,12 @@
-header.header
+header#header.header
   .container
     .header__inner
       a.header__logo(href="index.html")
         img(src="assets/img/svg/logo.svg", width="220", height="86", alt="Era App")
+        img(src="assets/img/svg/logo-burger.svg", width="220", height="86", alt="Era App", loading="lazy")
       .header__group
         .header__lang
-          img(src="assets/img/png/globe.png", width="22", height="19", alt="Language")
+          img(src="assets/img/png/globe.png", width="22", height="19", alt="")
           ul.header__lang-list
             li
               a(href="#") Ru
@@ -15,5 +16,42 @@ header.header
               ul
                 li
                   a(href="#") En
-        button#burger-btn.burger-btn(aria-label="Burger menu button")
+        button#burger-button.burger-button(aria-label="Open menu")
           span
+  #header-burger.header__burger
+    .container
+      .header__burger-inner
+        .header__burger-links
+          nav.header__burger-menu
+            ul.header__burger-list
+              li
+                a(href="#") Услуги
+                ul
+                  li
+                    a(href="#") Цифровая стратегия
+                  li
+                    a(href="#") Оптимизация магазина приложений
+                  li
+                    a(href="#") UI/UX дизайн
+                  li
+                    a(href="#") Разработка мобильных приложений
+                  li
+                    a(href="#") Разработка  Web-приложений
+                  li
+                    a(href="#") Motion дизайн
+                  li
+                    a(href="#") Поддержка, хостинг и управление
+                  li
+                    a(href="#") Услуги Dev Ops
+                  li
+                    a(href="#") Тестирование
+              li
+                a(href="#") Портфолио
+              li
+                a(href="#") О компании
+              li
+                a(href="#") Карьера
+          .header__burger-contact
+            +contactLinks
+            +button('Связатья с нами', 'button--secondary')
+        +contactForm

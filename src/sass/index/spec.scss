@@ -71,18 +71,26 @@
   padding: 10rem 11rem 10rem 0;
 
   a {
+    @include text-triangle-mark;
+
+    &:before {
+      transition: transform 0.1s ease-in-out;
+    }
+
     color: $color-black-alpha;
 
     transition: color 0.1s linear;
 
     &:hover {
       color: $color-red-alpha;
+
+      &::before {
+        transform: rotate(45deg);
+      }
     }
   }
 
   li {
-    @include text-triangle-mark;
-
     &:not(:last-of-type) {
       margin-bottom: 2rem;
     }

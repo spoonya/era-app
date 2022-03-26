@@ -1,4 +1,4 @@
-header#header.header
+header#header.header.open
   .container
     .header__inner
       a.header__logo(href="index.html")
@@ -16,9 +16,9 @@ header#header.header
               ul
                 li
                   a(href="#") En
-        button#burger-button.burger-button(aria-label="Open menu")
+        button#burger-button.burger-button.active(aria-label="Open menu")
           span
-  #header-burger.header__burger
+  #header-burger.header__burger.active
     .container
       .header__burger-inner
         .header__burger-links
@@ -54,4 +54,4 @@ header#header.header
           .header__burger-contact
             +contactLinks
             +button('Связатья с нами', 'button--secondary')
-        +contactForm
+        +contactForm('header')

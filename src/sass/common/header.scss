@@ -52,7 +52,7 @@
       }
     }
 
-    @include media-laptop {
+    @include media-desktop {
       .header__inner {
         padding-top: 40px;
       }

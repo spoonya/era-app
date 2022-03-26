@@ -21,6 +21,8 @@ function setMenuArrowsBehaviour() {
       subMenuContainer.classList.toggle(CLASSES.active);
       subMenu.classList.toggle(CLASSES.active);
       currentArrow.classList.toggle(CLASSES.active);
+
+      subMenu.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
 }

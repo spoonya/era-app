@@ -1,5 +1,3 @@
-import { CLASSES } from './constants';
-
 export function typeIntroTitle() {
   const titleFade = document.querySelector('#title-fade');
   const titleBounce = document.querySelector('#title-bounce');
@@ -20,7 +18,7 @@ export function typeIntroTitle() {
       targets: '#title-fade span',
       opacity: [0, 1],
       easing: 'easeInOutQuad',
-      duration: 50,
+      duration: 500,
       delay: (el, i) => 50 * (i + 1)
     })
     .add({

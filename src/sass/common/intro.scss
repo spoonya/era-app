@@ -70,6 +70,15 @@
   max-width: 63rem;
   width: 100%;
 
+  .title {
+    span {
+      span {
+        opacity: 0;
+        display: inline-block;
+      }
+    }
+  }
+
   @include media-tablet-lg {
     padding-top: 112px;
   }

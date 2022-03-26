@@ -1,46 +1,34 @@
 import { CLASSES } from './constants';
 
 export function typeIntroTitle() {
-  const split = function (element) {
-    const words = $(element).text().split('');
+  const titleFade = document.querySelector('#title-fade');
+  const titleBounce = document.querySelector('#title-bounce');
 
-    for (let i = 0; i < words.length; i++) {
-      words[i] = `<span>${words[i]}</span>`;
-    }
+  titleFade.innerHTML = titleFade.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
 
-    const text = words.join('');
-    $(element).html(text);
-  };
+  titleBounce.innerHTML = titleBounce.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
 
-  const textify = function (element, method, delay) {
-    $('.intro .title').removeClass(CLASSES.hidden);
-    split(element);
-    $(`${element} span`).css('opacity', '0');
-    $(`${element} span`).css('position', 'relative');
-
-    const inSpead = 20;
-    let count = 0;
-
-    setTimeout(() => {
-      count = 0;
-      $(`${element} span`).each(function () {
-        if (method === 'fade') {
-          $(this)
-            .delay(0 + inSpead * count)
-            .animate({ opacity: '1' }, 200);
-        } else if (method === 'bounce') {
-          $(this)
-            .delay(0 + inSpead * count)
-            .animate({ opacity: '1', top: '-6px' }, 220, 'easeOutCubic');
-          $(this)
-            .delay(0 + (inSpead * count) / 4)
-            .animate({ opacity: '1', top: '0px' }, 220);
-        }
-        count += 1;
-      });
-    }, delay);
-  };
-
-  textify('#title-fade', 'fade', 100);
-  textify('#title-bounce', 'bounce', 900);
+  anime
+    .timeline({ loop: false })
+    .add({
+      targets: '#title-fade span',
+      opacity: [0, 1],
+      easing: 'easeInOutQuad',
+      duration: 50,
+      delay: (el, i) => 50 * (i + 1)
+    })
+    .add({
+      targets: '#title-bounce span',
+      opacity: [0, 1],
+      translateY: ['1.1em', 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    });
 }

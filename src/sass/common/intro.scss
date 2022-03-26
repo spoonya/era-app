@@ -149,8 +149,6 @@
     }
 
     @include media-phone-sm {
-      min-height: 470px;
-
       &--1 {
         max-width: 116px;
       }

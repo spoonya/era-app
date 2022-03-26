@@ -6,6 +6,8 @@ export const CLASSES = {
   scrollHidden: 'scroll-hidden',
   modal: 'modal',
   scroll: 'scroll',
+  show: 'show',
+  touch: 'touch',
   notEmpty: 'not-empty'
 };
 

@@ -1,11 +1,25 @@
 .header {
   position: absolute;
+
   z-index: 8;
   top: 0;
   left: 0;
   width: 100%;
 
+  @include scroll-global;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  height: 100%;
+
   &.open {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-image: url('../img/png/burger-bg.png');
+
     .header__inner {
       padding-top: 80px;
     }
@@ -35,27 +49,41 @@
         color: $color-white-alpha;
       }
     }
+
+    @include media-laptop {
+      .header__inner {
+        padding-top: 40px;
+      }
+    }
+
+    @include media-tablet-lg {
+      background: #192f43;
+    }
   }
 }
 
 .header__inner {
-  position: relative;
-  z-index: 9;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 3rem;
+}
+
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 3rem;
 }
 
 .header__logo {
   max-width: 22rem;
 
-  @include media-phone-sm {
-    max-width: 95px;
-  }
-
   @include media-tablet-lg {
     max-width: 140px;
+  }
+
+  @include media-phone-sm {
+    max-width: 95px;
   }
 
   img:last-child {
@@ -112,8 +140,6 @@
 }
 
 .header__burger {
-  position: fixed;
-
   display: none;
 
   z-index: 8;
@@ -123,19 +149,17 @@
   right: 0;
   left: 0;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  background-image: url('../img/png/burger-bg.png');
-
   &.active {
     display: block;
   }
+}
 
-  .form {
-    max-width: 708px;
-    width: 100%;
+.header__bot {
+  padding-top: 16.8rem;
+  padding-bottom: 20px;
+
+  @include media-laptop {
+    padding-top: 70px;
   }
 }
 
@@ -144,11 +168,52 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  padding-top: 28.4rem;
+  @include media-tablet-lg {
+    flex-direction: column;
+  }
+}
+
+.header__burger-links {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 20px;
+  width: 100%;
+  min-width: 46rem;
+
+  @include media-tablet-lg {
+    flex-direction: row;
+    min-width: unset;
+    margin-right: 0;
+  }
+
+  @include media-tablet-sm {
+    justify-content: space-between;
+  }
+
+  @include media-phone-lg {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .header__burger-menu {
   margin-bottom: 4rem;
+
+  @include media-tablet-lg {
+    margin-right: 170px;
+    margin-bottom: 0;
+  }
+
+  @include media-tablet-sm {
+    margin-right: 0;
+  }
+
+  @include media-phone-lg {
+    margin-bottom: 60px;
+  }
 }
 
 .header__burger-list {
@@ -157,6 +222,22 @@
 
     transition: 0.1s linear, transform 0.2s linear;
 
+    & + svg {
+      display: none;
+
+      margin-left: 20px;
+
+      transition: transform 0.1s linear;
+
+      &.show {
+        display: inline-block;
+      }
+
+      &.active {
+        transform: rotateX(180deg);
+      }
+    }
+
     &:hover {
       color: $color-yellow-alpha;
     }
@@ -164,10 +245,18 @@
 
   ul {
     max-height: 0;
+    width: 0;
     overflow: hidden;
     opacity: 0;
 
     transition: opacity 0.2s ease-in;
+
+    &.active {
+      max-height: fit-content;
+      overflow: visible;
+      opacity: 1;
+      width: 100%;
+    }
 
     a {
       color: $color-white-alpha;
@@ -178,15 +267,20 @@
   }
 
   & > li {
+    position: relative;
+    width: fit-content;
+
     & > a {
       transform: translateX(-50px);
     }
 
-    &:hover {
+    body:not(.touch) &:hover,
+    &.active {
       ul {
         max-height: fit-content;
         overflow: visible;
         opacity: 1;
+        width: 100%;
       }
 
       a {
@@ -229,9 +323,52 @@
     margin-top: 4rem;
   }
 
+  @include media-tablet-lg {
+    justify-self: flex-start;
+  }
+
   @include media-phone-lg {
     .button {
       display: inline-block;
     }
+  }
+}
+
+.header__burger-form {
+  max-width: 708px;
+  width: 100%;
+
+  &::before {
+    position: relative;
+
+    display: none;
+
+    left: -15px;
+
+    content: '';
+
+    height: 1px;
+
+    width: 100vw;
+
+    margin: 30px 0;
+
+    background: rgba($color-white-alpha, 0.4);
+  }
+
+  .title {
+    font-size: 3.2rem;
+  }
+
+  @include media-tablet-lg {
+    max-width: unset;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  @include media-phone-lg {
+    display: none;
   }
 }

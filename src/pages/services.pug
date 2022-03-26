@@ -1,0 +1,27 @@
+extends common/layout
+
+block content
+  main.page-services
+    //Intro
+    section.intro.intro--secondary
+      .container
+        .intro__inner
+          .intro__descrip
+            //Crumbs
+            +crumbs([
+              {href: '#', name: 'Услуги'}
+            ])
+            .title
+              h1
+                |Достигайте целей с помощью&nbsp;
+                span.title__part-red цифровых продуктов&nbsp;
+                |и&nbsp;
+                span.title__part-red современных решений
+            .text
+              p Мы создаем современные цифровые решения и помогаем компаниям достичь поставленных целей и даже больше.
+            +button('Оценить проект')
+          .intro__img-wrapper
+            .intro__img
+              img.intro__img-main(src="assets/img/svg/programming.svg", width="236", height="512", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img-text
+              img(src="assets/img/svg/text.svg",  width="196", height="196", alt="", loading="lazy")

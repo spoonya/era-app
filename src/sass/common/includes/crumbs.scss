@@ -1,0 +1,37 @@
+.crumbs {
+  margin-bottom: 8.6rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    a {
+      font-size: 16px;
+      color: $color-black-alpha;
+    }
+
+    &:not(:last-of-type) {
+      &::after {
+        display: inline-block;
+        content: '\003E';
+        margin: 0 7px;
+        color: rgba($color-black-alpha, 0.7);
+
+        @include media-phone-lg {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    &:last-of-type {
+      a {
+        color: rgba($color-black-alpha, 0.7);
+        font-weight: 400;
+        pointer-events: none;
+      }
+    }
+  }
+}

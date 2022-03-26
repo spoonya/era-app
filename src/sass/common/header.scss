@@ -18,6 +18,10 @@
     background-image: url('../img/png/burger-bg.png');
     background-color: #192f43;
 
+    .header__bot {
+      display: block;
+    }
+
     .header__inner {
       padding-top: 80px;
     }
@@ -153,6 +157,8 @@
 }
 
 .header__bot {
+  display: none;
+
   padding-top: 16.8rem;
   padding-bottom: 20px;
 

@@ -27,7 +27,7 @@ mixin crumbs(arrLinks)
 
 mixin offer(img, title, textArr)
   .offer
-    img(src=`assets/img/svg/${img}.svg`, width="423", height="385", alt="", loading="lazy")
+    img.rellax(src=`assets/img/svg/${img}.svg`, width="423", height="385", alt="", loading="lazy", data-rellax-speed="1.5")
     .offer__descrip
       .offer__top
         .title

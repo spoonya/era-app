@@ -2,7 +2,6 @@ import { CLASSES, DOM } from './constants';
 import { isMobile } from './helpers/is-mobile';
 
 const header = document.querySelector('#header');
-const burger = document.querySelector('#header-burger');
 const menuArrows = document.querySelectorAll('#header-burger nav a + svg');
 const burgerBtn = document.querySelector('#burger-button');
 
@@ -32,7 +31,6 @@ function toggleBurger() {
     DOM.body.classList.toggle(CLASSES.scrollHidden);
     header.classList.toggle(CLASSES.open);
     this.classList.toggle(CLASSES.active);
-    burger.classList.toggle(CLASSES.active);
   });
 }
 

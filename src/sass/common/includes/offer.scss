@@ -1,12 +1,18 @@
 .offer {
-  margin-bottom: 13rem;
+  margin: 13rem 0;
 
   &--negative-margin {
-    margin-bottom: -15rem;
+    margin: 0 0 -15rem;
   }
 
-  @include media-tablet-sm {
-    margin-bottom: 60px;
+  &:not(.offer--negative-margin) {
+    @include media-tablet-lg {
+      margin: 60px 0;
+    }
+
+    @include media-tablet-sm {
+      margin: 40px 0;
+    }
   }
 }
 

@@ -79,8 +79,8 @@
   @include media-tablet-sm {
     grid-auto-flow: column;
 
-    margin: 0 -15px;
-    padding: 0 15px;
+    margin: 0 -15px 40px;
+    padding: 0 15px 0;
 
     overflow-x: scroll;
 

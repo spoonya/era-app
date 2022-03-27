@@ -3,29 +3,38 @@
 
 @import 'mixins/media';
 @import 'mixins/outline';
-@import 'mixins/scroll.scss';
+@import 'mixins/scroll';
 @import 'mixins/text-triangle-mark';
 
 @import 'common/global';
 @import 'common/burger-button';
+
 @import 'common/header';
 @import 'common/intro';
 @import 'common/text';
+@import 'common/about';
+@import 'common/draft';
+@import 'common/solution';
+@import 'common/sections-wrapper';
 @import 'common/form';
 @import 'common/contact-links';
 @import 'common/footer';
 @import 'common/animations';
 @import 'common/includes/button';
+@import 'common/includes/more';
 @import 'common/includes/title';
 @import 'common/includes/offer';
 @import 'common/includes/crumbs';
 
 @import 'index/spec';
-@import 'index/solution';
 @import 'index/projects';
 @import 'index/benefits';
 @import 'index/descrip';
 @import 'index/startup';
-@import 'index/sections-wrapper';
 @import 'index/join';
 @import 'index/start';
+
+@import 'services/services';
+@import 'services/steps';
+@import 'services/ways';
+@import 'services/tech';

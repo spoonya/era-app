@@ -1,0 +1,37 @@
+.sections-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 8rem;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    #182f43;
+
+  &--border-left {
+    border-radius: 400px 0 0 0;
+
+    @include media-laptop {
+      border-radius: 100px 0 0 0;
+    }
+
+    @include media-tablet-lg {
+      border-radius: 50px 0 0 0;
+    }
+  }
+
+  &--border-right {
+    border-radius: 0 400px 0 0;
+
+    @include media-desktop {
+      border-radius: 0 300px 0 0;
+    }
+
+    @include media-laptop {
+      border-radius: 100px 0 0 0;
+    }
+  }
+
+  @include media-tablet-lg {
+    padding-top: 40px;
+  }
+}

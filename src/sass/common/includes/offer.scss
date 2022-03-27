@@ -1,4 +1,16 @@
 .offer {
+  margin-bottom: 13rem;
+
+  &--negative-margin {
+    margin-bottom: -15rem;
+  }
+
+  @include media-tablet-sm {
+    margin-bottom: 60px;
+  }
+}
+
+.offer__inner {
   position: relative;
 
   background-image: url('../img/png/noise.png');
@@ -8,8 +20,7 @@
   background-color: $color-white-psi;
 
   padding: 2.9rem;
-  padding-left: 42.3rem;
-  margin-bottom: -15rem;
+  padding-left: 40rem;
 
   border-radius: 40px;
   border: 1px solid;
@@ -22,7 +33,7 @@
 
     transform: translateY(-50%);
 
-    max-width: 42.3rem;
+    max-width: 40rem;
   }
 
   .title {
@@ -60,6 +71,16 @@
 .offer__descrip {
   display: flex;
   flex-direction: column;
+
+  margin-left: 10rem;
+
+  @include media-tablet-lg {
+    margin-left: 35px;
+  }
+
+  @include media-tablet-sm {
+    margin-left: 0;
+  }
 
   @include media-phone-lg {
     align-items: center;

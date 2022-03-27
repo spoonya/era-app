@@ -1,7 +1,7 @@
 extends common/layout
 
 block content
-  main.page-services
+  main
     //Intro
     section.intro.intro--secondary
       .container
@@ -25,3 +25,192 @@ block content
               img.intro__img-main(src="assets/img/svg/programming.svg", width="236", height="512", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
             .intro__img-text
               img(src="assets/img/svg/text.svg",  width="196", height="196", alt="", loading="lazy")
+
+    //Services
+    section.services
+      .container
+        .title
+          h2 Наши услуги
+        ul.services__list
+          +serviceItem('#', 'service-1', 'Цифровая стратегия')
+          +serviceItem('#', 'service-2', 'Разработка мобильных приложений')
+          +serviceItem('#', 'service-3', 'Поддержка, хостинг и управление')
+          +serviceItem('#', 'service-4', 'Оптимизация магазина приложений')
+          +serviceItem('#', 'service-5', 'Разработка Web-приложений')
+          +serviceItem('#', 'service-6', 'Услуги Dev Ops')
+          +serviceItem('#', 'service-7', 'UI/UX дизайн')
+          +serviceItem('#', 'service-8', 'Motion дизайн')
+          +serviceItem('#', 'service-9', 'Тестирование')
+
+    //About
+    section.about
+      .container
+        .about__inner
+          .about__img
+            img(src="assets/img/png/about-1.png", width="580", height="470", alt="", loading="lazy")
+          .about__descrip
+            .title
+              h2
+                |Мы объединяем технологии и дизайн&nbsp;
+                span.title__part-red для создания хорошего образа
+            .text
+              p Принимайте быстрые и обоснованные решения на каждом этапе вашего проекта, работая с командой, которая заботится о вас так же, как и вы. Запуск вашего продукта — это еще не конец, мы помогаем вам вносить повторяющиеся улучшения и можем поддерживать вас 24/7.
+
+    //Solution
+    section.solution
+      .container
+        .solution__content
+          .solution__descrip
+            .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+              h2
+                |Мы разрабатываем решение&nbsp;
+                br
+                span.title__part-red для любой ниши
+                |,&nbsp;
+                br
+                |которая нуждается в нас
+            .solution__list(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+              div
+                img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Образование и здравохранение
+              div
+                img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Торговля и коммерция
+              div
+                img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Туризм и логистика
+              div
+                img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Здоровье и спорт
+              div
+                img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Еда и рестораны
+              div
+                img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="", loading="lazy")
+                h3 Социальные сети
+          figure.solution__img
+            img(src="assets/img/svg/tree.svg", width="609", height="609", alt="", loading="lazy")
+            .solution__icon.solution__icon--apple.solution__icon--dark
+              img(src="assets/img/svg/apple.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--swift
+              img(src="assets/img/svg/swift.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--node.solution__icon--dark
+              img(src="assets/img/svg/node.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--csharp
+              img(src="assets/img/svg/csharp.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--atom
+              img(src="assets/img/svg/atom.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--js.solution__icon--dark
+              img(src="assets/img/svg/js.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--python.solution__icon--dark
+              img(src="assets/img/svg/python.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--php
+              img(src="assets/img/svg/php.svg", width="75", height="75" alt="", loading="lazy")
+            .solution__icon.solution__icon--android
+              img(src="assets/img/svg/android.svg", width="75", height="75" alt="", loading="lazy")
+            figcaption Technology stack
+
+    //Steps
+    section.steps
+      .container
+        .steps__inner
+          .steps__img
+            img(src="assets/img/svg/steps.svg", width="226", height="471", alt="", loading="lazy")
+            ul.steps__list
+              li
+                span 1
+                p Первый контакт
+              li
+                span 2
+                p Этап обнаружения
+              li
+                span 3
+                p Ux/Ui дизайн
+              li
+                span 4
+                p Процесс разработки
+              li
+                span 5
+                p Гарантия качества
+              li
+                span 6
+                p Развертывание
+              li
+                span 7
+                p Поддержка и обслуживание
+          .steps__descrip
+            .title
+              h2
+                |Наш процесс разработки&nbsp;
+                span.title__part-red программмного обеспечения
+            .text
+              p Мы следуем установленному жизненному циклу разработки программного обеспечения (SDLC), чтобы создавать качественный и современный продукт, соответствующий вашим требованиям и требованиям рынка.
+
+    .sections-wrapper.sections-wrapper--border-left
+      //Ways
+      section.ways
+        .container
+          .title.title--light
+            h2
+              |Мы предоставим вам&nbsp;
+              span.title__part-yellow новые возможности
+          .ways__inner
+            .ways__img
+              img(src="assets/img/svg/ways.svg", width="463", height="361", alt="", loading="lazy")
+            .text.text--light
+              p Проведите время с нами, от первоначальной стратегии до тестирования пользователей во время дизайнерских спринтов. Мы подойдем к вашему проекту с настоящим сотрудничеством, предоставим самые лучшие цифровые и дизайнерские решения, которыми мы с вами будем гордиться
+
+      //Draft
+      section.draft
+        .container
+          .title.title--light
+            h2 Наши проекты
+          .draft__inner
+            ul.draft__list
+              +draftItem('projects-1', 'Femida', '#')
+              +draftItem('projects-2', 'Lapp', '#')
+              +draftItem('projects-3', 'Iona management', '#')
+            +link('Все проекты', "#", 'button--secondary')
+
+      //Tech
+      section.tech
+        .container
+          .tech__inner
+            .tech__descrip
+              .title.title--light
+                h2
+                  |Технологии для изменения жизни и&nbsp;
+                  span.title__part-red решения проблем
+              .text.text--light
+                p У нас есть опыт работы с множеством технологических стеков, которые потмогают нас объединить креативность, стратегию и видение вашего бренда
+            .tech__list
+              div
+                img(src="assets/img/svg/tech-1.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3
+                  |Оповещения
+                  br
+                  |Уведомления
+              div
+                img(src="assets/img/svg/tech-2.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3 Местоположение
+              div
+                img(src="assets/img/svg/tech-3.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3 Масштабные решения
+              div
+                img(src="assets/img/svg/tech-4.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3 Платежи
+              div
+                img(src="assets/img/svg/tech-5.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3 Продукты мирового класса
+              div
+                img(src="assets/img/svg/tech-6.svg", width="60px", height="60px", alt="", loading="lazy")
+                h3 И многое другое..
+
+      //Offer
+      +offer(
+        'mobile',
+        'Давайте обсуждать детали!',
+        [
+        'Начните экономить время и деньги с помощью услуг DevOps.'
+        ]
+      )

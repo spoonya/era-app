@@ -14,6 +14,20 @@ mixin link(text, link, modif= null)
         <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
       </svg>
 
+mixin more(isLink= false, link= null)
+  if isLink
+    a.more(href= link)
+      |Подробнее
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
+      </svg>
+  else
+    p.more
+      |Подробнее
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
+      </svg>
+
 mixin crumbs(arrLinks)
   .crumbs
     .crumbs__inner
@@ -25,18 +39,31 @@ mixin crumbs(arrLinks)
           else
             li: a= link.name
 
-mixin offer(img, title, textArr)
-  .offer
-    img.rellax(src=`assets/img/svg/${img}.svg`, width="423", height="385", alt="", loading="lazy", data-rellax-speed="1")
-    .offer__descrip
-      .offer__top
-        .title
-          h3= title
-        .text
-          each txt in textArr
-            p= txt
-      .offer__bot
-        +button('Связаться с нами')
+mixin offer(img, title, textArr, isRellax= false, modif= null)
+  .offer(class= modif)
+    .container
+      .offer__inner
+        if isRellax
+          img.rellax(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy", data-rellax-speed="1.2")
+        else
+          img(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy")
+        .offer__descrip
+          .offer__top
+            .title
+              h3= title
+            .text
+              each txt in textArr
+                p= txt
+          .offer__bot
+            +button('Связаться с нами')
+
+mixin serviceItem(link, img, title)
+  li
+    a(href= link)
+      img(src=`assets/img/svg/${img}.svg`, width="105", height="106", alt="")
+      div
+        h3= title
+        +more
 
 mixin joinItem(img, title, text)
   .join__item
@@ -52,6 +79,13 @@ mixin joinItem(img, title, text)
       .join__item-descrip
         .text
           p= text
+
+mixin draftItem(img, title, link)
+  li
+    img(src=`assets/img/png/${img}.png`, width="385", height="378", alt="", loading="lazy")
+    div
+      h3= title
+      +more(true, link)
 
 mixin contactLinks
   .contact-links

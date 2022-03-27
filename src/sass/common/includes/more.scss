@@ -1,0 +1,13 @@
+.more {
+  display: flex;
+  align-items: center;
+  color: $color-white-alpha;
+  font-weight: 600;
+
+  transition: color 0.1s linear, opacity 0.1s linear;
+
+  svg {
+    margin-left: 10px;
+    fill: $color-white-alpha;
+  }
+}

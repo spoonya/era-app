@@ -39,19 +39,14 @@
 }
 
 .contact-links__social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 
-  a {
-    width: 27px;
-    height: 27px;
-  }
+  max-width: 212px;
 
   li {
     transition: transform 0.15s linear;
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
 
     &:hover {
       transform: scale(1.17);

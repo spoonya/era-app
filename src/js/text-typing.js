@@ -2,6 +2,8 @@ export function typeIntroTitle() {
   const titleFade = document.querySelector('#title-fade');
   const titleBounce = document.querySelector('#title-bounce');
 
+  if (!titleFade && !titleBounce) return;
+
   titleFade.innerHTML = titleFade.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"

@@ -1,9 +1,0 @@
-.sections-wrapper {
-  border-top-right-radius: 400px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    #182f43;
-
-  @include media-desktop {
-    border-top-right-radius: 300px;
-  }
-}

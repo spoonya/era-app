@@ -22,8 +22,6 @@ export class Spoiler {
         el.open = false;
       });
     }
-
-    event.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   _controlSpoiler() {

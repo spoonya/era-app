@@ -1,8 +1,13 @@
+import { CLASSES } from './constants';
+
 export function typeIntroTitle() {
   const titleFade = document.querySelector('#title-fade');
   const titleBounce = document.querySelector('#title-bounce');
+  const titleWrapper = document.querySelector('.title.hidden');
 
   if (!titleFade && !titleBounce) return;
+
+  titleWrapper.classList.remove(CLASSES.hidden);
 
   titleFade.innerHTML = titleFade.textContent.replace(
     /\S/g,

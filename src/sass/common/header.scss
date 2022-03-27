@@ -148,6 +148,14 @@
   bottom: 0;
   right: 0;
   left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include media-tablet-lg {
+    flex-direction: column;
+  }
 }
 
 .header__bot {
@@ -161,24 +169,14 @@
   }
 }
 
-.header__burger-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  @include media-tablet-lg {
-    flex-direction: column;
-  }
-}
-
 .header__burger-links {
   position: relative;
 
   display: flex;
   flex-direction: column;
+  flex: 1 1 73%;
 
   margin-right: 20px;
-  width: 100%;
   min-width: 46rem;
 
   @include media-tablet-lg {

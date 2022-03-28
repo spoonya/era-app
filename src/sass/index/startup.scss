@@ -14,32 +14,6 @@
   .text {
     margin-bottom: 4.4rem;
   }
-
-  h2 {
-    @include text-triangle-mark;
-
-    margin-bottom: 3rem;
-
-    line-height: 1;
-    font-weight: 700;
-    font-size: 3.8rem;
-
-    &::before {
-      top: 5px;
-    }
-  }
-
-  @include media-tablet-lg {
-    h2 {
-      font-size: 28px;
-    }
-  }
-
-  @include media-phone-sm {
-    h2 {
-      font-size: 22px;
-    }
-  }
 }
 
 .startup__descrip {

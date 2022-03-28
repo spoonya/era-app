@@ -44,7 +44,7 @@ mixin offer(img, title, textArr, isRellax= false, modif= null)
     .container
       .offer__inner
         if isRellax
-          img.rellax(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy", data-rellax-speed="1.2")
+          img(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy")
         else
           img(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy")
         .offer__descrip
@@ -71,7 +71,7 @@ mixin joinItem(img, title, text)
       .join__item-img
         img(src=`assets/img/svg/${img}.svg`, width="60", height="60", alt="", loading="lazy")
       h3= title
-    details(open)
+    details.details(open)
       summary
         <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.40539 1.25L8.7666 14L16.1278 1.25H1.40539Z" fill="#FFB700" stroke="#162A3C"></path>
@@ -86,6 +86,20 @@ mixin draftItem(img, title, link)
     div
       h3= title
       +more(true, link)
+
+mixin stagesItem(num, title, text)
+  li
+    span= num
+    div
+      h3= title
+      details.details(open)
+        summary
+          <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.13878 1.25L8.5 14L15.8612 1.25H1.13878Z" fill="#FFB700" stroke="#FBFBFF"/>
+          </svg>
+
+        .text.text--light
+          p= text
 
 mixin contactLinks
   .contact-links

@@ -23,8 +23,11 @@
       border-top: none;
       overflow: hidden;
       border-right: 0;
+      min-height: 74.3rem;
 
-      background-color: #ffffff;
+      max-width: unset;
+
+      background: url('../img/png/gradient-2.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -34,13 +37,19 @@
       }
 
       .intro__img-main {
-        max-width: 64.4rem;
+        max-width: 100%;
+        width: unset;
       }
     }
 
     .intro__img-wrapper {
+      width: 100%;
+
       &::after {
-        background: #fff;
+        background: rgb(250, 198, 102);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         position: absolute;
         content: '';
         top: 0;

@@ -1,0 +1,147 @@
+extends common/layout
+
+block content
+  main
+    //Intro
+    section.intro.intro--secondary
+      .container
+        .intro__inner
+          .intro__descrip
+            //Crumbs
+            +crumbs([
+              {href: 'services.html', name: 'Услуги'},
+              {href: '#', name: 'Цифровая стратегия'}
+            ])
+            .title
+              h1
+                |Цифровая&nbsp;
+                span.title__part-red стратегия&nbsp;
+            .text
+              p Зачастую кленты обращаются к нам за советом по цифровой стратегии со своим крутыми идеями и стартапами, уже решив, что то или иное приложение - это то самое решение всех их проблем. В большинстве случаев это не так!
+            +button('Предложить идею')
+          .intro__img-wrapper
+            .intro__img
+              img.intro__img-main(src="assets/img/svg/strategy.svg", width="236", height="512", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img-text
+              img(src="assets/img/svg/text.svg",  width="196", height="196", alt="", loading="lazy")
+
+    //About
+    section.about
+      .container
+        .about__inner
+          .about__img
+            .about__img-wrapper
+              img(src="assets/img/png/about-2.png", width="580", height="470", alt="", loading="lazy")
+          .about__descrip
+            .title
+              h2
+                |Поделитесь с нами&nbsp;
+                span.title__part-yellow вашей идеей
+            .text
+              p Позвольте нам изучить ваш бизнес и ваших пользователей, чтобы создать общую картину того, каким будет ваш цифровой продукт
+            .about__list
+              div
+                img(src="assets/img/svg/idea-1.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Изучить бизнес
+              div
+                img(src="assets/img/svg/idea-2.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Наметить стратегию
+              div
+                img(src="assets/img/svg/idea-3.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Добиваться успеха
+
+    ////Descrip
+    section.descrip
+      .container
+        .descrip__inner
+          .title
+            h2
+              |ERA APP - ваш надежный партнер&nbsp;
+              br
+              span.title__part-red в инновационной цифровой стратегии!
+
+    //Pro
+    section.pro
+      .container
+        .pro__inner
+          .pro__descrip
+            .title-marked
+              h2 Профессионалы своего дела
+            .text
+              p
+                |Наша команда погрузится в вашу идею, изучит её и рассмотрит ваше будущее, чтобы найти решение соответствуещее вашим требованиям и видению. Будь то стратегия для мобильного или веб приложения, дизайна и многого другого, мы подробно все изучим и разработаем цифровую стратегию, которая поможет вам достичь желаемого. В нашей команде собрались великолепные разработчики, дизайнеры, тестировщики и другие специалисты.&nbsp;
+                b Вы можете быть уверены, что вашим проектом занимаются настоящие профессионалы!
+            +link('Подробнее о нас', 'company.html')
+          img(src="assets/img/svg/pro.svg", width="665", height="470", alt="", loading="lazy")
+
+    .sections-wrapper.sections-wrapper--border-left
+      //Stages
+      section.stages
+        .container
+          .title.title--light
+            h2 Лучшие результаты начинаются с&nbsp;
+            span.title__part-yellow отличной цифровой стратегии
+          ul#spoilers-stages.stages__list
+            +stagesItem('1', 'Исследование', 'В начале разработки описываются видение продукта, принципы и механики его работы. Формируется MVP и создаются вайрфреймы. Затем создается дизайн приложения, прорабатываются все экраны и добавляется анимация элементов.')
+            +stagesItem('2', 'Обнаружение', 'Команда разработчиков пишет код, чтобы реализовать запланированное поведение приложения. Программисты воплощают готовый дизайн в коде.')
+            +stagesItem('3', 'Наброски', 'Тестирование предполагает проверку качества системы специалистом, который не участвовал в непосредственной разработке продукта, что повышает вероятность обнаружения дефектов еще в процессе разработки.')
+            +stagesItem('4', 'Согласование', 'Время добавить приложение в магазин приложений App Store, Google Play или любой другой сервис. Чтобы приложение прошло ревью магазинов приложений, мы предоставляем услуги по оптимизации приложения.')
+            +stagesItem('5', 'Прототип', 'Тестирование предполагает проверку качества системы специалистом, который не участвовал в непосредственной разработке продукта, что повышает вероятность обнаружения дефектов еще в процессе разработки.')
+            +stagesItem('6', 'Определение', 'Время добавить приложение в магазин приложений App Store, Google Play или любой другой сервис. Чтобы приложение прошло ревью магазинов приложений, мы предоставляем услуги по оптимизации приложения.')
+
+      //Draft
+      section.draft
+        .container
+          .title.title--light
+            h2 Наши проекты
+          .draft__inner
+            ul.draft__list
+              +draftItem('projects-1', 'Femida', '#')
+              +draftItem('projects-2', 'Lapp', '#')
+              +draftItem('projects-3', 'Iona management', '#')
+            +link('Все проекты', "#", 'button--secondary')
+
+      //About
+      section.about.about--light
+        .container
+          .about__inner
+            .about__img
+              .about__img-wrapper
+                img(src="assets/img/png/about-3.png", width="580", height="470", alt="", loading="lazy")
+            .about__descrip
+              .title.title--light
+                h2
+                  |Мы разрабатываем решение&nbsp;
+                  br
+                  span.title__part-red для любой ниши
+                  |,&nbsp;
+                  br
+                  |которая нуждается в нас
+              .about__list.about__list--light
+                div
+                  img(src="assets/img/svg/solution-1-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Образование и здравохранение
+                div
+                  img(src="assets/img/svg/solution-2-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Торговля и коммерция
+                div
+                  img(src="assets/img/svg/solution-3-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Туризм и логистика
+                div
+                  img(src="assets/img/svg/solution-4-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Здоровье и спорт
+                div
+                  img(src="assets/img/svg/solution-5-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Еда и рестораны
+                div
+                  img(src="assets/img/svg/solution-6-light.svg", width="80", height="80", alt="", loading="lazy")
+                  h3 Социальные сети
+
+      //Offer
+      +offer(
+        'mobile',
+        'Давайте обсуждать детали!',
+        [
+        'Свяжитесь с нашей командой, чтобы обсудить ваш вопрос и мы предложим вам подходящий вариант решения.'
+        ]
+      )

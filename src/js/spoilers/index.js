@@ -4,6 +4,7 @@ export class Spoiler {
   constructor(selector) {
     this.spoilers = [...document.querySelectorAll(selector)];
     this.isOnMedia = false;
+    this.init();
   }
 
   _onToggle(event) {

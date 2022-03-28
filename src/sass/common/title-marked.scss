@@ -1,0 +1,23 @@
+.title-marked {
+  h2,
+  h3 {
+    @include text-triangle-mark;
+
+    margin-bottom: 3rem;
+
+    font-weight: 700;
+    font-size: 3.8rem;
+
+    @include media-tablet-lg {
+      font-size: 28px;
+    }
+
+    @include media-tablet-sm {
+      margin-bottom: 20px;
+    }
+
+    @include media-phone-sm {
+      font-size: 22px;
+    }
+  }
+}

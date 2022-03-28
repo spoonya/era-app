@@ -91,6 +91,7 @@ input[type='button'] {
 input::placeholder,
 textarea::placeholder {
   color: $color-black-alpha;
+  opacity: 1;
 }
 
 button {
@@ -117,27 +118,35 @@ button {
   }
 }
 
-details summary {
-  cursor: pointer;
-
-  user-select: none;
-
-  &:focus {
-    outline: 0;
+details {
+  &[open] {
+    summary {
+      transform: rotateX(180deg);
+    }
   }
 
-  &:focus-visible {
-    @include outline;
+  summary {
+    list-style: none;
+    display: block;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition: transform 0.2s linear;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:focus-visible {
+      @include outline;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
-}
-
-details > summary {
-  list-style: none;
-  display: block;
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
 }
 
 main {

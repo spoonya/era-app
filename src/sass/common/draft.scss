@@ -30,6 +30,11 @@
 
   .more {
     line-height: 1.6;
+    color: $color-yellow-alpha;
+
+    svg {
+      fill: $color-yellow-alpha;
+    }
   }
 
   li {

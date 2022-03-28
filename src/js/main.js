@@ -1,14 +1,16 @@
 import { controlHeaderBurger } from './burger';
 import { controlDropwdown } from './dropdown';
 import { initSpecParallax } from './rellax';
-import { initSpoilersJoin } from './spoilers/join';
 import { typeIntroTitle } from './text-typing';
+import { Spoiler } from './spoilers';
 
 controlHeaderBurger();
 typeIntroTitle();
 initSpecParallax();
 controlDropwdown();
-initSpoilersJoin();
+
+const spoilersJoin = new Spoiler('#spoilers-join details');
+const spoilersStages = new Spoiler('#spoilers-stages details');
 
 AOS.init({
   disable: 'mobile',

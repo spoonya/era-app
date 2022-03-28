@@ -14,7 +14,7 @@ module.exports = function imageMinify() {
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
         }),
-        imagemin.optipng({ optimizationLevel: 4 })
+        imagemin.optipng({ optimizationLevel: 6 })
       ])
     )
     .pipe(gulp.dest('build/assets/img'));

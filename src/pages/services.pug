@@ -56,58 +56,7 @@ block content
               p Принимайте быстрые и обоснованные решения на каждом этапе вашего проекта, работая с командой, которая заботится о вас так же, как и вы. Запуск вашего продукта — это еще не конец, мы помогаем вам вносить повторяющиеся улучшения и можем поддерживать вас 24/7.
 
     //Solution
-    section.solution
-      .container
-        .solution__content
-          .solution__descrip
-            .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
-              h2
-                |Мы разрабатываем решение&nbsp;
-                br
-                span.title__part-red для любой ниши
-                |,&nbsp;
-                br
-                |которая нуждается в нас
-            .solution__list(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
-              div
-                img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Образование и здравохранение
-              div
-                img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Торговля и коммерция
-              div
-                img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Туризм и логистика
-              div
-                img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Здоровье и спорт
-              div
-                img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Еда и рестораны
-              div
-                img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="", loading="lazy")
-                h3 Социальные сети
-          figure.solution__img
-            img(src="assets/img/svg/tree.svg", width="609", height="609", alt="", loading="lazy")
-            .solution__icon.solution__icon--apple.solution__icon--dark
-              img(src="assets/img/svg/apple.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--swift
-              img(src="assets/img/svg/swift.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--node.solution__icon--dark
-              img(src="assets/img/svg/node.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--csharp
-              img(src="assets/img/svg/csharp.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--atom
-              img(src="assets/img/svg/atom.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--js.solution__icon--dark
-              img(src="assets/img/svg/js.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--python.solution__icon--dark
-              img(src="assets/img/svg/python.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--php
-              img(src="assets/img/svg/php.svg", width="75", height="75" alt="", loading="lazy")
-            .solution__icon.solution__icon--android
-              img(src="assets/img/svg/android.svg", width="75", height="75" alt="", loading="lazy")
-            figcaption Technology stack
+    +sectionSolution
 
     //Steps
     section.steps
@@ -160,16 +109,7 @@ block content
               p Проведите время с нами, от первоначальной стратегии до тестирования пользователей во время дизайнерских спринтов. Мы подойдем к вашему проекту с настоящим сотрудничеством, предоставим самые лучшие цифровые и дизайнерские решения, которыми мы с вами будем гордиться
 
       //Draft
-      section.draft
-        .container
-          .title.title--light
-            h2 Наши проекты
-          .draft__inner
-            ul.draft__list
-              +draftItem('projects-1', 'Femida', '#')
-              +draftItem('projects-2', 'Lapp', '#')
-              +draftItem('projects-3', 'Iona management', '#')
-            +link('Все проекты', "#", 'button--secondary')
+      +sectionDraft
 
       //Tech
       section.tech

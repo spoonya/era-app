@@ -130,12 +130,114 @@ mixin contactLinks
         a(href="#" target="_blank" aria-label="linkedin")
           img(src="assets/img/svg/linkedin.svg", width="27", height="27", alt="")
 
+mixin sectionSolution
+  section.solution
+    .container
+      .solution__content
+        .solution__descrip
+          .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+            h2
+              |Мы разрабатываем решение&nbsp;
+              br
+              span.title__part-red для любой ниши
+              |,&nbsp;
+              br
+              |которая нуждается в нас
+          .solution__list(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+            div
+              img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Образование и здравохранение
+            div
+              img(src="assets/img/svg/solution-2.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Торговля и коммерция
+            div
+              img(src="assets/img/svg/solution-3.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Туризм и логистика
+            div
+              img(src="assets/img/svg/solution-4.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Здоровье и спорт
+            div
+              img(src="assets/img/svg/solution-5.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Еда и рестораны
+            div
+              img(src="assets/img/svg/solution-6.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Социальные сети
+        figure.solution__img
+          img(src="assets/img/svg/tree.svg", width="609", height="609", alt="", loading="lazy")
+          .solution__icon.solution__icon--apple.solution__icon--dark
+            img(src="assets/img/svg/apple.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--swift
+            img(src="assets/img/svg/swift.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--node.solution__icon--dark
+            img(src="assets/img/svg/node.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--csharp
+            img(src="assets/img/svg/csharp.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--atom
+            img(src="assets/img/svg/atom.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--js.solution__icon--dark
+            img(src="assets/img/svg/js.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--python.solution__icon--dark
+            img(src="assets/img/svg/python.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--php
+            img(src="assets/img/svg/php.svg", width="75", height="75" alt="", loading="lazy")
+          .solution__icon.solution__icon--android
+            img(src="assets/img/svg/android.svg", width="75", height="75" alt="", loading="lazy")
+          figcaption Technology stack
+
+mixin sectionDraft
+  section.draft
+    .container
+      .title.title--light
+        h2 Наши проекты
+      .draft__inner
+        ul.draft__list
+          +draftItem('projects-1', 'Femida', '#')
+          +draftItem('projects-2', 'Lapp', '#')
+          +draftItem('projects-3', 'Iona management', '#')
+        +link('Все проекты', "#", 'button--secondary')
+
+mixin sectionAboutSolutions
+  section.about.about--light
+    .container
+      .about__inner
+        .about__img
+          .about__img-wrapper
+            img(src="assets/img/png/about-3.png", width="580", height="470", alt="", loading="lazy")
+        .about__descrip
+          .title.title--light
+            h2
+              |Мы разрабатываем решение&nbsp;
+              br
+              span.title__part-red для любой ниши
+              |,&nbsp;
+              br
+              |которая нуждается в нас
+          .about__list.about__list--light
+            div
+              img(src="assets/img/svg/solution-1-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Образование и здравохранение
+            div
+              img(src="assets/img/svg/solution-2-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Торговля и коммерция
+            div
+              img(src="assets/img/svg/solution-3-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Туризм и логистика
+            div
+              img(src="assets/img/svg/solution-4-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Здоровье и спорт
+            div
+              img(src="assets/img/svg/solution-5-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Еда и рестораны
+            div
+              img(src="assets/img/svg/solution-6-light.svg", width="80", height="80", alt="", loading="lazy")
+              h3 Социальные сети
+
 mixin contactForm(id)
   form.form(action="#", method="POST")
     .form__control
-      input.form__input(type="text", name="name", placeholder="Ваше имя*")
+      input.form__input(type="text", name="name", placeholder="Ваше имя*", required)
     .form__control
-      input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*")
+      input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*", required)
     .form__control
       input.form__input(type="text", name="company", placeholder="Ваша компания")
     .form__control.form__select(tabindex="0" data-form-dropdown)

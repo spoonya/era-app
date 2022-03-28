@@ -50,7 +50,7 @@ block content
                 img(src="assets/img/svg/idea-3.svg", width="105", height="105", alt="", loading="lazy")
                 h3 Добиваться успеха
 
-    ////Descrip
+    //Descrip
     section.descrip
       .container
         .descrip__inner
@@ -90,52 +90,10 @@ block content
             +stagesItem('6', 'Определение', 'Время добавить приложение в магазин приложений App Store, Google Play или любой другой сервис. Чтобы приложение прошло ревью магазинов приложений, мы предоставляем услуги по оптимизации приложения.')
 
       //Draft
-      section.draft
-        .container
-          .title.title--light
-            h2 Наши проекты
-          .draft__inner
-            ul.draft__list
-              +draftItem('projects-1', 'Femida', '#')
-              +draftItem('projects-2', 'Lapp', '#')
-              +draftItem('projects-3', 'Iona management', '#')
-            +link('Все проекты', "#", 'button--secondary')
+      +sectionDraft
 
       //About
-      section.about.about--light
-        .container
-          .about__inner
-            .about__img
-              .about__img-wrapper
-                img(src="assets/img/png/about-3.png", width="580", height="470", alt="", loading="lazy")
-            .about__descrip
-              .title.title--light
-                h2
-                  |Мы разрабатываем решение&nbsp;
-                  br
-                  span.title__part-red для любой ниши
-                  |,&nbsp;
-                  br
-                  |которая нуждается в нас
-              .about__list.about__list--light
-                div
-                  img(src="assets/img/svg/solution-1-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Образование и здравохранение
-                div
-                  img(src="assets/img/svg/solution-2-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Торговля и коммерция
-                div
-                  img(src="assets/img/svg/solution-3-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Туризм и логистика
-                div
-                  img(src="assets/img/svg/solution-4-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Здоровье и спорт
-                div
-                  img(src="assets/img/svg/solution-5-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Еда и рестораны
-                div
-                  img(src="assets/img/svg/solution-6-light.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Социальные сети
+      +sectionAboutSolutions
 
       //Offer
       +offer(

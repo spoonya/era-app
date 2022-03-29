@@ -9,9 +9,9 @@ typeIntroTitle();
 initSpecParallax();
 controlDropwdown();
 
-const spoilersJoin = new Spoiler('#spoilers-join details');
-const spoilersStages = new Spoiler('#spoilers-stages details');
-const spoilersAso = new Spoiler('#spoilers-aso details', true);
+Spoiler.init({
+  selector: '[data-spoilers]'
+});
 
 AOS.init({
   disable: 'mobile',

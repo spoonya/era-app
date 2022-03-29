@@ -1,11 +1,12 @@
 import { isMediaBreakpoint } from '../helpers';
 
 export class Spoiler {
-  constructor(selector, isDesktop = false) {
-    this.spoilers = [...document.querySelectorAll(selector)];
+  constructor(container) {
+    this.spoilerContainer = container;
+    this.spoilers = [...this.spoilerContainer.querySelectorAll('details')];
     this.isOnMedia = false;
-    this.isDesktop = isDesktop;
-    this.init();
+    this.isDesktop = container.dataset.spoilersDesktop;
+    this._init();
   }
 
   _onToggle(event) {
@@ -46,9 +47,7 @@ export class Spoiler {
     }
   }
 
-  init() {
-    if (!this.spoilers.length) return;
-
+  _init() {
     this._controlSpoiler();
 
     window.addEventListener('resize', () => this._controlSpoiler());
@@ -56,5 +55,15 @@ export class Spoiler {
     this.spoilers.forEach((el) =>
       el.addEventListener('toggle', (e) => this._onToggle(e))
     );
+  }
+
+  static init({ selector }) {
+    const spoilerContainers = document.querySelectorAll(selector);
+
+    if (!spoilerContainers.length) return;
+
+    spoilerContainers.forEach((container) => {
+      const spoiler = new Spoiler(container);
+    });
   }
 }

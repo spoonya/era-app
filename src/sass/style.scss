@@ -21,7 +21,9 @@
 @import 'common/draft';
 @import 'common/stages';
 @import 'common/solution';
+@import 'common/dev';
 @import 'common/sections-wrapper';
+@import 'common/wrapper-round';
 @import 'common/form';
 @import 'common/contact-links';
 @import 'common/footer';
@@ -44,3 +46,5 @@
 @import 'services/tech';
 
 @import 'optimization/aso';
+
+@import 'dev-ops/dev-ops';

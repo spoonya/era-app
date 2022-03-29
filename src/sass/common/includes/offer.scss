@@ -19,17 +19,8 @@
 .offer__inner {
   position: relative;
 
-  background-image: url('../img/png/noise.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: $color-white-psi;
-
   padding: 2.9rem;
   padding-left: 40rem;
-
-  border-radius: 40px;
-  border: 1px solid;
 
   img {
     position: absolute;

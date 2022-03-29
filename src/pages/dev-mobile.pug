@@ -1,0 +1,111 @@
+extends common/layout
+
+block content
+  main
+    //Intro
+    section.intro.intro--secondary
+      .container
+        .intro__inner
+          .intro__descrip
+            //Crumbs
+            +crumbs([
+              {href: 'services.html', name: 'Услуги'},
+              {href: '', name: 'Разработка Web-приложений'}
+            ])
+            .title
+              h1
+                |Разработка&nbsp;
+                span.title__part-red мобильных приложений
+            .text
+              p Мы разрабатываем веб приложения и сайты, используя надежные современные технологии, чтобы помочь вам воплотить идеи и развить бизнес.
+            +button('Наши проекты')
+          .intro__img-wrapper
+            .intro__img
+              img.intro__img-main(src="assets/img/svg/design.svg", width="665", height="539", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img-text
+              img(src="assets/img/svg/text-dev-mobile.svg",  width="196", height="196", alt="", loading="lazy")
+
+    //About
+    section.about
+      .container
+        .about__inner
+          .about__img
+            .about__img-wrapper
+              img(src="assets/img/png/about-11.png", width="580", height="470", alt="", loading="lazy")
+          .about__descrip
+            .title
+              h2
+                |Наши приложения&nbsp;
+                span.title__part-red делают жизнь проще
+            .text
+              p Мы специализируемся на нативных и гибридных решениях, которые достигают положительных результатов, меняют восприятие и устаналивают стандарты инноваций
+            .about__list
+              div
+                img(src="assets/img/svg/idea-15.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Android development
+              div
+                img(src="assets/img/svg/idea-16.svg", width="105", height="105", alt="", loading="lazy")
+                h3 IOS development
+              div
+                img(src="assets/img/svg/idea-17.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Hybrid app
+
+    //Descrip
+    section.descrip
+      .container
+        .descrip__inner.wrapper-round
+          .title
+            h2
+              |Мы превратим твою идею&nbsp;
+              span.title__part-red в первоклассное решение!
+
+    //Dev
+    section.dev
+      .container
+        .title
+          h2 Мы предлагаем разработку
+        ul.dev__list
+          +devWebItem('IOS app', 'полнофункциональное приложение для всех устройств Apple')
+          +devWebItem('Android app', 'приложения разной сложности для всех устройств Android')
+          +devWebItem('Hybrid app', 'разработка мобильных и веб-приложений, а также интеграция со сторонними приложениями')
+
+    //Pro
+    section.pro
+      .container
+        .pro__inner
+          .pro__descrip
+            .title-marked
+              h2 Профессионалы своего дела
+            .text
+              p Вы любите то, что делаете, мы любим то, что делаем, вашим пользователям понравится то, что мы делаем вместе.
+              p Наша ключевая вера в использование технологий для решения больших проблем - это то, что делает нас сильной компанией по разработке приложений. Мы хотим изменить миллионы жизней, создавая решения, которые любят люди.
+            +link('Подробнее о нас', 'company.html')
+          img(src="assets/img/svg/pro.svg", width="665", height="470", alt="", loading="lazy")
+
+    .sections-wrapper.sections-wrapper--border-left
+      //Stages
+      section.stages
+        .container
+          .title.title--light
+            h2 Этапы разработки приложения
+          ul#spoilers-stages.stages__list
+            +stagesItem('1', 'Аналитика и дизйн', 'В начале разработки описываются видение продукта, принципы и механики его работы. Формируется MVP и создаются вайрфреймы. Затем создается дизайн приложения, прорабатываются все экраны и добавляется анимация элементов.')
+            +stagesItem('2', 'Согласование', 'Прототип представляется заказчику для согласования. При необходимости носятся корректировки и доработки.')
+            +stagesItem('3', 'Верстка и программирование', 'На этом этапе происходит техническая работа верстальщиком и программистом. Команда разработчиков пишет код, чтобы реализовать запланированное поведение приложения. Программисты воплощают готовый дизайн в коде.')
+            +stagesItem('4', 'Тестирование и интеграция', 'Тестирование предполагает проверку качества системы специалистом, который не участвовал в непосредственной разработке продукта, что повышает вероятность обнаружения дефектов еще в процессе разработки.')
+            +stagesItem('5', 'Публикация', 'Время добавить приложение в магазин приложений App Store, Google Play или любой другой сервис. Чтобы приложение прошло ревью магазинов приложений, мы предоставляем услуги по оптимизации приложения.')
+
+      //Draft
+      +sectionDraft
+
+      //About
+      +sectionAboutSolutions
+
+      //Offer
+      +offer(
+        'mobile',
+        'Давайте обсуждать детали!',
+        [
+        'Свяжитесь с нашей командой, чтобы обсудить ваш вопрос и мы предложим вам подходящий вариант решения.'
+        ]
+      )

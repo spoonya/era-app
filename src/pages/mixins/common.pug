@@ -37,12 +37,12 @@ mixin crumbs(arrLinks)
           if link.href
             li: a(href= link.href)= link.name
           else
-            li: a= link.name
+            li: span= link.name
 
 mixin offer(img, title, textArr, isRellax= false, modif= null)
   .offer(class= modif)
     .container
-      .offer__inner
+      .offer__inner.wrapper-round
         if isRellax
           img(src=`assets/img/svg/${img}.svg`, width="400", height="363", alt="", loading="lazy")
         else
@@ -66,7 +66,7 @@ mixin serviceItem(link, img, title)
         +more
 
 mixin joinItem(img, title, text)
-  .join__item
+  .join__item.wrapper-round
     .join__item-header
       .join__item-img
         img(src=`assets/img/svg/${img}.svg`, width="60", height="60", alt="", loading="lazy")
@@ -129,6 +129,15 @@ mixin contactLinks
       li
         a(href="#" target="_blank" aria-label="linkedin")
           img(src="assets/img/svg/linkedin.svg", width="27", height="27", alt="")
+
+mixin devWebItem(title, text)
+  li
+    .dev__item-text
+      h3= title
+      .text
+        h4= text
+    .dev__item-order
+      +button('Заказать разработку')
 
 mixin sectionSolution
   section.solution

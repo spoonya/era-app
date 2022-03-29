@@ -27,10 +27,9 @@
     }
 
     &:last-of-type {
-      a {
+      span {
         color: rgba($color-black-alpha, 0.7);
         font-weight: 400;
-        pointer-events: none;
       }
     }
   }

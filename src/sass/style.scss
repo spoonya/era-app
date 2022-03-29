@@ -16,6 +16,7 @@
 @import 'common/intro';
 @import 'common/text';
 @import 'common/about';
+@import 'common/descrip';
 @import 'common/pro';
 @import 'common/draft';
 @import 'common/stages';
@@ -33,7 +34,6 @@
 @import 'index/spec';
 @import 'index/projects';
 @import 'index/benefits';
-@import 'index/descrip';
 @import 'index/startup';
 @import 'index/join';
 @import 'index/start';
@@ -42,3 +42,5 @@
 @import 'services/steps';
 @import 'services/ways';
 @import 'services/tech';
+
+@import 'optimization/aso';

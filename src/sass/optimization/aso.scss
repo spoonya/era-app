@@ -1,0 +1,129 @@
+.aso {
+  margin-bottom: 8rem;
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  @include media-tablet-lg {
+    margin-bottom: 60px;
+
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include media-tablet-sm {
+    margin-bottom: 40px;
+  }
+}
+
+.aso__faq {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 500px));
+  grid-template-rows: auto;
+  gap: 10px 19rem;
+
+  details {
+    position: relative;
+    display: flex;
+
+    padding-left: 8rem;
+    padding-top: 20px;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+
+    transition: background-color 0.1s linear;
+
+    &[open] {
+      background-color: $color-white-gamma;
+      border-color: $color-black-alpha;
+
+      padding: 20px 5px 20px 8rem;
+
+      summary {
+        color: $color-yellow-alpha;
+      }
+
+      svg {
+        opacity: 0;
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+
+    max-width: fit-content;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    transition: color 0.1s linear;
+
+    &::before {
+      position: absolute;
+
+      display: inline-block;
+
+      left: -70px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      content: url('../img/svg/checks.svg');
+
+      margin-right: 2rem;
+      margin-left: 5px;
+
+      width: 5.4rem;
+      height: 5.1rem;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  span {
+    margin-right: 15px;
+  }
+
+  svg {
+    position: absolute;
+
+    top: -9px;
+    right: -5px;
+
+    transition: transform 0.1s linear;
+  }
+
+  .text {
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  @include media-laptop {
+    gap: 10px 20px;
+  }
+
+  @include media-tablet-sm {
+    grid-template-columns: repeat(1, 1fr);
+
+    .text {
+      font-size: 15px;
+    }
+  }
+}
+
+.aso__faq-block {
+  div {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

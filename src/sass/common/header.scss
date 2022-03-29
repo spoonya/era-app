@@ -262,6 +262,12 @@
       font-weight: 400;
       padding: 5px 0;
     }
+
+    @include media-tablet-lg {
+      a {
+        padding: 8px 0;
+      }
+    }
   }
 
   & > li {

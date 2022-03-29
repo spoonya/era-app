@@ -36,6 +36,11 @@
     color: $color-yellow-alpha;
   }
 
+  &__part-red,
+  &__part-yellow {
+    display: inline-block;
+  }
+
   @include media-laptop {
     font-size: 36px;
   }

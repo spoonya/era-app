@@ -16,7 +16,15 @@
     }
   }
 
+  &--marginless {
+    margin-bottom: 0;
+  }
+
   @include media-tablet-lg {
+    &--marginless {
+      margin-bottom: 0;
+    }
+
     margin-bottom: 40px;
   }
 }
@@ -30,12 +38,18 @@
 .about__img-wrapper {
   position: relative;
   z-index: 1;
+
+  border-radius: inherit;
+  border: 1px solid $color-black-alpha;
+
+  img {
+    max-width: 58rem;
+    max-height: 47rem;
+  }
 }
 
 .about__img {
   position: relative;
-
-  max-width: 58rem;
 
   margin-right: 50px;
 

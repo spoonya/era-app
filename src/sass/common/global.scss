@@ -119,12 +119,6 @@ button {
 }
 
 details {
-  &[open] {
-    summary {
-      transform: rotateX(180deg);
-    }
-  }
-
   summary {
     list-style: none;
     display: block;
@@ -132,8 +126,6 @@ details {
     cursor: pointer;
 
     user-select: none;
-
-    transition: transform 0.2s linear;
 
     &:focus {
       outline: 0;

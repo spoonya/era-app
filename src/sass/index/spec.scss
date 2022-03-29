@@ -74,7 +74,7 @@
     @include text-triangle-mark;
 
     &:before {
-      transition: transform 0.1s ease-in-out;
+      transition: transform 0.15s ease-in-out;
     }
 
     color: $color-black-alpha;

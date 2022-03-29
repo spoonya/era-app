@@ -11,6 +11,7 @@ controlDropwdown();
 
 const spoilersJoin = new Spoiler('#spoilers-join details');
 const spoilersStages = new Spoiler('#spoilers-stages details');
+const spoilersAso = new Spoiler('#spoilers-aso details', true);
 
 AOS.init({
   disable: 'mobile',

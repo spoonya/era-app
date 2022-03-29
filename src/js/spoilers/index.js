@@ -1,14 +1,15 @@
 import { isMediaBreakpoint } from '../helpers';
 
 export class Spoiler {
-  constructor(selector) {
+  constructor(selector, isDesktop = false) {
     this.spoilers = [...document.querySelectorAll(selector)];
     this.isOnMedia = false;
+    this.isDesktop = isDesktop;
     this.init();
   }
 
   _onToggle(event) {
-    if (!isMediaBreakpoint()) return;
+    if (!isMediaBreakpoint() && !this.isDesktop) return;
 
     const detailsOpened = this.spoilers.filter((el) => el.hasAttribute('open'));
 
@@ -26,6 +27,8 @@ export class Spoiler {
   }
 
   _controlSpoiler() {
+    if (this.isDesktop) return;
+
     if (isMediaBreakpoint() && this.isOnMedia) return;
 
     if (isMediaBreakpoint()) {

@@ -5,17 +5,14 @@
 
   z-index: 1;
 
-  margin-left: 8px;
-  margin-top: 8px;
-
   &:before {
     z-index: -1;
 
     position: absolute;
     content: '';
     background-color: $color-black-alpha;
-    bottom: 8px;
-    left: -8px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 
@@ -33,7 +30,7 @@
         color: $color-red-alpha;
       }
 
-      transform: translate(-8px, -8px);
+      transform: translate(0, 0);
     }
   }
 
@@ -48,6 +45,8 @@
     border-bottom-right-radius: 20px;
 
     transition: transform 0.15s ease;
+
+    transform: translate(8px, 8px);
   }
 
   a:active,
@@ -77,6 +76,8 @@
     a,
     button {
       background-color: $color-black-alpha;
+
+      transform: translate(6px, 6px);
     }
 
     &:hover {
@@ -85,16 +86,11 @@
         span {
           color: $color-white-alpha;
         }
-
-        transform: translate(-6px, -6px);
       }
     }
 
     &::before {
       background-color: $color-yellow-alpha;
-      left: -6px;
-      bottom: 6px;
-      height: 100%;
     }
 
     span {

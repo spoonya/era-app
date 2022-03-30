@@ -1,0 +1,100 @@
+extends common/layout
+
+block content
+  main
+    //Intro
+    section.intro.intro--secondary
+      .container
+        .intro__inner
+          .intro__descrip
+            //Crumbs
+            +crumbs([
+              {href: '', name: 'Карьера'}
+            ])
+            .title
+              h1
+                |Твоя карьера&nbsp;
+                span.title__part-red в Era App
+            .text.text--margin
+              p Мы активно расширяем свою команду и регулярно публикуем новые вакансии
+            +button('Отправить резюме')
+          .intro__img-wrapper
+            .intro__img
+              img.intro__img-main(src="assets/img/svg/career.svg", width="665", height="539", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img-text
+              img(src="assets/img/svg/text-career.svg",  width="196", height="196", alt="", loading="lazy")
+
+    //Academy
+    section.academy.section
+      .container
+        .title
+          h2
+            |Представляем вам&nbsp;
+            br
+            span.title__part-yellow ERA Academy
+        ul.academy__list
+          li
+            .text.academy__text
+              p
+                |Независимо от того, учитесь вы или ищете свой&nbsp;
+                span первый шанс в карьере своей мечты,&nbsp;
+                span получить опыт&nbsp;
+                |в выбранной вами отрасли может быть трудно.
+          li
+            .text.academy__text
+              p
+                |Но у вас&nbsp;
+                span есть возможность присоедениться к нашим командам&nbsp;
+                |дизайнеров и разработчиков.
+          li
+            .text.academy__text
+              p Скорее всего вы уже сталкивались с ответами работодателей &#8220;извините, мы ищем кандидата с большим опытом...&#8221;
+          li
+            .text.academy__text
+              p
+                |Мы верим в талант и даем&nbsp;
+                span шанс&nbsp;
+                |молодым специалистам&nbsp;
+                span проявить себя!&nbsp;
+                |Мы и сами проходили через это&nbsp;
+                span и будем рады поделиться опытом&nbsp;
+                |и пообщаться.
+
+    .sections-wrapper.sections-wrapper--border-left
+      //Descrip
+      section.descrip.descrip--negative-margin
+        .container
+          .descrip__inner.wrapper-round
+            .title
+              h2
+                |Стань частью&nbsp;
+                span.title__part-red нашей команды
+                |!
+
+      //About
+      section.about.about--light.about--secondary
+        .container
+          .about__inner
+            .about__img
+              .about__img-wrapper
+                img(src="assets/img/png/about-13.png", width="580", height="470", alt="", loading="lazy")
+            .about__descrip
+              .title.title--light
+                h2
+                  |Как попасть в&nbsp;
+                  span.title__part-red ERA APP&nbsp;
+                  |?
+              ul.stages-list.stages-list--secondary(data-spoilers data-spoilers-media="1024.98")
+                +stagesItem('1', 'Резюме', 'Изучи описание позиций, откликнись на интересующую вакансию. Нет нужной в списке? Заполняй форму и отправляй нам резюме.')
+                +stagesItem('2', 'Предварительное интервью', 'Мы ответим на твоё письмо и предложим побеседовать по телефону. Расскажем о нас, зададим вопросы и поинтересуется ожиданиями от работы в компании.')
+                +stagesItem('3', 'Интервью с руководителем', 'Если телефонное интервью прошло успешно, готовься пообщаться лично с будущим уководителем и техническим специалистом.')
+                +stagesItem('4', 'Приглашение на работу', 'После всех этапов мнтервью мы с тобой обязательно свяжемся, чтобы дать обратную связь.')
+
+      //Offer
+      +offer(
+        'people',
+        'Не нашли подходящую вакансию?',
+        [
+          'Мы все время в поиске талантливых и целеустремленных личностей. Присылайте нам свое резюме, и мы свяжемся с вами, как только появится подходящая позиция для вас! '
+        ]
+      )

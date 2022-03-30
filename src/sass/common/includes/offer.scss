@@ -38,19 +38,9 @@
     font-weight: 600;
   }
 
-  .text {
-    margin-bottom: 0;
-    max-width: 59rem;
-    width: 100%;
-  }
-
   @include media-laptop {
     img {
       max-width: 306px;
-    }
-
-    .text {
-      margin-bottom: 30px;
     }
 
     padding-left: 310px;
@@ -82,6 +72,17 @@
   @include media-phone-lg {
     align-items: center;
     text-align: center;
+  }
+}
+
+.offer__text {
+  max-width: 59rem;
+  width: 100%;
+}
+
+.offer__top {
+  @include media-laptop {
+    margin-bottom: 30px;
   }
 }
 

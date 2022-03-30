@@ -19,17 +19,17 @@
   align-items: center;
   justify-content: space-between;
 
-  .text {
-    max-width: 62rem;
-    width: 100%;
-  }
-
   @include media-tablet-sm {
     flex-direction: column-reverse;
+  }
+}
 
-    .text {
-      max-width: unset;
-    }
+.ways__text {
+  max-width: 62rem;
+  width: 100%;
+
+  @include media-tablet-sm {
+    max-width: unset;
   }
 }
 

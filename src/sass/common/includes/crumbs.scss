@@ -8,9 +8,11 @@
   }
 
   li {
-    a {
-      font-size: 16px;
-      color: $color-black-alpha;
+    &:last-of-type {
+      span {
+        color: rgba($color-black-alpha, 0.7);
+        font-weight: 400;
+      }
     }
 
     &:not(:last-of-type) {
@@ -25,12 +27,16 @@
         }
       }
     }
+  }
 
-    &:last-of-type {
-      span {
-        color: rgba($color-black-alpha, 0.7);
-        font-weight: 400;
-      }
+  a {
+    font-size: 16px;
+    color: $color-black-alpha;
+
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: $color-red-alpha;
     }
   }
 }

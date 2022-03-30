@@ -2,5 +2,5 @@ mixin devOpsItem(img, title, text)
   div.dev-ops__item
     img(src=`assets/img/svg/${img}.svg`, alt="", width="120", height="120", loading="lazy")
     h3= title
-    .text.text--sm
+    .text.text--sm.dev-ops__item-text
       p= text

@@ -1,10 +1,13 @@
 import { isMediaBreakpoint } from '../helpers';
+import { CLASSES } from '../constants';
 
 export class Spoiler {
   constructor(container) {
     this.spoilerContainer = container;
     this.spoilers = [...this.spoilerContainer.querySelectorAll('details')];
+    this.summaries = this.spoilerContainer.querySelectorAll('summary');
     this.isOnMedia = false;
+    this.mediaBreakpoint = container.dataset.spoilersMedia || 767.98;
     this.isDesktop = container.dataset.spoilersDesktop;
     this._init();
   }
@@ -27,19 +30,35 @@ export class Spoiler {
     }
   }
 
+  _showSummaries() {
+    this.summaries.forEach((summary) => {
+      summary.classList.add(CLASSES.active);
+    });
+  }
+
+  _hideSummaries() {
+    this.summaries.forEach((summary) => {
+      summary.classList.remove(CLASSES.active);
+    });
+  }
+
   _controlSpoiler() {
     if (this.isDesktop) return;
 
-    if (isMediaBreakpoint() && this.isOnMedia) return;
+    if (isMediaBreakpoint(this.mediaBreakpoint) && this.isOnMedia) return;
 
-    if (isMediaBreakpoint()) {
+    if (isMediaBreakpoint(this.mediaBreakpoint)) {
       this.isOnMedia = true;
+
+      this._showSummaries();
 
       this.spoilers.forEach((spoiler) => {
         spoiler.open = false;
       });
     } else {
       this.isOnMedia = false;
+
+      this._hideSummaries();
 
       this.spoilers.forEach((spoiler) => {
         spoiler.open = true;

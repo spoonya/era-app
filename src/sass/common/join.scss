@@ -1,10 +1,12 @@
 .join {
-  position: relative;
-  bottom: 21.5rem;
-  margin-bottom: -115px;
+  &--negative-margin {
+    position: relative;
+    bottom: 21.5rem;
+    margin-bottom: -115px;
 
-  @include media-tablet-lg {
-    margin-bottom: -160px;
+    @include media-tablet-lg {
+      margin-bottom: -160px;
+    }
   }
 }
 
@@ -84,10 +86,6 @@
 .join__item-descrip {
   padding: 12px 17px 34px;
 
-  .text {
-    margin-bottom: 0;
-  }
-
   @include media-tablet-sm {
     padding-bottom: 20px;
   }
@@ -99,7 +97,7 @@
     margin-bottom: 20px;
   }
 
-  .text {
+  &-text {
     margin-bottom: 30px;
   }
 

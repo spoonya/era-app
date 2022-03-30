@@ -17,9 +17,9 @@
   }
 }
 
-.stages__list {
+.stages-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 6rem 25px;
 
   li {
@@ -58,10 +58,6 @@
     font-size: 2.8rem;
     margin-bottom: 5px;
     margin-right: 50px;
-  }
-
-  .text {
-    margin-bottom: 0;
   }
 
   summary {
@@ -107,6 +103,28 @@
 
       text-shadow: 2px -4px 1px $color-black-alpha;
       font-size: 40px;
+    }
+  }
+
+  &--secondary {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    span {
+      min-width: 55px;
+      min-height: 55px;
+      max-width: 55px;
+      max-height: 55px;
+      font-size: 4rem;
+
+      background-color: $color-yellow-alpha;
+    }
+
+    @include media-tablet-lg {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

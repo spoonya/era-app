@@ -1,3 +1,7 @@
+mixin logo
+  a.logo(href="index.html")
+    img(src="assets/img/svg/logo.svg", width="256", height="56", alt="Era App")
+
 mixin button(text, modif= null, type= 'button')
   .button(class= modif)
     button(type= type)
@@ -51,7 +55,7 @@ mixin offer(img, title, textArr, isRellax= false, modif= null)
           .offer__top
             .title
               h3= title
-            .text
+            .text.offer__text
               each txt in textArr
                 p= txt
           .offer__bot
@@ -148,7 +152,7 @@ mixin devWebItem(title, text)
   li
     .dev__item-text
       h3= title
-      .text
+      .text.dev__item-subtitle
         h4= text
     .dev__item-order
       +button('Заказать разработку')

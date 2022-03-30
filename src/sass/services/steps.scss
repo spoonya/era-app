@@ -52,8 +52,7 @@
   max-width: 66.5rem;
   width: 100%;
 
-  .text {
-    margin-bottom: 0;
+  &-text {
     max-width: 63.1rem;
     width: 100%;
   }
@@ -68,7 +67,7 @@
     align-self: flex-start;
     max-width: unset;
 
-    .text {
+    &-text {
       max-width: unset;
     }
   }
@@ -76,7 +75,7 @@
   @include media-tablet-sm {
     max-width: unset;
 
-    .text {
+    &-text {
       max-width: unset;
     }
   }

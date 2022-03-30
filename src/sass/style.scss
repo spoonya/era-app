@@ -18,6 +18,7 @@
 @import 'common/about';
 @import 'common/descrip';
 @import 'common/pro';
+@import 'common/join';
 @import 'common/draft';
 @import 'common/stages';
 @import 'common/solution';
@@ -31,6 +32,7 @@
 @import 'common/footer';
 @import 'common/animations';
 @import 'common/includes/button';
+@import 'common/includes/logo';
 @import 'common/includes/more';
 @import 'common/includes/offer';
 @import 'common/includes/crumbs';
@@ -39,7 +41,6 @@
 @import 'index/projects';
 @import 'index/benefits';
 @import 'index/startup';
-@import 'index/join';
 @import 'index/start';
 
 @import 'services/services';
@@ -50,3 +51,5 @@
 @import 'optimization/aso';
 
 @import 'dev-ops/dev-ops';
+
+@import 'career/academy';

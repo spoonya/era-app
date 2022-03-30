@@ -1,5 +1,4 @@
 .text {
-  margin-bottom: 6rem;
   line-height: 1.5;
   font-size: 18px;
 
@@ -9,6 +8,10 @@
 
   &--sm {
     font-size: 16px;
+  }
+
+  &--margin {
+    margin-bottom: 6rem;
   }
 
   p {
@@ -29,14 +32,16 @@
   }
 
   @include media-tablet-sm {
-    margin-bottom: 40px;
-
-    &--sm {
-      font-size: 15px;
+    &--margin {
+      margin-bottom: 40px;
     }
+
+    font-size: 15px;
   }
 
   @include media-phone-sm {
-    margin-bottom: 20px;
+    &--margin {
+      margin-bottom: 20px;
+    }
   }
 }

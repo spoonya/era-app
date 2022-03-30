@@ -14,9 +14,7 @@
 
   margin-right: 35px;
 
-  .text {
-    margin-bottom: 0;
-
+  &-text {
     font-size: 2rem;
   }
 
@@ -25,10 +23,6 @@
 
     margin-bottom: 30px;
     margin-right: 0;
-
-    .text {
-      font-size: 15px;
-    }
   }
 }
 

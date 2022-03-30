@@ -16,7 +16,7 @@ block content
               h1
                 |Услуга&nbsp;
                 span.title__part-red тестирования
-            .text
+            .text.text--margin
               p Мы разрабатываем разные подходы тестирования вашего программного обеспечения, которые охватывают каждую деталь вашего продукта и обеспечивает его качество.
             +button('Наши проекты')
           .intro__img-wrapper
@@ -47,7 +47,7 @@ block content
           .pro__descrip
             .title-marked
               h2 Профессионалы своего дела
-            .text
+            .text.text--margin.pro__descrip-text
               p Вы любите то, что делаете, мы любим то, что делаем, вашим пользователям понравится то, что мы делаем вместе.
               p Наша ключевая вера в использование технологий для решения больших проблем - это то, что делает нас сильной компанией по разработке приложений. Мы хотим изменить миллионы жизней, создавая решения, которые любят люди.
             +link('Подробнее о нас', 'company.html')
@@ -59,7 +59,7 @@ block content
         .container
           .title.title--light
             h2 Обязанности службы администрирования
-          ul.stages__list(data-spoilers)
+          ul.stages-list(data-spoilers)
             +stagesItem('1', 'Функциональное тестирование', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ')
             +stagesItem('2', 'Тестирование совместимости', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ')
             +stagesItem('3', 'Тестирование локализации', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ')

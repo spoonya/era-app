@@ -43,8 +43,7 @@
 
   z-index: 1;
 
-  bottom: 4px;
-  left: 4px;
+  transform: translate(4px, -4px);
 
   line-height: 1.5;
   font-size: 18px;
@@ -59,7 +58,7 @@
 
   &.active,
   &:focus {
-    transform: translate(-4px, 4px);
+    transform: translate(0, 0);
   }
 }
 

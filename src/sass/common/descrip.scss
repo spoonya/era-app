@@ -1,4 +1,5 @@
 .descrip {
+  position: relative;
   margin: 6rem 0 8rem;
 
   @include media-tablet-lg {
@@ -8,11 +9,32 @@
   @include media-tablet-sm {
     margin: 40px 0;
   }
+
+  &--negative-margin {
+    position: relative;
+    bottom: 27.5rem;
+    margin-bottom: -190px;
+
+    @include media-laptop {
+      bottom: 200px;
+      margin-bottom: -150px;
+
+      .descrip__inner {
+        min-height: 144px;
+      }
+    }
+
+    @include media-tablet-sm {
+      bottom: 170px;
+      margin-bottom: -130px;
+    }
+  }
 }
 
 .descrip__inner {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   padding: 3.6rem 17.2rem;
 

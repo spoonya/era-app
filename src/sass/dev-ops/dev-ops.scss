@@ -39,10 +39,10 @@
     margin-bottom: 5px;
   }
 
-  .text {
+  &-text {
     max-width: 31rem;
+
     width: 100%;
-    margin-bottom: 0;
   }
 
   @include media-tablet-lg {
@@ -60,7 +60,7 @@
 
     padding: 10px 0;
 
-    .text {
+    &-text {
       max-width: unset;
     }
   }

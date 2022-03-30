@@ -67,21 +67,6 @@
   align-items: flex-start;
 }
 
-.header__logo {
-  img {
-    max-width: 100%;
-    width: auto;
-  }
-
-  @include media-tablet-lg {
-    max-width: 140px;
-  }
-
-  @include media-phone-sm {
-    max-width: 95px;
-  }
-}
-
 .header__group {
   display: flex;
   align-items: center;

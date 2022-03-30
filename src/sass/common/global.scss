@@ -127,6 +127,10 @@ details {
 
     user-select: none;
 
+    &.active {
+      display: flex;
+    }
+
     &:focus {
       outline: 0;
     }

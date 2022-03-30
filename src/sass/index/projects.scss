@@ -1,10 +1,5 @@
 .projects {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    #182f43;
-
-  border-top-left-radius: 400px;
-
-  padding: 29rem 0 10rem;
+  padding: 21rem 0 10rem;
   margin-bottom: 8rem;
 
   .title {
@@ -13,12 +8,12 @@
   }
 
   @include media-laptop {
-    padding: 230px 0 80px;
-    border-top-left-radius: 200px;
+    padding: 150px 0 80px;
+    border-radius: 200px 0 0 0;
   }
 
   @include media-tablet-lg-sm {
-    padding: 200px 0 60px;
+    padding: 120px 0 60px;
   }
 
   @include media-tablet-lg {
@@ -92,7 +87,7 @@
     text-transform: uppercase;
   }
 
-  .text {
+  &-text {
     margin-bottom: 3rem;
 
     max-width: 46rem;

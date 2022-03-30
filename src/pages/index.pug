@@ -13,7 +13,7 @@ block content
               h1
                 span#title-fade Наша команда проложит вам путь к&nbsp;
                 span#title-bounce.title__part-red цифровому будущему
-            .text
+            .text.text--margin
               p Мы являемся компанией по разработке веб-приложений и мобильных приложений полного цикла, создающей индивидуальные решения.
               p Наша команда дизайнеров использует новейшие практики UI/UX дизайна
             +button('Оценить проект')
@@ -57,7 +57,7 @@ block content
                 |в&nbsp;
                 span.title__part-yellow 8 отраслях
             div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
-              .text
+              .text.text--margin
                 p Мы создадим для вас решение, которое определит и решит ваши бизнес-задачи, продукт достигнет соответствия рынку и технологическим тенденциям
               +link('Наши услуги', '#')
 
@@ -77,7 +77,7 @@ block content
     )
 
     //Projects
-    section.projects
+    section.projects.sections-wrapper.sections-wrapper--border-left
       .container
         .title.title--light
           h2 Наши проекты
@@ -95,7 +95,7 @@ block content
             .projects__item-descrip
               h3(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") LawDoc
               div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
-                .text.text--light
+                .text.text--light.projects__item-text
                   p Приложение для контроля финансов и осуществления денежных переводов
                 +link('Подробнее', '#', 'button--secondary')
         .projects__descrip
@@ -155,13 +155,13 @@ block content
             .title-marked
               h2(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Услуги стартапа
             div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
-              .text
+              .text.startup__text
                 p Если вы смелый стартап с идеей и хотите ее протестировать, мы поможем вам воплотить ее в жизнь. Как компания по разработке ПО, мы имеем глубокий опыт создания проектов MVP, чтобы сократить время выхода на рынок.
               +button('Поделиться своей идеей')
 
     .sections-wrapper.sections-wrapper--border-right
       //Join
-      section.join
+      section.join.join--negative-margin
         .container
           .join__list(data-spoilers)
             +joinItem('join-1', 'Стремление', 'Оставайся любопытным, задавай вопросы о возможностях и расширяй границы своей личной и профессиональной жизни')
@@ -173,7 +173,7 @@ block content
               .title.title--light(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
                 h3 Присоединяйся к нам!
               div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
-                .text.text--light
+                .text.text--light.join__descrip-text
                   p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
                 +link('Наши вакансии', '#', 'button--secondary')
 

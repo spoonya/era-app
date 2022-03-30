@@ -30,16 +30,6 @@
       margin-right: 0;
     }
 
-    .header__logo {
-      img:first-child {
-        display: none;
-      }
-
-      img:last-child {
-        display: block;
-      }
-    }
-
     .header__lang {
       img {
         filter: brightness(10);
@@ -78,7 +68,10 @@
 }
 
 .header__logo {
-  max-width: 22rem;
+  img {
+    max-width: 100%;
+    width: auto;
+  }
 
   @include media-tablet-lg {
     max-width: 140px;
@@ -86,10 +79,6 @@
 
   @include media-phone-sm {
     max-width: 95px;
-  }
-
-  img:last-child {
-    display: none;
   }
 }
 
@@ -115,6 +104,10 @@
 
   @include media-phone-sm {
     margin-right: 20px;
+
+    & > img {
+      display: none;
+    }
   }
 }
 

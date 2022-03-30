@@ -81,9 +81,8 @@
   width: 100%;
 
   .title {
-    span {
+    &__part-red {
       span {
-        opacity: 0;
         display: inline-block;
       }
     }

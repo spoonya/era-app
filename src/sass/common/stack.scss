@@ -1,0 +1,157 @@
+.stack {
+  margin-bottom: 8rem;
+
+  .title {
+    text-align: center;
+  }
+
+  @include media-tablet-lg {
+    margin-bottom: 60px;
+  }
+
+  @include media-tablet-sm {
+    margin-bottom: 40px;
+  }
+}
+
+.stack__inner {
+  padding: 4rem 3rem 3rem;
+
+  @include media-tablet-sm {
+    &.wrapper-round {
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+.stack__list {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 20%;
+  flex-wrap: wrap;
+
+  @include media-tablet-sm {
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+}
+
+.stack__item {
+  position: relative;
+  padding: 1rem 2rem;
+
+  &--wide {
+    .stack__item-inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 6rem;
+    }
+
+    @include media-tablet-lg {
+      .stack__item-inner {
+        gap: 0 15px;
+      }
+    }
+
+    @include media-tablet-sm {
+      .stack__item-inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 2.8rem;
+    color: $color-red-alpha;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+
+    transition: color 0.1s linear;
+  }
+
+  summary {
+    position: static;
+    display: block;
+
+    width: unset;
+    height: unset;
+
+    pointer-events: none;
+
+    svg {
+      display: none;
+      margin-left: 10px;
+    }
+  }
+
+  .details {
+    max-height: unset;
+  }
+
+  @include media-tablet-lg {
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  @include media-tablet-sm {
+    padding: 5px 0;
+
+    h3 {
+      color: $color-black-alpha;
+      text-align: left;
+      display: inline;
+    }
+
+    .details {
+      &[open] {
+        h3 {
+          color: $color-red-alpha;
+        }
+      }
+    }
+
+    summary {
+      pointer-events: all;
+      display: inline;
+
+      svg {
+        display: inline;
+      }
+    }
+  }
+}
+
+.stack__item-inner {
+  margin-top: 10px;
+}
+
+.stack__item-content {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 55px;
+    margin-right: 10px;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  @include media-tablet-sm {
+    img {
+      max-width: 40px;
+    }
+  }
+}

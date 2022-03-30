@@ -97,9 +97,23 @@ mixin stagesItem(num, title, text)
           <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.13878 1.25L8.5 14L15.8612 1.25H1.13878Z" fill="#FFB700" stroke="#FBFBFF"/>
           </svg>
-
         .text.text--light
           p= text
+
+mixin stackItem(title, contentArr, modif= null)
+  .stack__item(class= modif)
+    details.details(open)
+      summary
+        h3= title
+        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.40539 1.25L8.7666 14L16.1278 1.25H1.40539Z" fill="#FFB700" stroke="#162A3C"></path>
+        </svg>
+      .stack__item-inner
+        for content in contentArr
+          .stack__item-content
+            img(src=`assets/img/svg/${content.img}.svg`, width="55", height="55", alt="", loading="lazy")
+            h4= content.title
+
 
 mixin contactLinks
   .contact-links

@@ -82,6 +82,100 @@ block content
             +link('Подробнее о нас', 'company.html')
           img(src="assets/img/svg/pro.svg", width="665", height="470", alt="", loading="lazy")
 
+    //Stack
+    section.stack
+      .container
+        .stack__inner.wrapper-round
+          .title
+            h2 Стек используемых технологий
+          .stack__list(data-spoilers)
+            +stackItem(
+              'iOS',
+              [
+                {
+                  img: 'obj-c',
+                  title: 'Kotlin',
+                },
+                {
+                  img:'swift-2',
+                  title: 'Java',
+                },
+              ]
+            )
+            +stackItem(
+              'Android',
+              [
+                {
+                  img: 'kotlin',
+                  title: 'Kotlin',
+                },
+                {
+                  img:'java',
+                  title: 'Java',
+                },
+              ]
+            )
+            +stackItem(
+              'Cross platform',
+              [
+                {
+                  img: 'dart',
+                  title: 'Dart',
+                },
+                {
+                  img:'flutter',
+                  title: 'Flutter',
+                },
+              ]
+            )
+            +stackItem(
+              'Database',
+              [
+                {
+                  img: 'moor',
+                  title: 'Moor',
+                },
+                {
+                  img:'sqlite',
+                  title: 'SQLite',
+                },
+                {
+                  img:'realm',
+                  title: 'Realm',
+                },
+                {
+                  img:'room',
+                  title: 'Room',
+                },
+                {
+                  img:'core-data',
+                  title: 'Core data',
+                },
+                {
+                  img:'obj-box',
+                  title: 'ObjectBox',
+                },
+              ],
+              'stack__item--wide'
+            )
+            +stackItem(
+              'Cross platform',
+              [
+                {
+                  img: 'skripe',
+                  title: 'Skripe',
+                },
+                {
+                  img:'braintree',
+                  title: 'Braintree',
+                },
+                {
+                  img:'purchase',
+                  title: 'In-app purchases',
+                },
+              ]
+            )
+
     .sections-wrapper.sections-wrapper--border-left
       //Stages
       section.stages

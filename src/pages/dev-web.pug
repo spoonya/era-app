@@ -75,6 +75,104 @@ block content
             +link('Подробнее о нас', 'company.html')
           img(src="assets/img/svg/pro.svg", width="665", height="470", alt="", loading="lazy")
 
+    //Stack
+    section.stack
+      .container
+        .stack__inner.wrapper-round
+          .title
+            h2 Стек используемых технологий
+          .stack__list(data-spoilers)
+            +stackItem(
+              'Languages',
+              [
+                {
+                  img: 'js-2',
+                  title: 'JavaScript',
+                },
+                {
+                  img:'ts',
+                  title: 'TypeScript',
+                },
+                {
+                  img:'csharp-2',
+                  title: 'C#',
+                },
+              ]
+            )
+            +stackItem(
+              'Back-end',
+              [
+                {
+                  img: 'node-js',
+                  title: 'Node.js',
+                },
+                {
+                  img:'express',
+                  title: 'Express',
+                },
+                {
+                  img:'dot-net',
+                  title: '.Net',
+                },
+              ]
+            )
+            +stackItem(
+              'Front-end',
+              [
+                {
+                  img: 'react',
+                  title: 'React',
+                },
+                {
+                  img:'gatsby',
+                  title: 'Gatsby',
+                },
+                {
+                  img:'angular',
+                  title: 'AngularJS',
+                },
+                {
+                  img:'html',
+                  title: 'HTML',
+                },
+                {
+                  img:'wpf',
+                  title: 'WPF',
+                },
+                {
+                  img:'css',
+                  title: 'CSS',
+                },
+              ],
+              'stack__item--wide'
+            )
+            +stackItem(
+              'Database',
+              [
+                {
+                  img: 'redis',
+                  title: 'Redis',
+                },
+                {
+                  img:'postgre',
+                  title: 'PosgreSQL',
+                },
+                {
+                  img:'mysql',
+                  title: 'MySQL',
+                },
+                {
+                  img:'dynamo',
+                  title: 'DynamoDB',
+                },
+                {
+                  img:'mongo',
+                  title: 'MongoDB',
+                },
+              ],
+              'stack__item--wide'
+            )
+
     .sections-wrapper.sections-wrapper--border-left
       //Stages
       section.stages

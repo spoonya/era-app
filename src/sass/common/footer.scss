@@ -41,11 +41,11 @@
 .footer__group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6rem;
+  grid-gap: 6rem;
 
   @include media-tablet-lg-sm {
     grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+    grid-gap: 30px;
   }
 
   @include media-phone-lg {
@@ -106,20 +106,20 @@
 .footer__top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0 13rem;
+  grid-gap: 0 13rem;
 
   padding: 6rem 0;
   border-top: 1px solid $color-grey-alpha;
 
   @include media-tablet-lg {
-    gap: 0 50px;
+    grid-gap: 0 50px;
 
     padding: 30px 0;
   }
 
   @include media-phone-lg {
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
+    grid-gap: 40px;
   }
 }
 

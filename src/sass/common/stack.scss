@@ -1,16 +1,6 @@
 .stack {
-  margin-bottom: 8rem;
-
   .title {
     text-align: center;
-  }
-
-  @include media-tablet-lg {
-    margin-bottom: 60px;
-  }
-
-  @include media-tablet-sm {
-    margin-bottom: 40px;
   }
 }
 
@@ -47,19 +37,19 @@
     .stack__item-inner {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 0 6rem;
+      grid-gap: 0 6rem;
     }
 
     @include media-tablet-lg {
       .stack__item-inner {
-        gap: 0 15px;
+        grid-gap: 0 15px;
       }
     }
 
     @include media-tablet-sm {
       .stack__item-inner {
         grid-template-columns: repeat(1, 1fr);
-        gap: 0;
+        grid-gap: 0;
       }
     }
   }

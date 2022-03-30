@@ -35,7 +35,7 @@
 .tech__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-gap: 4rem;
 
   div {
     text-align: center;
@@ -58,7 +58,7 @@
 
   @include media-tablet-lg-sm {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 20px;
+    grid-gap: 40px 20px;
     flex-grow: 2;
   }
 }

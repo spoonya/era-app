@@ -7,6 +7,10 @@
     color: $color-white-alpha;
   }
 
+  &--sm {
+    font-size: 16px;
+  }
+
   p {
     font-size: inherit;
     line-height: inherit;
@@ -26,6 +30,10 @@
 
   @include media-tablet-sm {
     margin-bottom: 40px;
+
+    &--sm {
+      font-size: 15px;
+    }
   }
 
   @include media-phone-sm {

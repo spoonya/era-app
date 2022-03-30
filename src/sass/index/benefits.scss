@@ -1,7 +1,7 @@
 .benefits__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px 20px;
+  grid-gap: 40px 20px;
 
   div {
     display: flex;
@@ -32,7 +32,7 @@
 
   @include media-tablet-sm {
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    grid-gap: 10px;
 
     h3 {
       max-width: unset;

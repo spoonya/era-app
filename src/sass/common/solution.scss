@@ -145,10 +145,10 @@
   }
 
   @include media-laptop {
-    gap: 20px;
+    grid-gap: 20px;
   }
 
   @include media-tablet-sm {
-    gap: 40px;
+    grid-gap: 40px;
   }
 }

@@ -1,0 +1,8 @@
+.vacancies__title {
+  margin-bottom: 6rem;
+  text-align: center;
+
+  @include media-tablet-sm {
+    margin-bottom: 40px;
+  }
+}

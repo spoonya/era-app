@@ -61,13 +61,17 @@ mixin offer(img, title, textArr, isRellax= false, modif= null)
           .offer__bot
             +button('Связаться с нами')
 
-mixin serviceItem(link, img, title)
+mixin serviceItem(link, img, title, text= null)
   li
     a(href= link)
       img(src=`assets/img/svg/${img}.svg`, width="105", height="106", alt="")
       div
         h3= title
-        +more
+        .deal-list__text
+          +more
+          if text
+            p.deal-list__info= text
+
 
 mixin joinItem(img, title, text)
   .join__item.wrapper-round

@@ -23,6 +23,7 @@
 @import 'common/stages';
 @import 'common/solution';
 @import 'common/stack';
+@import 'common/start';
 @import 'common/deal-list';
 @import 'common/dev';
 @import 'common/sections-wrapper';
@@ -42,7 +43,6 @@
 @import 'index/projects';
 @import 'index/benefits';
 @import 'index/startup';
-@import 'index/start';
 
 @import 'services/services';
 @import 'services/steps';
@@ -55,3 +55,6 @@
 
 @import 'career/academy';
 @import 'career/vacancies';
+
+@import 'vacancy/vacancy';
+@import 'vacancy/vacancy-form';

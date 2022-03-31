@@ -40,6 +40,8 @@
 
   max-width: 508px;
 
+  margin-left: 20px;
+
   @include media-laptop {
     display: none;
   }

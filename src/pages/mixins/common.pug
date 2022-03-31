@@ -32,8 +32,8 @@ mixin more(isLink= false, link= null)
         <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
       </svg>
 
-mixin crumbs(arrLinks)
-  .crumbs
+mixin crumbs(arrLinks, modif= null)
+  .crumbs(class= modif)
     .crumbs__inner
       ul
         li: a(href='index.html') Главная
@@ -304,7 +304,7 @@ mixin contactForm(id)
     .form__control.form__control--wide
       textarea.form__input(name="message", placeholder="Расскажите коротко о вашем проекте" maxlength="250")
       label.form__upload-button
-        input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files" data-form-upload)
+        input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files")
         span.form__error
         span.form__upload-button-txt
           span Прикрепить файл

@@ -1,0 +1,36 @@
+.info__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-tablet-sm {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.info__descrip {
+  max-width: 66.5rem;
+  width: 100%;
+
+  @include media-tablet-sm {
+    margin-right: 0;
+
+    text-align: center;
+  }
+}
+
+.info__img {
+  max-width: 58.6rem;
+
+  margin-left: 20px;
+
+  @include media-tablet-lg {
+    max-width: 350px;
+  }
+
+  @include media-tablet-sm {
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
+}

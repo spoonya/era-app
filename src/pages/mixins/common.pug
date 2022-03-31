@@ -110,7 +110,7 @@ mixin stagesItem(num, title, text)
 
 mixin stackItem(title, contentArr, modif= null)
   .stack__item(class= modif)
-    details.details(open)
+    details.details.stack__details(open)
       summary
         h3= title
         <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,6 @@ mixin stackItem(title, contentArr, modif= null)
           .stack__item-content
             img(src=`assets/img/svg/${content.img}.svg`, width="55", height="55", alt="", loading="lazy")
             h4= content.title
-
 
 mixin contactLinks
   .contact-links

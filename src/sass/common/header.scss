@@ -26,6 +26,10 @@
       padding-top: 80px;
     }
 
+    .header__top {
+      padding: 0 7px 0 0;
+    }
+
     .header__group {
       margin-right: 0;
     }
@@ -57,24 +61,25 @@
 .header__inner {
   display: flex;
   flex-direction: column;
-
-  padding-top: 3rem;
 }
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  padding: 3rem 0;
+
+  padding-right: 4rem;
+
+  @include media-phone-lg {
+    padding-right: 25px;
+  }
 }
 
 .header__group {
   display: flex;
   align-items: center;
-  margin-right: 4rem;
-
-  @include media-phone-lg {
-    margin-right: 25px;
-  }
 }
 
 .header__lang {

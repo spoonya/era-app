@@ -52,6 +52,25 @@
       }
     }
   }
+
+  &--img-media {
+    .about__img {
+      @include media-tablet-sm {
+        display: block;
+
+        max-width: 354px;
+
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    .about__inner {
+      @include media-tablet-sm {
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 .about__inner {

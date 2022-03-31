@@ -1,15 +1,3 @@
-.academy {
-  margin-bottom: 21.6rem;
-
-  @include media-tablet-lg {
-    margin-bottom: 160px;
-  }
-
-  @include media-tablet-sm {
-    margin-bottom: 140px;
-  }
-}
-
 .academy__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));

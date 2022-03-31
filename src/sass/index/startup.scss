@@ -4,6 +4,10 @@
   @include media-tablet-lg {
     margin-bottom: 170px;
   }
+
+  @include media-tablet-sm {
+    margin-bottom: 80px;
+  }
 }
 
 .startup__inner {
@@ -14,6 +18,10 @@
 
 .startup__text {
   margin-bottom: 4.4rem;
+
+  @include media-tablet-sm {
+    margin-bottom: 25px;
+  }
 }
 
 .startup__descrip {

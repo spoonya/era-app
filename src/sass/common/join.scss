@@ -7,6 +7,11 @@
     @include media-tablet-lg {
       margin-bottom: -160px;
     }
+
+    @include media-tablet-sm {
+      bottom: 80px;
+      margin-bottom: -50px;
+    }
   }
 }
 

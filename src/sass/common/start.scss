@@ -1,11 +1,3 @@
-.start {
-  padding-bottom: 8rem;
-
-  @include media-tablet-lg {
-    padding-bottom: 40px;
-  }
-}
-
 .start__inner {
   display: flex;
   justify-content: space-between;

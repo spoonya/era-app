@@ -7,6 +7,18 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     #182f43;
 
+  &--margin-top {
+    margin-top: 21.6rem;
+
+    @include media-tablet-lg {
+      margin-top: 160px;
+    }
+
+    @include media-tablet-sm {
+      margin-top: 140px;
+    }
+  }
+
   &--border-left {
     border-radius: 400px 0 0 0;
 
@@ -31,7 +43,7 @@
     }
 
     @include media-laptop {
-      border-radius: 100px 0 0 0;
+      border-radius: 0 100px 0 0;
     }
   }
 

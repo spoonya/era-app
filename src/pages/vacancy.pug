@@ -23,7 +23,7 @@ block content
               p
                 |Уровень:&nbsp;
                 span Middle
-            +link('Откликнуться', '#')
+            +link('Откликнуться', '#form-vacancy')
           section.vacancy__info.section
             .vacancy__info-item
               .title.title-marked.vacancy__info-title
@@ -59,40 +59,41 @@ block content
                     li Свободная коммуникация c носителями английского языка
 
       //Start
-      section.start.vacancy-form.sections-wrapper.sections-wrapper--border-right
-        .container
-          .title.title--light.vacancy-form__title
-            h2
-              |Стань частью нашей&nbsp;
-              span.title__part-yellow команды профессионалов!
-          .start__inner
-            .start__content
-              form.form(action="#", method="POST")
-                .form__control
-                  input.form__input(type="text", name="name", placeholder="Ваше имя*", required)
-                .form__control
-                  input.form__input(type="text", name="name", placeholder="Фамилия*", required)
-                .form__control
-                  input.form__input(type="tel", name="phone", placeholder="Телефон*", required)
-                .form__control
-                  input.form__input(type="text", name="linkedin", placeholder="LinkedIn")
-                .form__control
-                  input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*", required)
-                .form__control
-                  input.form__input(type="text", name="name",  placeholder="Резюме" readonly)
-                  label.form__upload-button
-                    input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files")
-                    span.form__error
-                    span.form__upload-button-txt
-                      span Файл
-                      img(src="assets/img/png/attach.png", width="30", height="30", alt="")
-                .form__control.form__control--wide
-                  textarea.form__input(name="message", placeholder="Комментарий" maxlength="250")
-                .form__group
-                  label.form__checkbox-wrapper
-                    input.form__checkbox(name="agreement" type="checkbox" checked hidden)
-                    span.form__checkbox-styled
-                    span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
-                  +button('Отправить', 'button--secondary', 'submit')
-            .start__img.vacancy-form__img
-              img(src="assets/img/svg/people.svg", width="586", height="429", alt="", loading="lazy")
+      .sections-wrapper.sections-wrapper--border-right
+        section.start.vacancy-form.section
+          .container
+            .title.title--light.vacancy-form__title
+              h2
+                |Стань частью нашей&nbsp;
+                span.title__part-yellow команды профессионалов!
+            .start__inner
+              .start__content
+                form#form-vacancy.form(action="#", method="POST")
+                  .form__control
+                    input.form__input(type="text", name="name", placeholder="Ваше имя*", required)
+                  .form__control
+                    input.form__input(type="text", name="name", placeholder="Фамилия*", required)
+                  .form__control
+                    input.form__input(type="tel", name="phone", placeholder="Телефон*", required)
+                  .form__control
+                    input.form__input(type="text", name="linkedin", placeholder="LinkedIn")
+                  .form__control
+                    input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*", required)
+                  .form__control
+                    input.form__input(type="text", name="name",  placeholder="Резюме" readonly)
+                    label.form__upload-button
+                      input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files")
+                      span.form__error
+                      span.form__upload-button-txt
+                        span Файл
+                        img(src="assets/img/png/attach.png", width="30", height="30", alt="")
+                  .form__control.form__control--wide
+                    textarea.form__input(name="message", placeholder="Комментарий" maxlength="250")
+                  .form__group
+                    label.form__checkbox-wrapper
+                      input.form__checkbox(name="agreement" type="checkbox" checked hidden)
+                      span.form__checkbox-styled
+                      span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+                    +button('Отправить', 'button--secondary', 'submit')
+              .start__img.vacancy-form__img
+                img(src="assets/img/svg/people.svg", width="586", height="429", alt="", loading="lazy")

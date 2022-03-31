@@ -4,6 +4,10 @@
     width: auto;
   }
 
+  @include media-desktop {
+    max-width: 200px;
+  }
+
   @include media-tablet-lg {
     max-width: 140px;
   }

@@ -10,4 +10,16 @@
   &__img {
     max-width: 58.6rem;
   }
+
+  @include media-tablet-lg {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-tablet-sm {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
 }

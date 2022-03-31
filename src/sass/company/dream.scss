@@ -1,0 +1,33 @@
+.dream__inner {
+  text-align: center;
+
+  max-width: 110rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dream__title {
+  margin-bottom: 4rem;
+
+  @include media-tablet-sm {
+    margin-bottom: 30px;
+  }
+
+  @include media-phone-lg {
+    font-size: 24px;
+  }
+}
+
+.dream__text {
+  font-size: 2rem;
+
+  p {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include media-tablet-sm {
+    font-size: 16px;
+  }
+}

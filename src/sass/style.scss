@@ -28,6 +28,7 @@
 @import 'common/dev';
 @import 'common/wrapper';
 @import 'common/section';
+@import 'common/list';
 @import 'common/projects';
 @import 'common/wrapper-round';
 @import 'common/form';
@@ -64,3 +65,7 @@
 @import 'company/future';
 
 @import 'portfolio/portfolio-intro';
+
+@import 'project/project-about';
+@import 'project/project-stack';
+@import 'project/project-feature';

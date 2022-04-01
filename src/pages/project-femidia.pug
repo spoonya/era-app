@@ -1,0 +1,112 @@
+extends common/layout
+
+block content
+  main
+    //Intro
+    section.intro.intro--secondary
+      .container
+        .intro__inner
+          .intro__img-text.intro__img-text--tablet
+            img(src="assets/img/svg/text-project.svg",  width="170", height="170", alt="", loading="lazy")
+          .intro__descrip
+            //Crumbs
+            +crumbs([
+              {href: 'portfolio.html', name: 'Портфолио'},
+              {href: '', name: 'Femidia'}
+
+            ])
+            .title.title--uppercase
+              h1
+                |Femidia
+            .text.text--margin
+              p Приложение предназначено для Юридической компании и ее пользователей.
+            .intro__buttons
+              +link('Скачать для iOS', '#', 'button--reverse button--iconless')
+              +link('Скачать для Android', '#', 'button--iconless')
+          .intro__img-wrapper.intro__img-wrapper--secondary
+            .intro__img.intro__img--secondary
+              img.intro__img-main(src="assets/img/png/femidia.png", width="655", height="556", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img-text
+              img(src="assets/img/svg/text-project.svg",  width="165", height="165", alt="", loading="lazy")
+
+    //Project-about
+    section.project-about
+      .container
+        .project-about__inner
+          .project-about__img
+            img(src="assets/img/png/femidia-about-1.png", width="485", height="550", alt="", loading="lazy")
+          .project-about__descrip
+            .project-about__item
+              .title-marked.project-about__title
+                h2 Клиент
+              .project-about__text
+                .text
+                  p Один из ведущих коммерческих банков в Беларуси, отличающийся инновационным подходом и использованием последних разработок в FinTech сфере.
+            .project-about__item
+              .title-marked.project-about__title
+                h2 Возможности приложения
+              .project-about__text
+                .text
+                  p Приложение предоставляет новый формат работы с документами и юридическими вопросами.
+
+    //Project-about
+    section.project-about.project-about--reverse.section
+      .container
+        .project-about__inner
+          .project-about__img
+            img(src="assets/img/png/femidia-about-2.png", width="485", height="550", alt="", loading="lazy")
+          .project-about__descrip
+            .project-about__item
+              .title-marked.project-about__title
+                h2 Проделанная работа
+              .project-about__text
+                ul.list.project-about__list.text
+                  li Консалтинг и формирование требований
+                  li Разработка архитектура платформы
+                  li Создан дизайн лендинга, а также удобный и интуитивно понятный UX/UI дизайн для приложения
+                  li Произведена интеграция интернет-эквайрингом банка БелВЭБ, что позволяет пополнять кошельки с карты
+
+    .wrapper.wrapper--border-left
+      //Project-stack
+      section.project-stack.section
+        .container
+          .project-stack__inner
+            .project-stack__descrip
+              .title-marked.title-marked--light
+                h2 Использованные технологии
+              .project-stack__list
+                div
+                  img(src="assets/img/svg/react-2.svg", width="100", height="100", alt="", loading="lazy")
+                  h3 React
+                div
+                  img(src="assets/img/svg/python-3.svg", width="100", height="100", alt="", loading="lazy")
+                  h3 Python
+                div
+                  img(src="assets/img/svg/js-3.svg", width="100", height="100", alt="", loading="lazy")
+                  h3 Javascript
+                div
+                  img(src="assets/img/svg/csharp-3.svg", width="100", height="100", alt="", loading="lazy")
+                  h3 C#
+            .project-stack__img
+              img(src="assets/img/png/femidia-about-3.png", width="665", height="531", alt="", loading="lazy")
+
+      //Project-feature
+      section.project-feature
+        .container
+          .project-feature__inner(style="background: #162A3C; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('assets/img/png/noise.png')")
+            .project-feature__img
+              img(src="assets/img/png/femidia-about-4.png", width="833", height="742", alt="", loading="lazy")
+            .project-feature__descrip
+              .title.title--light.project-feature__title
+                h2 Особенность приложения
+              .text.text--light
+                p Приложение позволяет управлять активами и счетами клиента, проводить электронные платежи, совершать межбанковские и международные переводы, и много другое. Приложение позволяет управлять активами и счетами клиента, проводить электронные платежи, совершать межбанковские и международные переводы, и много другое.
+
+      //Offer
+      +offer(
+        'mobile',
+        'Готовы начать свой проект?',
+        [
+        'Свяжитесь с нашей командой, чтобы обсудить ваш вопрос и мы предложим вам подходящий вариант решения.'
+        ]
+      )

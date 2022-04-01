@@ -91,46 +91,9 @@
   p {
     font-size: 2.2rem;
     font-weight: 700;
+    padding-left: 13px;
 
     margin-bottom: 2rem;
-  }
-
-  p,
-  ul li {
-    padding-left: 13px;
-  }
-
-  ul {
-    li {
-      position: relative;
-
-      line-height: 1.5;
-
-      &::before {
-        position: absolute;
-
-        display: inline-block;
-
-        content: '';
-
-        top: 0.6em;
-
-        left: 0;
-
-        vertical-align: middle;
-
-        width: 4px;
-        height: 4px;
-
-        border-radius: 50%;
-
-        background-color: $color-black-alpha;
-      }
-
-      &:not(:last-of-type) {
-        margin-bottom: 2rem;
-      }
-    }
   }
 
   @include media-tablet-sm {

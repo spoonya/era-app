@@ -118,7 +118,6 @@
     border-bottom-left-radius: 300px;
     border: 1px solid;
     border-top: none;
-    overflow: hidden;
     border-right: 0;
     background: url('../img/png/gradient-2.png');
     background-repeat: no-repeat;
@@ -250,6 +249,16 @@
   @include media-phone-lg {
     &--tablet {
       display: none;
+    }
+  }
+}
+
+.intro__buttons {
+  display: flex;
+
+  .button {
+    &:not(:last-of-type) {
+      margin-right: 20px;
     }
   }
 }

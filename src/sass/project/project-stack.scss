@@ -1,0 +1,32 @@
+.project-stack__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-stack__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem 4.7rem;
+
+  div {
+    text-align: center;
+  }
+
+  h3 {
+    color: $color-white-alpha;
+  }
+
+  img {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.project-stack__img {
+  margin-left: 20px;
+
+  filter: drop-shadow(10px 10px 10px rgba(77, 83, 89, 0.5));
+}

@@ -1,0 +1,27 @@
+.project-feature__img {
+  max-width: 83.3rem;
+  margin-right: 20px;
+}
+
+.project-feature__title {
+  margin-bottom: 20px;
+  font-size: 3.8rem;
+}
+
+.project-feature__descrip {
+  max-width: 49rem;
+  width: 100%;
+}
+
+.project-feature__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6rem;
+
+  border-radius: 30px;
+  border: 1px solid $color-white-alpha;
+
+  background-repeat: no-repeat;
+}

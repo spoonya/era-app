@@ -1,0 +1,50 @@
+.project-about {
+  &--reverse {
+    .project-about__inner {
+      flex-direction: row-reverse;
+    }
+
+    .project-about-img {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+}
+
+.project-about__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-about-img {
+  max-width: 48.5rem;
+  margin-right: 20px;
+}
+
+.project-about__descrip {
+  max-width: 60.8rem;
+  width: 100%;
+}
+
+.project-about__text {
+  padding-left: 5.4rem;
+}
+
+.project-about__title {
+  margin-bottom: 2rem;
+}
+
+.project-about__item {
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
+}
+
+.project-about__list {
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}

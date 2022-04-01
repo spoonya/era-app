@@ -64,29 +64,6 @@
     transition: color 0.1s linear;
   }
 
-  summary {
-    position: static;
-    display: block;
-
-    width: unset;
-    height: unset;
-
-    pointer-events: none;
-
-    svg {
-      display: none;
-      margin-left: 10px;
-    }
-
-    &.active {
-      display: inline;
-    }
-  }
-
-  .details {
-    max-height: unset;
-  }
-
   @include media-tablet-lg {
     h3 {
       font-size: 20px;
@@ -107,6 +84,46 @@
         h3 {
           color: $color-red-alpha;
         }
+      }
+    }
+
+    summary {
+      pointer-events: all;
+      display: inline;
+
+      svg {
+        display: inline;
+      }
+    }
+  }
+}
+
+.stack__details {
+  max-height: unset;
+
+  summary {
+    position: static;
+    display: block;
+
+    width: unset;
+    height: unset;
+
+    pointer-events: none;
+
+    svg {
+      display: none;
+      margin-left: 10px;
+    }
+
+    &.active {
+      display: inline;
+    }
+  }
+
+  @include media-tablet-sm {
+    &[open] {
+      h3 {
+        color: $color-red-alpha;
       }
     }
 

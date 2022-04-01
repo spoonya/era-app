@@ -88,13 +88,6 @@ mixin joinItem(img, title, text)
         .text
           p= text
 
-mixin draftItem(img, title, link)
-  li
-    img(src=`assets/img/png/${img}.png`, width="385", height="378", alt="", loading="lazy")
-    div
-      h3= title
-      +more(true, link)
-
 mixin stagesItem(num, title, text)
   li
     span= num
@@ -213,6 +206,13 @@ mixin sectionSolution
           .solution__icon.solution__icon--android
             img(src="assets/img/svg/android.svg", width="75", height="75" alt="", loading="lazy")
           figcaption Technology stack
+
+mixin draftItem(img, title, link)
+  li
+    img(src=`assets/img/png/${img}.png`, width="385", height="378", alt="", loading="lazy")
+    div
+      h3= title
+      +more(true, link)
 
 mixin sectionDraft
   section.draft.section

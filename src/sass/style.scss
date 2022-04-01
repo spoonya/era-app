@@ -26,8 +26,9 @@
 @import 'common/start';
 @import 'common/deal-list';
 @import 'common/dev';
-@import 'common/sections-wrapper';
+@import 'common/wrapper';
 @import 'common/section';
+@import 'common/projects';
 @import 'common/wrapper-round';
 @import 'common/form';
 @import 'common/contact-links';
@@ -40,7 +41,6 @@
 @import 'common/includes/crumbs';
 
 @import 'index/spec';
-@import 'index/projects';
 @import 'index/benefits';
 @import 'index/startup';
 
@@ -62,3 +62,5 @@
 @import 'company/dream';
 @import 'company/info';
 @import 'company/future';
+
+@import 'portfolio/portfolio-intro';

@@ -3,8 +3,10 @@ import { controlDropwdown } from './dropdown';
 import { initSpecParallax } from './rellax';
 import { typeIntroTitle } from './text-typing';
 import { Spoiler } from './spoilers';
+import { controlLangButton } from './lang-button';
 
 controlHeaderBurger();
+controlLangButton();
 typeIntroTitle();
 initSpecParallax();
 controlDropwdown();

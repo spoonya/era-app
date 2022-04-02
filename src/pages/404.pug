@@ -1,0 +1,15 @@
+extends common/layout
+
+block content
+  main.not-found
+    .container
+      .not-found__inner
+        .not-found__img
+          img(src="assets/img/svg/404.svg", width="597", height="503", alt="")
+        .not-found__descrip
+          .not-found__text
+            .title
+              h1 Ищете что-то интересное на нашем сайте?
+            .text
+              p К сожалению, страница, которую Вы запрашиваете, не существует…
+          +link('Вырнуться на главную', 'index.html')

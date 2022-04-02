@@ -6,11 +6,11 @@
   left: 0;
   width: 100%;
 
-  overflow-y: auto;
-  overflow-x: hidden;
-
   &.open {
     height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
 
     background-size: cover;
     background-position: center;
@@ -35,15 +35,19 @@
     }
 
     .header__lang {
+      button {
+        color: $color-white-alpha;
+      }
+
       img {
         filter: brightness(10);
       }
     }
 
     .header__lang-list {
-      a {
-        color: $color-white-alpha;
-      }
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
 
     @include media-desktop {
@@ -83,10 +87,36 @@
 }
 
 .header__lang {
+  position: relative;
+
   display: flex;
   align-items: center;
 
   margin-right: 35px;
+
+  button {
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 20px;
+    color: $color-black-alpha;
+    font-family: $font-secondary;
+
+    span {
+      margin: 0 8px;
+    }
+
+    svg {
+      transition: transform 0.2s linear;
+    }
+
+    &.active {
+      svg {
+        transform: rotateX(180deg);
+      }
+    }
+  }
 
   & > img {
     max-width: 22px;
@@ -102,31 +132,78 @@
 }
 
 .header__lang-list {
-  a {
-    font-weight: 600;
-    font-size: 20px;
-    color: $color-black-alpha;
-    font-family: $font-secondary;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  bottom: -80px;
+  left: 20%;
+
+  padding: 10px;
+  border: 1px solid $color-black-alpha;
+  background-color: $color-white-alpha;
+
+  min-width: 63px;
+
+  opacity: 0;
+
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+
+    opacity: 1;
   }
 
-  & > li {
+  li {
+    position: relative;
+
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
 
-    & > a {
-      margin: 0 8px;
+    width: 100%;
+
+    &::before {
+      opacity: 0;
+
+      content: '';
+
+      background-color: $color-yellow-alpha;
+      width: 10px;
+      height: 10px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
+    &.active {
+      &::before {
+        opacity: 1;
+      }
     }
   }
 
-  ul {
-    display: none;
+  a {
+    font-size: 18px;
+    color: $color-black-alpha;
+    font-family: $font-secondary;
+
+    justify-self: flex-end;
+
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: $color-yellow-alpha;
+    }
   }
 }
 
 .header__burger {
-  z-index: 8;
-
   display: none;
 
   top: 0;

@@ -6,15 +6,16 @@ header#header.header
         .header__group
           .header__lang
             img(src="assets/img/png/globe.png", width="22", height="19", alt="")
-            ul.header__lang-list
+            button#lang-button(type="button")
+              span Ru
+              <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.40539 1.25L8.7666 14L16.1278 1.25H1.40539Z" fill="#FFB700" stroke="#162A3C"/>
+              </svg>
+            ul#lang-list.header__lang-list
+              li.active
+                a(href="#" lang="ru") Ru
               li
-                a(href="#") Ru
-                <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.40539 1.25L8.7666 14L16.1278 1.25H1.40539Z" fill="#FFB700" stroke="#162A3C"/>
-                </svg>
-                ul
-                  li
-                    a(href="#") En
+                a(href="#" lang="en") En
           button#burger-button.burger-button(aria-label="Open menu")
             span
       #header-burger.header__burger

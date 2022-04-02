@@ -12,7 +12,7 @@ block content
             //Crumbs
             +crumbs([
               {href: '', name: 'Портфолио'}
-            ])
+            ], 'crumbs--margin-lg')
             .title
               h1
                 |Создадим&nbsp;
@@ -35,28 +35,28 @@ block content
             h2 Наши проекты
           ul.projects__list
             li.projects__item
-              a(href="project-femidia.html")
+              a.projects__item-img-link(href="project-femidia.html")
                 img(src="assets/img/png/projects-1.png", width="460", height="452", alt="Vino&vino", loading="lazy")
               .projects__item-descrip
-                div(href="#" data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+                div(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
                   a.projects__item-link(href="project-femidia.html")  Femida
                 div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
                   .text.text--light.projects__item-text
                     p Приложение предназначено для Юридической компании и ее пользователей.
             li.projects__item
-              a(href="#")
+              a.projects__item-img-link(href="#")
                 img(src="assets/img/png/projects-2.png", width="460", height="452", alt="LawDoc", loading="lazy")
               .projects__item-descrip
-                div(href="#" data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+                div(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
                   a.projects__item-link(href="#") LawDoc
                 div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
                   .text.text--light.projects__item-text
                     p Приложение для контроля финансов и осуществления денежных переводов
             li.projects__item
-              a(href="#")
+              a.projects__item-img-link(href="project-ionia.html")
                 img(src="assets/img/png/projects-3.png", width="460", height="452", alt="LawDoc", loading="lazy")
               .projects__item-descrip
-                div(href="project-ionia.html" data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+                div(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
                   a.projects__item-link(href="project-ionia.html") Ionia Management
                 div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
                   .text.text--light.projects__item-text

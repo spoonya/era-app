@@ -4,10 +4,18 @@
   align-items: center;
 }
 
+.project-stack__descrip {
+  padding-left: 20px;
+
+  @include media-laptop {
+    padding-left: 0;
+  }
+}
+
 .project-stack__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem 4.7rem;
+  grid-gap: 5rem 4.7rem;
 
   div {
     text-align: center;
@@ -23,10 +31,27 @@
     height: 5rem;
     margin-bottom: 3.5rem;
   }
+
+  @include media-phone-sm {
+    grid-gap: 30px 25px;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .project-stack__img {
+  max-width: 66.5rem;
   margin-left: 20px;
 
   filter: drop-shadow(10px 10px 10px rgba(77, 83, 89, 0.5));
+
+  @include media-desktop {
+    max-width: 400px;
+  }
+
+  @include media-tablet-sm {
+    display: none;
+  }
 }

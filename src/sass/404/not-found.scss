@@ -1,0 +1,33 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 19.5rem;
+  padding-bottom: 8rem;
+}
+
+.not-found__img {
+  max-width: 59.7rem;
+
+  margin-bottom: 6rem;
+
+  @include media-tablet-lg {
+    max-width: 470px;
+  }
+}
+
+.not-found__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found__descrip {
+  text-align: center;
+}
+
+.not-found__text {
+  margin-bottom: 4rem;
+}

@@ -136,3 +136,11 @@
     margin-top: 40px;
   }
 }
+
+.projects__item-img-link {
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}

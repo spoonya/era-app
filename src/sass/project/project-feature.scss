@@ -1,16 +1,31 @@
 .project-feature__img {
   max-width: 83.3rem;
-  margin-right: 20px;
+  margin-right: 40px;
+
+  @include media-tablet-lg-sm {
+    margin-bottom: 30px;
+    margin-right: 0;
+    max-width: 350px;
+  }
 }
 
 .project-feature__title {
   margin-bottom: 20px;
   font-size: 3.8rem;
+
+  @include media-phone-lg {
+    font-size: 24px;
+  }
 }
 
 .project-feature__descrip {
   max-width: 49rem;
+  padding: 2rem 0;
   width: 100%;
+
+  @include media-tablet-lg-sm {
+    max-width: unset;
+  }
 }
 
 .project-feature__inner {
@@ -24,4 +39,12 @@
   border: 1px solid $color-white-alpha;
 
   background-repeat: no-repeat;
+
+  @include media-tablet-lg-sm {
+    flex-direction: column;
+  }
+
+  @include media-tablet-sm {
+    padding: 0 25px;
+  }
 }

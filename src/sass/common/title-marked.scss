@@ -1,5 +1,12 @@
 .title-marked {
+  font-weight: 700;
+  font-size: 3.8rem;
+
   margin-bottom: 3rem;
+
+  @include media-tablet-lg {
+    font-size: 28px;
+  }
 
   @include media-tablet-sm {
     margin-bottom: 20px;
@@ -9,16 +16,12 @@
     font-size: 22px;
   }
 
+  h1,
   h2,
   h3 {
     @include text-triangle-mark;
-
-    font-weight: 700;
-    font-size: 3.8rem;
-
-    @include media-tablet-lg {
-      font-size: 28px;
-    }
+    font-size: inherit;
+    font-weight: inherit;
   }
 
   &--light {

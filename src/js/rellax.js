@@ -1,4 +1,4 @@
-import { isMobile } from './helpers/is-mobile';
+import { isMobile } from './helpers';
 
 export function initSpecParallax() {
   if (isMobile() || !document.querySelector('.rellax')) return;

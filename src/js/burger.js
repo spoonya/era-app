@@ -1,5 +1,5 @@
 import { CLASSES, DOM } from './constants';
-import { isMobile } from './helpers/is-mobile';
+import { isMobile } from './helpers';
 
 const header = document.querySelector('#header');
 const menuArrows = document.querySelectorAll('#header-burger nav a + svg');

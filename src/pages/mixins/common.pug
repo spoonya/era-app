@@ -3,7 +3,7 @@ mixin logo
     img(src="assets/img/svg/logo.svg", width="256", height="56", alt="Era App")
 
 mixin button(text, modif= null, type= 'button')
-  .button(class= modif)
+  .button(class= modif, data-modal-target="modal-callback")
     button(type= type)
       span= text
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -313,4 +313,4 @@ mixin contactForm(id)
         input.form__checkbox(name="agreement" type="checkbox" checked hidden)
         span.form__checkbox-styled
         span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
-      +button('Отправить', 'button--secondary', 'submit')
+      +button('Отправить', 'button--secondary form__submit', 'submit')

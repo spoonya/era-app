@@ -2,9 +2,17 @@ mixin logo
   a.logo(href="index.html")
     img(src="assets/img/svg/logo.svg", width="256", height="56", alt="Era App")
 
-mixin button(text, modif= null, type= 'button')
+mixin submitButton(text, modif= null)
+  .button(class= modif)
+    button(type="submit")
+      span= text
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
+      </svg>
+
+mixin modalButton(text, modif= null)
   .button(class= modif, data-modal-target="modal-callback")
-    button(type= type)
+    button(type="button")
       span= text
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
@@ -59,7 +67,7 @@ mixin offer(img, title, textArr, isRellax= false, modif= null)
               each txt in textArr
                 p= txt
           .offer__bot
-            +button('Связаться с нами')
+            +modalButton('Связаться с нами')
 
 mixin serviceItem(link, img, title, text= null)
   li
@@ -151,7 +159,7 @@ mixin devWebItem(title, text)
       .text.dev__item-subtitle
         h4= text
     .dev__item-order
-      +button('Заказать разработку')
+      +modalButton('Заказать разработку')
 
 mixin sectionSolution
   section.solution
@@ -313,4 +321,4 @@ mixin contactForm(id)
         input.form__checkbox(name="agreement" type="checkbox" checked hidden)
         span.form__checkbox-styled
         span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
-      +button('Отправить', 'button--secondary form__submit', 'submit')
+      +submitButton('Отправить', 'button--secondary form__submit')

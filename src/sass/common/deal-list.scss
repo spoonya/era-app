@@ -44,6 +44,8 @@
 
     transition: transform 0.1s linear, background-color 0.1s linear;
 
+    will-change: transform, background-color;
+
     &:hover {
       transform: translate(5px, 5px);
 
@@ -93,6 +95,8 @@
 
   &__info {
     color: $color-red-alpha;
+
+    will-change: display;
   }
 
   &--dark {

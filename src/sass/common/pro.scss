@@ -59,4 +59,8 @@
       align-self: center;
     }
   }
+
+  @include media-tablet-sm {
+    margin-right: 0;
+  }
 }

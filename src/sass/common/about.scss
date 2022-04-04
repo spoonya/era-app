@@ -177,5 +177,6 @@
   }
 
   @include media-phone-sm {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

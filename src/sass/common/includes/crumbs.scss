@@ -28,7 +28,6 @@
   }
 
   a {
-    font-size: 16px;
     color: $color-black-alpha;
 
     transition: color 0.1s linear;
@@ -36,6 +35,11 @@
     &:hover {
       color: $color-red-alpha;
     }
+  }
+
+  a,
+  span {
+    font-size: 16px;
   }
 
   &--margin-lg {
@@ -47,6 +51,14 @@
   }
 
   &--margin-sm {
+    margin-bottom: 20px;
+  }
+
+  @include media-tablet-lg {
+    margin-bottom: 30px;
+  }
+
+  @include media-phone-lg {
     margin-bottom: 20px;
   }
 }

@@ -1,6 +1,10 @@
 .portfolio-intro__img {
   overflow: hidden;
 
+  &::after {
+    display: none;
+  }
+
   img {
     position: absolute;
     bottom: 0;

@@ -6,6 +6,24 @@
   left: 0;
   width: 100%;
 
+  &--light {
+    .header__lang {
+      button {
+        color: $color-white-alpha;
+      }
+
+      img {
+        filter: brightness(10);
+      }
+    }
+
+    .burger-button {
+      span {
+        background-color: $color-white-alpha;
+      }
+    }
+  }
+
   &.open {
     height: 100%;
 

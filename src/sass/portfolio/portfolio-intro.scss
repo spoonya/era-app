@@ -1,25 +1,6 @@
 .portfolio-intro__img {
-  overflow: hidden;
-
   img {
     position: absolute;
-    bottom: 0;
-  }
-}
-
-.portfolio-intro__img,
-.portfolio-intro__img-wrapper {
-  @include media-tablet-lg {
-    max-width: 380px;
-    min-height: 530px;
-  }
-
-  @include media-tablet-sm {
-    max-width: 530px;
-  }
-
-  @include media-phone-sm {
-    max-width: 335px;
-    min-height: 355px;
+    bottom: -5px;
   }
 }

@@ -1,13 +1,14 @@
 extends common/layout
 
+block header
+  +header('header--light')
+
 block content
   main
     //Intro
     section.intro.intro--secondary
       .container
         .intro__inner
-          .intro__img-text.intro__img-text--tablet
-            img(src="assets/img/svg/text-project.svg",  width="170", height="170", alt="", loading="lazy")
           .intro__descrip
             //Crumbs
             +crumbs([
@@ -22,11 +23,9 @@ block content
             .intro__buttons
               +link('Скачать для iOS', '#', 'button--reverse button--iconless')
               +link('Скачать для Android', '#', 'button--iconless')
-          .intro__img-wrapper.intro__img-wrapper--secondary
-            .intro__img.intro__img--secondary
-              img.intro__img-main(src="assets/img/png/femidia.png", width="655", height="556", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+          .intro__img-wrapper.intro__img-wrapper--secondary(style="background-image: url('assets/img/png/femidia.png');")
             .intro__img-text
-              img(src="assets/img/svg/text-project.svg",  width="165", height="165", alt="", loading="lazy")
+              img(src="assets/img/svg/text-company.svg",  width="196", height="196", alt="", loading="lazy")
 
     //Project-about
     section.project-about

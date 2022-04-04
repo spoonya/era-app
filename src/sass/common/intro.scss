@@ -62,7 +62,9 @@
   display: flex;
   justify-content: flex-end;
 
+  max-width: 68.3rem;
   width: 100%;
+  min-height: 77.2rem;
 
   border-radius: 0 0 400px 400px;
 
@@ -114,15 +116,31 @@
     }
   }
 
+  &--gradient {
+    &::before {
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+
+      content: '';
+
+      background: url('../img/png/gradient-3.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
   &--secondary {
     display: flex;
 
-    overflow: hidden;
-
-    min-height: 74.3rem;
     max-width: 100%;
-
-    padding-top: 74px;
+    min-height: 74.3rem;
 
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 300px;
@@ -152,9 +170,21 @@
     }
 
     @include media-tablet-lg {
+      max-width: 380px;
+      min-height: 530px;
+
       .intro__img-text {
         display: none;
       }
+    }
+
+    @include media-tablet-sm {
+      max-width: 530px;
+    }
+
+    @include media-phone-sm {
+      max-width: 335px;
+      min-height: 355px;
     }
   }
 }
@@ -162,10 +192,12 @@
 .intro__img {
   position: relative;
 
+  display: flex;
+
   overflow: hidden;
 
+  padding-top: 74px;
   width: 100%;
-  min-height: 77.2rem;
 
   border-radius: inherit;
 
@@ -191,7 +223,7 @@
   }
 
   &--padding-bottom {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   &-phone {
@@ -232,33 +264,6 @@
         max-width: 95px;
       }
     }
-  }
-}
-
-.intro__img,
-.intro__img-wrapper {
-  max-width: 68.3rem;
-
-  @include media-desktop {
-    max-width: 550px;
-  }
-
-  @include media-laptop {
-    max-width: 422px;
-    min-height: 541px;
-  }
-
-  @include media-tablet-lg-sm {
-    max-width: 350px;
-  }
-
-  @include media-tablet-sm {
-    max-width: 422px;
-    align-self: flex-end;
-  }
-
-  @include media-phone-sm {
-    min-height: 470px;
   }
 }
 
@@ -314,6 +319,31 @@
   .button {
     &:not(:last-of-type) {
       margin-right: 20px;
+    }
+  }
+
+  @include media-phone-sm {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .button:not(:last-of-type) {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    .button--reverse {
+      margin-left: 0;
+
+      a,
+      button {
+        transform: translate(8px, 8px);
+      }
+
+      &:before,
+      a,
+      button {
+        border-radius: 0 0 20px 0;
+      }
     }
   }
 }

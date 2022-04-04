@@ -163,6 +163,10 @@
       @include media-tablet-sm {
         max-width: 400px;
       }
+
+      @include media-phone-sm {
+        max-width: 250px;
+      }
     }
 
     @include media-desktop {

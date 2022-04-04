@@ -7,25 +7,25 @@ block content
   main
     //Intro
     section.intro.intro--secondary.project-intro
-      .container
-        .intro__inner
-          .intro__descrip
-            //Crumbs
-            +crumbs([
-              {href: 'portfolio.html', name: 'Портфолио'},
-              {href: '', name: 'Femidia'}
-            ], 'crumbs--margin-lg')
-            .title.title--uppercase
-              h1
-                |Femidia
-            .text.text--margin
-              p Приложение предназначено для Юридической компании и ее пользователей.
-            .intro__buttons
-              +link('Скачать для iOS', '#', 'button--reverse button--iconless')
-              +link('Скачать для Android', '#', 'button--iconless')
-          .intro__img-wrapper.intro__img-wrapper--secondary.project-intro__img(style="background-image: url('assets/img/png/femidia.png')")
-            .intro__img-text
-              img(src="assets/img/svg/text-company.svg",  width="196", height="196", alt="", loading="lazy")
+
+      .intro__inner.container
+        .intro__descrip
+          //Crumbs
+          +crumbs([
+            {href: 'portfolio.html', name: 'Портфолио'},
+            {href: '', name: 'Femidia'}
+          ], 'crumbs--margin-lg')
+          .title.title--uppercase
+            h1
+              |Femidia
+          .text.text--margin
+            p Приложение предназначено для Юридической компании и ее пользователей.
+          .intro__buttons
+            +link('Скачать для iOS', '#', 'button--reverse button--iconless')
+            +link('Скачать для Android', '#', 'button--iconless')
+        .intro__img-wrapper.intro__img-wrapper--secondary.project-intro__img(style="background-image: url('assets/img/png/femidia.png')")
+          .intro__img-text
+            img(src="assets/img/svg/text-company.svg",  width="196", height="196", alt="", loading="lazy")
 
     //Project-about
     section.project-about

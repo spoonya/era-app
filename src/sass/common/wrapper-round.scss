@@ -7,4 +7,8 @@
 
   border-radius: 40px;
   border: 1px solid;
+
+  @include media-tablet-lg {
+    border-radius: 30px;
+  }
 }

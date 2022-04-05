@@ -27,6 +27,19 @@
 .startup__descrip {
   max-width: 59.6rem;
   width: 100%;
+
+  @include media-tablet-sm {
+    max-width: unset;
+  }
+}
+
+.startup__button {
+  display: block;
+  max-width: fit-content;
+
+  @include media-tablet-sm {
+    margin: 0 auto 8px;
+  }
 }
 
 .startup__img {
@@ -37,6 +50,10 @@
 
   img:first-child {
     position: relative;
+  }
+
+  @include media-tablet-lg {
+    max-width: 358px;
   }
 
   @include media-tablet-sm {

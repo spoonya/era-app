@@ -60,6 +60,10 @@
   &:focus {
     transform: translate(0, 0);
   }
+
+  @include media-phone-lg {
+    font-size: 14px;
+  }
 }
 
 textarea.form__input {

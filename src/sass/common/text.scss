@@ -19,9 +19,12 @@
     line-height: inherit;
   }
 
-  ul {
+  ul,
+  ol {
     padding-left: 18px;
+  }
 
+  ol {
     li {
       list-style: decimal;
     }

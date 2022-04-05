@@ -1,9 +1,17 @@
 import { CLASSES } from './constants';
+import { isMobile } from './helpers';
 
 export function typeIntroTitle() {
+  const titleWrapper = document.querySelector('.title.hidden');
+
+  if (isMobile() && titleWrapper) {
+    titleWrapper.classList.remove(CLASSES.hidden);
+
+    return;
+  }
+
   const titleFade = document.querySelector('#title-fade');
   const titleBounce = document.querySelector('#title-bounce');
-  const titleWrapper = document.querySelector('.title.hidden');
 
   if (!titleFade && !titleBounce) return;
 

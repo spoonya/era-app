@@ -38,6 +38,8 @@
 
   a,
   button {
+    font-size: 18px;
+
     border: 2px solid;
 
     padding: 1.25em 1.625em;
@@ -48,6 +50,10 @@
     transition: transform 0.15s ease;
 
     transform: translate(8px, 8px);
+
+    @include media-tablet-lg {
+      font-size: 16px;
+    }
   }
 
   &:before,

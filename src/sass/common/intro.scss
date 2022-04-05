@@ -11,11 +11,41 @@
 
     .intro__descrip {
       padding-top: 14.9rem;
+      margin-right: 0;
+      min-width: 63rem;
+    }
+
+    @include media-desktop {
+      .intro__descrip {
+        min-width: 510px;
+      }
+    }
+
+    @include media-laptop {
+      .intro__descrip {
+        min-width: 480px;
+      }
+    }
+
+    @include media-tablet-lg {
+      .intro__descrip {
+        min-width: 422px;
+        max-width: 422px;
+      }
+    }
+
+    @include media-tablet-lg-sm {
+      .intro__descrip {
+        min-width: 343px;
+        max-width: 343px;
+      }
     }
 
     @include media-tablet-sm {
       .intro__descrip {
         padding-top: 30px;
+        min-width: unset;
+        max-width: unset;
       }
     }
   }
@@ -47,12 +77,23 @@
     }
   }
 
+  .button {
+    display: block;
+
+    max-width: fit-content;
+
+    @include media-tablet-sm {
+      margin: 0 auto 8px;
+    }
+  }
+
   @include media-tablet-lg {
     padding-top: 112px;
   }
 
   @include media-tablet-sm {
     padding-top: 35px;
+    max-width: unset;
   }
 }
 
@@ -139,8 +180,11 @@
   &--secondary {
     display: flex;
 
+    left: 4%;
+
     max-width: 100%;
     min-height: 74.3rem;
+    min-width: 94.8rem;
 
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 300px;
@@ -160,8 +204,12 @@
       max-width: 100%;
       width: unset;
 
-      @include media-tablet-sm {
-        max-width: 400px;
+      @include media-laptop {
+        max-width: 410px;
+      }
+
+      @include media-tablet-lg {
+        max-width: 350px;
       }
 
       @include media-phone-sm {
@@ -169,12 +217,17 @@
       }
     }
 
-    @include media-desktop {
+    @include media-laptop {
       border-bottom-left-radius: 150px;
     }
 
+    @include media-laptop {
+      min-width: 600px;
+    }
+
     @include media-tablet-lg {
-      max-width: 380px;
+      max-width: 542px;
+      min-width: 542px;
       min-height: 530px;
 
       .intro__img-text {
@@ -183,11 +236,11 @@
     }
 
     @include media-tablet-sm {
-      max-width: 530px;
+      min-width: calc(100vw - 10px);
     }
 
     @include media-phone-sm {
-      max-width: 335px;
+      left: 5%;
       min-height: 355px;
     }
   }
@@ -223,7 +276,7 @@
   }
 
   &--padding-left-right {
-    padding: 0 30px;
+    padding: 0 60px;
   }
 
   &--padding-bottom {
@@ -328,7 +381,7 @@
     }
   }
 
-  @include media-phone-sm {
+  @include media-laptop {
     flex-direction: column;
     align-items: flex-start;
 

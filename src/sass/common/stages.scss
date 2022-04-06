@@ -65,7 +65,7 @@
 
   summary {
     right: 0;
-    top: -10px;
+    top: 0;
   }
 
   div {
@@ -96,22 +96,25 @@
 
   @include media-tablet-sm {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 40px;
+    grid-gap: 20px;
 
     .text {
       padding-top: 20px;
     }
 
     h3 {
-      font-size: 20px;
+      display: flex;
+      align-items: center;
 
+      font-size: 20px;
+      min-height: 50px;
       padding-left: 70px;
     }
 
     span {
       position: absolute;
 
-      top: -10px;
+      top: 0;
       left: 0;
 
       min-width: 50px;

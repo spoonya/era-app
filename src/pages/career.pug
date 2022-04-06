@@ -17,7 +17,7 @@ block content
                 span.title__part-red в Era App
             .text.text--margin
               p Мы активно расширяем свою команду и регулярно публикуем новые вакансии
-            +modalButton('Отправить резюме')
+            +modalButton('Отправить резюме', '', 'modal-vacancy')
           .intro__img-wrapper.intro__img-wrapper--secondary
             .intro__img.intro__img--secondary.intro__img--align-end.intro__img--justify-start
               img.intro__img-main(src="assets/img/svg/career.svg", width="665", height="539", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
@@ -108,5 +108,8 @@ block content
         'Не нашли подходящую вакансию?',
         [
           'Мы все время в поиске талантливых и целеустремленных личностей. Присылайте нам свое резюме, и мы свяжемся с вами, как только появится подходящая позиция для вас! '
-        ]
+        ],
+        '',
+        '',
+        'modal-vacancy'
       )

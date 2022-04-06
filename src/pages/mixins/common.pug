@@ -10,8 +10,8 @@ mixin submitButton(text, modif= null)
         <path d="M11.0365 12.4728C11.5887 12.4728 12.0365 12.0251 12.0364 11.4728L12.0364 2.47282C12.0364 1.92053 11.5887 1.47282 11.0364 1.47283C10.4841 1.47283 10.0364 1.92055 10.0364 2.47283L10.0364 10.4728L2.03644 10.4729C1.48416 10.4729 1.03645 10.9206 1.03645 11.4729C1.03645 12.0252 1.48417 12.4729 2.03646 12.4729L11.0365 12.4728ZM0.356375 2.20711L10.3293 12.1799L11.7436 10.7657L1.77058 0.792888L0.356375 2.20711Z"/>
       </svg>
 
-mixin modalButton(text, modif= null)
-  .button(class= modif, data-modal-target="modal-callback")
+mixin modalButton(text, modif= null, target="modal-callback")
+  .button(class= modif, data-modal-target= target)
     button(type="button")
       span= text
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ mixin crumbs(arrLinks, modif= null)
           else
             li: span= link.name
 
-mixin offer(img, title, textArr, isRellax= false, modif= null)
+mixin offer(img, title, textArr, isRellax= false, modif= null, target="modal-callback")
   .offer(class= modif)
     .container
       .offer__inner.wrapper-round
@@ -67,7 +67,7 @@ mixin offer(img, title, textArr, isRellax= false, modif= null)
               each txt in textArr
                 p= txt
           .offer__bot
-            +modalButton('Связаться с нами')
+            +modalButton('Связаться с нами', '', target)
 
 mixin serviceItem(link, img, title, text= null)
   li

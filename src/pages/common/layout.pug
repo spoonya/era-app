@@ -54,6 +54,34 @@ html(lang="ru")
                 span.form__checkbox-styled
                 span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
               +submitButton('Отправить', 'form__submit')
+      #modal-vacancy.modal
+        .modal__content
+          button.modal__close(aria-label="Close modal" type="button" data-modal-close)
+            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1.70711" y1="1.29289" x2="18.6777" y2="18.2635" stroke="#182F43" stroke-width="2"/>
+              <line x1="1.29289" y1="18.2636" x2="18.2635" y2="1.29303" stroke="#182F43" stroke-width="2"/>
+            </svg>
+          .title.modal__title
+            h2 Присоединяйтесь к нам!
+          form.form(action="#", method="POST")
+            .form__control
+              input.form__input(type="text", name="name", placeholder="Ваше имя*", required)
+            .form__control
+              input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*", required)
+            .form__control.form__control--wide
+              textarea.form__input(name="message", placeholder="Коротко расскажите о себе" maxlength="250")
+              label.form__upload-button
+                input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files")
+                span.form__error
+                span.form__upload-button-txt
+                  span Прикрепить резюме
+                  img(src="assets/img/png/attach.png", width="30", height="30", alt="")
+            .form__group
+              label.form__checkbox-wrapper.form__checkbox-wrapper--dark
+                input.form__checkbox(name="agreement" type="checkbox" checked hidden)
+                span.form__checkbox-styled
+                span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+              +submitButton('Отправить', 'form__submit')
 
     block scripts
       script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js")

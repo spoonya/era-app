@@ -23,7 +23,7 @@ block content
               p
                 |Уровень:&nbsp;
                 span Middle
-            +link('Откликнуться', '#form-vacancy')
+            +link('Откликнуться', '#vacancy-form')
           section.vacancy__info.section
             .vacancy__info-item
               .title.title-marked.vacancy__info-title
@@ -60,7 +60,7 @@ block content
 
       //Start
       .wrapper.wrapper--border-right
-        section.start.vacancy-form.section
+        section#vacancy-form.start.vacancy-form.section
           .container
             .title.title--light.vacancy-form__title
               h2
@@ -68,7 +68,7 @@ block content
                 span.title__part-yellow команды профессионалов!
             .start__inner
               .start__content
-                form#form-vacancy.form(action="#", method="POST")
+                form.form(action="#", method="POST")
                   .form__control
                     input.form__input(type="text", name="name", placeholder="Ваше имя*", required)
                   .form__control
@@ -80,7 +80,8 @@ block content
                   .form__control
                     input.form__input(type="email", name="e-mail", placeholder="Ваш e-mail*", required)
                   .form__control
-                    input.form__input(type="text", name="name",  placeholder="Резюме" readonly)
+                    .form__placeholder
+                      span Резюме
                     label.form__upload-button
                       input.form__input(type="file" multiple="multiple" accept=".doc, .docx, .odt, .pdf, .ppt, .pptx, .tex, .txt, .rtf, .wps, .wks, .wpd, .png, .jpg, .jpeg" hidden name="files")
                       span.form__error

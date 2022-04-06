@@ -36,7 +36,8 @@
   }
 }
 
-.form__input {
+.form__input,
+.form__placeholder {
   position: relative;
 
   width: 100%;
@@ -64,6 +65,12 @@
   @include media-phone-lg {
     font-size: 14px;
   }
+}
+
+.form__placeholder {
+  width: 100%;
+  height: 100%;
+  padding-right: 108px;
 }
 
 textarea.form__input {
@@ -156,6 +163,10 @@ textarea.form__input {
 
   bottom: 17px;
   right: 20px;
+
+  @include media-tablet-sm {
+    bottom: 14px;
+  }
 
   &-txt {
     display: flex;

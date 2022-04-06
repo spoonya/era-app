@@ -1,0 +1,15 @@
+.support-intro {
+  .support-intro__img {
+    @include media-laptop {
+      top: 20px;
+    }
+
+    @include media-tablet-sm {
+      top: 15px;
+    }
+
+    @include media-phone-sm {
+      top: 5px;
+    }
+  }
+}

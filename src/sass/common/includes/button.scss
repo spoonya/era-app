@@ -50,7 +50,6 @@
     transition: transform 0.15s ease;
 
     transform: translate(8px, 8px);
-    will-change: transform;
 
     @include media-tablet-lg {
       font-size: 16px;
@@ -77,8 +76,6 @@
     font-weight: 600;
 
     transition: color 0.15s ease;
-
-    will-change: color;
   }
 
   svg {
@@ -86,7 +83,6 @@
     fill: $color-black-alpha;
 
     transition: transform 0.15s ease;
-    will-change: transform;
   }
 
   &--secondary {

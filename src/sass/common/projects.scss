@@ -117,6 +117,14 @@
     }
   }
 
+  @include media-tablet-sm {
+    .button {
+      display: block;
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
   @include media-phone-lg {
     align-items: center;
 

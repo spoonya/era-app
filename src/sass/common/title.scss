@@ -56,4 +56,8 @@
   @include media-tablet-lg-sm {
     font-size: 26px;
   }
+
+  @include media-tablet-sm {
+    margin-bottom: 15px;
+  }
 }

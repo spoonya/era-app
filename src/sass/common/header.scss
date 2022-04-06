@@ -22,6 +22,24 @@
         background-color: $color-white-alpha;
       }
     }
+
+    @include media-tablet-sm {
+      .header__lang {
+        button {
+          color: $color-black-alpha;
+        }
+
+        img {
+          filter: unset;
+        }
+      }
+
+      .burger-button:not(.active) {
+        span {
+          background-color: $color-black-alpha;
+        }
+      }
+    }
   }
 
   &.open {

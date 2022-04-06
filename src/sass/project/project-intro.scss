@@ -1,0 +1,7 @@
+.project-intro {
+  &__title {
+    @include media-tablet-sm {
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -10,7 +10,7 @@
     }
   }
 
-  @include media-tablet-lg-sm {
+  @include media-tablet-lg {
     justify-self: unset;
     align-self: flex-end;
   }
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 
     &:not(:last-of-type) {
       margin-bottom: 12px;

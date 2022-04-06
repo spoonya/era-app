@@ -156,12 +156,20 @@
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
   @include media-phone-lg {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
+
+    img {
+      max-width: 65px;
+    }
+
+    a {
+      padding: 12px 10px;
+    }
   }
 }

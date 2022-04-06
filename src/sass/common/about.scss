@@ -49,6 +49,7 @@
         display: block;
 
         margin-bottom: 40px;
+        margin-right: 0;
       }
     }
   }
@@ -138,12 +139,8 @@
     border-radius: inherit;
   }
 
-  @include media-laptop {
-    max-width: 400px;
-  }
-
   @include media-tablet-lg {
-    max-width: 290px;
+    max-width: 350px;
     border-radius: 0 0 100px 0;
   }
 

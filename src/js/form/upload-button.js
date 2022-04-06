@@ -4,13 +4,15 @@ export function controlUploadButton() {
   if (!uploadButtons.length) return;
 
   uploadButtons.forEach((uploadButton) => {
+    const placeholder = uploadButton
+      .closest('.form__control')
+      .querySelector('.form__placeholder span');
+    const placeholderInitial = placeholder ? placeholder.textContent : '';
+
     uploadButton.addEventListener('change', () => {
       const fileName = uploadButton.value.split('\\').pop();
-      const placeholder = uploadButton
-        .closest('.form__control')
-        .querySelector('.form__placeholder span');
 
-      placeholder.textContent = fileName;
+      placeholder.textContent = fileName || placeholderInitial;
     });
   });
 }

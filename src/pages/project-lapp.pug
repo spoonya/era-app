@@ -19,9 +19,7 @@ block content
               |Lapp
           .text.text--margin
             p Приложение, разработка, которая выводит работу с документами и специалистами на новый уровень.
-          .intro__buttons
-            +link('Скачать для iOS', '#', 'button--reverse button--iconless')
-            +link('Скачать для Android', '#', 'button--iconless')
+          +modalButton('Предложить идею')
         .intro__img-wrapper.intro__img-wrapper--secondary(style="background-image: url('assets/img/png/lapp.png')")
           .intro__img-text
             img(src="assets/img/svg/text-company.svg",  width="196", height="196", alt="", loading="lazy")

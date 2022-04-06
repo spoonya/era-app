@@ -20,7 +20,7 @@ block content
             +link('Наше портфолио', 'portfolio.html')
           .intro__img-wrapper.intro__img-wrapper--secondary.intro__img-wrapper--gradient(style="background-image: url('assets/img/png/company.png');")
             .intro__img-text
-              img(src="assets/img/svg/text-company.svg",  width="196", height="196", alt="", loading="lazy")
+              img(src="assets/img/svg/text-company.svg", width="196", height="196", alt="", loading="lazy")
 
     //About
     section.about.about--img-media
@@ -33,9 +33,9 @@ block content
             .title
               h2
                 |Агентство по созданию&nbsp;
-                span.title__part-yellow мобильных&nbsp;
+                span.title__part-yellow.title__part-br мобильных&nbsp;
                 |и&nbsp;
-                span.title__part-red веб-приложений
+                span.title__part-red.title__part-br веб-приложений
             .text
               p За несколько лет работы мы сотрудничали с международными организациями и интересными стартапами, общались, помогали и создавали современные продукты. Это наша история.
 
@@ -99,7 +99,7 @@ block content
               div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
                 .text.text--light.join__descrip-text
                   p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
-                +link('Наши вакансии', '#', 'button--secondary')
+                +link('Наши вакансии', 'career.html#vacancies', 'button--secondary')
 
       //Info
       section.info.section
@@ -107,7 +107,9 @@ block content
           .info__inner
             .info__descrip
               .title.title--light
-                h2 Почему стоит сотрудничать с нами?
+                h2 Почему стоит сотрудничать
+                  br
+                  |с нами?
               .text.text--light.text--margin
                 p Мы являемся командой технологов, стратегов, дизайнеров, маркетологов и разработчиков. Работая друг с драгом мы превзойдем все ожидания, чтобы сделать то, что любят люди.
               +modalButton('Свяжитесь с нами', 'button--secondary')

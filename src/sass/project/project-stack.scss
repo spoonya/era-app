@@ -47,7 +47,7 @@
 
   filter: drop-shadow(10px 10px 10px rgba(77, 83, 89, 0.5));
 
-  @include media-desktop {
+  @include media-laptop {
     max-width: 400px;
   }
 

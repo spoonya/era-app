@@ -60,10 +60,6 @@
 
       transition: transform 0.2s linear;
 
-      &.show {
-        display: inline-block;
-      }
-
       &.active {
         transform: rotateX(180deg);
       }

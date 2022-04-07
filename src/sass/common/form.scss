@@ -184,6 +184,8 @@ textarea.form__input {
   height: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+
+  transition: opacity 0.1s linear;
 }
 
 .form__checkbox:checked + .form__checkbox-styled::before {

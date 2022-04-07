@@ -9,10 +9,10 @@ block content
           .intro__img-text.intro__img-text--tablet
             img(src="assets/img/svg/text.svg",  width="170", height="170", alt="", loading="lazy")
           .intro__descrip
-            .title.hidden
+            .title
               h1
-                span#title-fade Наша команда проложит вам путь к&nbsp;
-                span#title-bounce.title__part-red.title__part-br цифровому будущему
+                span Наша команда проложит вам путь к&nbsp;
+                span.title__part-red цифровому будущему
             .text.text--margin
               p Мы являемся компанией по разработке веб-приложений и мобильных приложений полного цикла, создающей индивидуальные решения.
               p Наша команда дизайнеров использует новейшие практики UI/UX дизайна
@@ -50,13 +50,13 @@ block content
                 a(href="testing.html")  Тестирование
             img.rellax(src="assets/img/svg/gear.svg", width="142", height="143", loading="lazy", alt="", data-rellax-speed="-2.5")
           .spec__descrip
-            .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+            .title
               h2
                 |Мы специализируемся на&nbsp;
                 span.title__part-red.title__part-br 9 услугах&nbsp;
                 |в&nbsp;
                 span.title__part-yellow.title__part-br 8 отраслях
-            div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+            div
               .text.text--margin
                 p Мы создадим для вас решение, которое определит и решит ваши бизнес-задачи, продукт достигнет соответствия рынку и технологическим тенденциям
               +link('Наши услуги', 'services.html')
@@ -85,16 +85,16 @@ block content
           li.projects__item
             img(src="assets/img/png/projects-1.png", width="460", height="452", alt="Vino&vino", loading="lazy")
             .projects__item-descrip
-              h3(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Femidia
-              div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+              h3 Femidia
+              div
                 .text.text--light.projects__item-text
                   p Приложение предназначено для Юридической компании и ее пользователей.
                 +link('Подробнее', 'project-femidia.html', 'button--secondary')
           li.projects__item
             img(src="assets/img/png/projects-3.png", width="460", height="452", alt="LawDoc", loading="lazy")
             .projects__item-descrip
-              h3(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Lapp
-              div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+              h3 Lapp
+              div
                 .text.text--light.projects__item-text
                   p Приложение, разработка, которая выводит работу с документами и специалистами на новый уровень.
                 +link('Подробнее', 'project-lapp.html', 'button--secondary')
@@ -152,8 +152,8 @@ block content
               img(src="assets/img/svg/like.svg", width="52", height="52", alt="", loading="lazy")
           .startup__descrip
             .title-marked
-              h2(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300") Услуги стартапа
-            div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+              h2 Услуги стартапа
+            div
               .text.startup__text
                 p Если вы смелый стартап с идеей и хотите ее протестировать, мы поможем вам воплотить ее в жизнь. Как компания по разработке ПО, мы имеем глубокий опыт создания проектов MVP, чтобы сократить время выхода на рынок.
               +modalButton('Поделиться своей идеей', 'startup__button')
@@ -169,9 +169,9 @@ block content
             +joinItem('join-4', 'Честность', 'Будь честен, открыт и ясно озвучивай мысль. Делай то, что лучше всего подходит всем, а не только тебе')
             +joinItem('join-5', 'Развлечение', 'Хихикай. Найслаждайся тем, что мы делаем и чего стремимся достичь. Смех заразителен, заставь мир улыбнуться')
             .join__descrip
-              .title.title--light(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+              .title.title--light
                 h3 Присоединяйся к нам!
-              div(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+              div
                 .text.text--light.join__descrip-text
                   p Все это отзывается в тебе? Присоединяйся к команде, ознакомься с нашими вакансиями
                 +link('Наши вакансии', 'career.html#vacancies', 'button--secondary')

@@ -45,6 +45,12 @@
     max-height: 37.8rem;
     object-fit: contain;
     margin-bottom: 10px;
+
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   h3 {

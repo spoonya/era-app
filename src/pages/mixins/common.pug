@@ -166,13 +166,13 @@ mixin sectionSolution
     .container
       .solution__content
         .solution__descrip
-          .title(data-aos="fade-down", data-aos-easig="linear", data-aos-duration="1300")
+          .title
             h2
               |Мы разрабатываем решение&nbsp;
               span.title__part-red для любой ниши
               |,
               |которая нуждается в нас
-          .solution__list(data-aos="fade-up", data-aos-easig="linear", data-aos-duration="1300")
+          .solution__list
             div
               img(src="assets/img/svg/solution-1.svg", width="80", height="80", alt="", loading="lazy")
               h3 Образование и здравохранение
@@ -215,7 +215,8 @@ mixin sectionSolution
 
 mixin draftItem(img, title, link)
   li
-    img(src=`assets/img/png/${img}.png`, width="385", height="378", alt="", loading="lazy")
+    a(href= link)
+      img(src=`assets/img/png/${img}.png`, width="385", height="378", alt="", loading="lazy")
     div
       h3= title
       +more(true, link)

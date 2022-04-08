@@ -319,5 +319,7 @@ mixin contactForm(id)
       label.form__checkbox-wrapper
         input.form__checkbox(name="agreement" type="checkbox" checked hidden)
         span.form__checkbox-styled
-        span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+        span.form__checkbox-txt
+          |Я согласен (а) с условиями&nbsp;
+          a(href="docs/agreement.pdf" target="_blank") пользовательского соглашения
       +submitButton('Отправить', 'button--secondary form__submit')

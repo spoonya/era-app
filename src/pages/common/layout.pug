@@ -52,7 +52,9 @@ html(lang="ru")
               label.form__checkbox-wrapper.form__checkbox-wrapper--dark
                 input.form__checkbox(name="agreement" type="checkbox" checked hidden)
                 span.form__checkbox-styled
-                span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+                span.form__checkbox-txt
+                  |Я согласен (а) с условиями&nbsp;
+                  a(href="docs/agreement.pdf" target="_blank") пользовательского соглашения
               +submitButton('Отправить', 'form__submit')
       #modal-vacancy.modal
         .modal__content
@@ -80,7 +82,9 @@ html(lang="ru")
               label.form__checkbox-wrapper.form__checkbox-wrapper--dark
                 input.form__checkbox(name="agreement" type="checkbox" checked hidden)
                 span.form__checkbox-styled
-                span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+                span.form__checkbox-txt
+                  |Я согласен (а) с условиями&nbsp;
+                  a(href="docs/agreement.pdf" target="_blank") пользовательского соглашения
               +submitButton('Отправить', 'form__submit')
 
     block scripts

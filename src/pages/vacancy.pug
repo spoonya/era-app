@@ -94,7 +94,9 @@ block content
                     label.form__checkbox-wrapper
                       input.form__checkbox(name="agreement" type="checkbox" checked hidden)
                       span.form__checkbox-styled
-                      span.form__checkbox-txt Я согласен (а) на обработку моих персональных данных
+                      span.form__checkbox-txt
+                        |Я согласен (а) с условиями&nbsp;
+                        a(href="docs/agreement.pdf" target="_blank") пользовательского соглашения
                     +submitButton('Отправить', 'button--secondary form__submit')
               .start__img.vacancy-form__img
                 img(src="assets/img/svg/people.svg", width="586", height="429", alt="", loading="lazy")

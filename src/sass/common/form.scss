@@ -98,13 +98,29 @@
 .form__placeholder {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   padding-right: 108px;
+
+  span {
+    display: block;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20.6rem;
+  }
 
   & + .form__upload-button {
     bottom: 16px;
 
-    @include media-tablet-sm {
+    @include media-phone-lg {
       top: 2px;
+    }
+  }
+
+  @include media-phone-lg {
+    span {
+      max-width: 50vw;
     }
   }
 }

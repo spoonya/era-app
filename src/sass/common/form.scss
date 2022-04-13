@@ -118,6 +118,12 @@
     }
   }
 
+  @include media-desktop {
+    span {
+      max-width: 150px;
+    }
+  }
+
   @include media-phone-lg {
     span {
       max-width: 50vw;

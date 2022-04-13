@@ -59,6 +59,36 @@
   @include media-phone-sm {
     padding: 45px 20px;
   }
+
+  &--paddingless {
+    padding: 0;
+  }
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-tablet-sm {
+    flex-direction: column;
+  }
+}
+
+.modal__descrip {
+  max-width: 61.1rem;
+  width: 100%;
+
+  margin-right: 20px;
+  padding: 17.2rem 0 17.2rem 6rem;
+
+  @include media-tablet-lg {
+    padding: 90px 0 90px 30px;
+  }
+
+  @include media-tablet-sm {
+    padding: 50px 20px 30px;
+    max-width: unset;
+  }
 }
 
 .modal__close {
@@ -79,4 +109,26 @@
 
 .modal__title {
   text-align: center;
+
+  &--left {
+    text-align: left;
+  }
+}
+
+.modal__text {
+  font-weight: 500;
+}
+
+.modal__img {
+  max-width: 44.9rem;
+  align-self: flex-end;
+
+  @include media-tablet-lg {
+    max-width: 270px;
+  }
+
+  @include media-tablet-sm {
+    align-self: center;
+    max-width: 250px;
+  }
 }

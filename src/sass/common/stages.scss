@@ -68,10 +68,6 @@
     top: 0;
   }
 
-  div {
-    position: relative;
-  }
-
   @include media-desktop {
     span {
       min-width: 70px;

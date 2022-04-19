@@ -1,4 +1,8 @@
 .details {
+  transition: max-height 0.4s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+
   &[open] {
     summary {
       svg {
@@ -23,13 +27,7 @@
     }
   }
 
-  @include media-tablet-sm {
-    transition: max-height 0.4s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-
-    &[open] {
-      max-height: 1000px;
-    }
+  &[open] {
+    max-height: 1000px;
   }
 }

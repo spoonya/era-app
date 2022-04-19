@@ -13,7 +13,7 @@ export class Spoiler {
   }
 
   _onToggle(event) {
-    if (!isMediaBreakpoint() && !this.isDesktop) return;
+    if (!isMediaBreakpoint(this.mediaBreakpoint) && !this.isDesktop) return;
 
     const detailsOpened = this.spoilers.filter((el) => el.hasAttribute('open'));
 

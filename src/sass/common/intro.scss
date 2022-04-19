@@ -178,12 +178,10 @@
   }
 
   &--secondary {
-    display: flex;
-
     left: 4%;
 
     max-width: 100%;
-    min-height: 74.3rem;
+    min-height: 73.4rem;
     min-width: 94.8rem;
 
     border-bottom-right-radius: 0;
@@ -201,15 +199,16 @@
 
     .intro__img-main {
       top: 5px;
+
       max-width: 100%;
       width: unset;
 
-      @include media-laptop {
-        max-width: 410px;
+      @include media-tablet-sm {
+        max-width: 582px;
       }
 
       @include media-phone-sm {
-        max-width: 65vw;
+        min-width: 400px;
       }
     }
 
@@ -224,7 +223,7 @@
     @include media-tablet-lg {
       max-width: 542px;
       min-width: 542px;
-      min-height: 530px;
+      min-height: 452px;
 
       .intro__img-text {
         display: none;
@@ -246,38 +245,13 @@
   position: relative;
 
   display: flex;
+  align-items: flex-end;
 
   overflow: hidden;
 
-  padding-top: 74px;
   width: 100%;
 
   border-radius: inherit;
-
-  &--align-end {
-    align-items: flex-end;
-  }
-
-  &--align-center {
-    align-items: center;
-  }
-
-  &--justify-center {
-    justify-content: center;
-  }
-
-  &--justify-end {
-    justify-content: flex-end;
-    padding-right: 10px;
-  }
-
-  &--padding-left-right {
-    padding: 0 60px;
-  }
-
-  &--padding-bottom {
-    padding-bottom: 30px;
-  }
 
   &-phone {
     position: absolute;

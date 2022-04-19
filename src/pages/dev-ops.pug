@@ -1,7 +1,5 @@
 extends common/layout
 
-include mixins/dev-ops
-
 block content
   main
     //Intro
@@ -22,8 +20,8 @@ block content
               p Оптимизируйте свои процессы, повысьте эффективность и быстрее реализуйте новые идеи с нашей помощью
             +link('Наши проекты', 'portfolio.html')
           .intro__img-wrapper.intro__img-wrapper--secondary
-            .intro__img.intro__img--secondary.intro__img--align-end.intro__img--justify-start
-              img.intro__img-main(src="assets/img/svg/dev-ops.svg", width="667", height="512", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
+            .intro__img
+              img.intro__img-main(src="assets/img/svg/dev-ops.svg", width="826", height="638", alt="", data-aos="fade-up", data-aos-duration="1500", data-aos-delay="100")
             .intro__img-text
               img(src="assets/img/svg/text-dev-ops.svg",  width="196", height="196", alt="", loading="lazy")
 
@@ -42,15 +40,15 @@ block content
             .text
               p Привносите с легкостью новый код и функции в свои продукты с опытными специалистами, которые всегда рядом
 
-    //Dev-ops
-    section.dev-ops.section
+    //Features
+    section.features.section
       .container
-        .dev-ops__list.wrapper-round
-          +devOpsItem('dev-ops-1', 'Скорость', 'Ускорьте выход на рынок с помощью лучших практик DevOps')
-          +devOpsItem('dev-ops-2', 'Затраты', 'Сократите затраты, избегая ненужных работ')
-          +devOpsItem('dev-ops-3', 'Обновление', 'Вносите новый код и функции, чтобы сократить время выпуска')
-          +devOpsItem('dev-ops-4', 'Безопасность', 'Подход, ориентированный на безопасность, для устранения проблем')
-          +devOpsItem('dev-ops-5', 'Время', 'Делегируйте рутинные задачи DevOps, чтобы освободить время разработчиков')
+        .features__list.wrapper-round
+          +featureItem('dev-ops-1', 'Скорость', 'Ускорьте выход на рынок с помощью лучших практик DevOps')
+          +featureItem('dev-ops-2', 'Затраты', 'Сократите затраты, избегая ненужных работ')
+          +featureItem('dev-ops-3', 'Обновление', 'Вносите новый код и функции, чтобы сократить время выпуска')
+          +featureItem('dev-ops-4', 'Безопасность', 'Подход, ориентированный на безопасность, для устранения проблем')
+          +featureItem('dev-ops-5', 'Время', 'Делегируйте рутинные задачи DevOps, чтобы освободить время разработчиков')
 
     //Pro
     section.pro.section

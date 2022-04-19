@@ -7,6 +7,9 @@
   &::-webkit-scrollbar-thumb {
     background: $color-red-alpha;
   }
+
+  scrollbar-color: $color-red-alpha transparent;
+  scrollbar-width: thin;
 }
 
 @mixin scroll-global {

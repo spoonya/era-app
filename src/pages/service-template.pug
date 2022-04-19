@@ -38,12 +38,37 @@ block content
             .title
               h2
                 |Предоставляем услуги&nbsp;
-                span.title__part-red ASO&nbsp;
+                span.title__part-red process&nbsp;
                 |и&nbsp;
                 span.title__part-yellow SEO
             .text
-              p ASO - App Store Optimization - оптимизация магазина приложений.
+              p process - App Store Optimization - оптимизация магазина приложений.
               p SEO - Search Engine Optimization - поисковая оптимизация сайта.
+
+    //About
+    section.about
+      .container
+        .about__inner
+          .about__img
+            .about__img-wrapper
+              img(src="assets/img/png/about-1.png", width="580", height="470", alt="", loading="lazy")
+          .about__descrip
+            .title
+              h2
+                |Поделитесь с нами&nbsp;
+                span.title__part-yellow вашей идеей
+            .text
+              p Позвольте нам изучить ваш бизнес и ваших пользователей, чтобы создать общую картину того, каким будет ваш цифровой продукт
+            .about__list
+              div
+                img(src="assets/img/svg/idea-1.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Изучить бизнес
+              div
+                img(src="assets/img/svg/idea-2.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Наметить стратегию
+              div
+                img(src="assets/img/svg/idea-3.svg", width="105", height="105", alt="", loading="lazy")
+                h3 Добиваться успеха
 
     //Descrip
     section.descrip
@@ -67,6 +92,134 @@ block content
                 li <b>Повышение видимости приложения в магазине</b> - рост позиций по поисковым запросам, возможность участия в списках рекомендуемых приложений
             +link('Подробнее о нас', 'company.html')
           img(src="assets/img/svg/seo.svg", width="665", height="470", alt="", loading="lazy")
+
+    //Pro
+    section.pro.section
+      .container
+        .pro__inner
+          .pro__descrip
+            .title-marked
+              h2 Профессионалы своего дела
+            .text.text--margin.pro__descrip-text
+              p
+                |Наша команда погрузится в вашу идею, изучит её и рассмотрит ваше будущее, чтобы найти решение соответствуещее вашим требованиям и видению. Будь то стратегия для мобильного или веб приложения, дизайна и многого другого, мы подробно все изучим и разработаем цифровую стратегию, которая поможет вам достичь желаемого. В нашей команде собрались великолепные разработчики, дизайнеры, тестировщики и другие специалисты.&nbsp;
+                b Вы можете быть уверены, что вашим проектом занимаются настоящие профессионалы!
+            +link('Подробнее о нас', 'company.html')
+          img(src="assets/img/svg/pro.svg", width="665", height="470", alt="", loading="lazy")
+
+    //Dev
+    section.dev.section
+      .container
+        .title
+          h2 Мы предлагаем разработку
+        ul.dev__list
+          +devWebItem('IOS app', 'полнофункциональное приложение для всех устройств Apple')
+          +devWebItem('Android app', 'приложения разной сложности для всех устройств Android')
+          +devWebItem('Hybrid app', 'разработка мобильных и веб-приложений, а также интеграция со сторонними приложениями')
+
+    //Features
+    section.features.section
+      .container
+        .features__list.wrapper-round
+          +featureItem('dev-ops-1', 'Скорость', 'Ускорьте выход на рынок с помощью лучших практик DevOps')
+          +featureItem('dev-ops-2', 'Затраты', 'Сократите затраты, избегая ненужных работ')
+          +featureItem('dev-ops-3', 'Обновление', 'Вносите новый код и функции, чтобы сократить время выпуска')
+          +featureItem('dev-ops-4', 'Безопасность', 'Подход, ориентированный на безопасность, для устранения проблем')
+          +featureItem('dev-ops-5', 'Время', 'Делегируйте рутинные задачи DevOps, чтобы освободить время разработчиков')
+
+    //Stack
+    section.stack.section
+      .container
+        .stack__inner.wrapper-round
+          .title
+            h2 Стек используемых технологий
+          .stack__list(data-spoilers)
+            +stackItem(
+              'iOS',
+              [
+                {
+                  img: 'obj-c',
+                  title: 'Objective-C',
+                },
+                {
+                  img:'swift-2',
+                  title: 'Swift',
+                },
+              ]
+            )
+            +stackItem(
+              'Android',
+              [
+                {
+                  img: 'kotlin',
+                  title: 'Kotlin',
+                },
+                {
+                  img:'java',
+                  title: 'Java',
+                },
+              ]
+            )
+            +stackItem(
+              'Cross platform',
+              [
+                {
+                  img: 'dart',
+                  title: 'Dart',
+                },
+                {
+                  img:'flutter',
+                  title: 'Flutter',
+                },
+              ]
+            )
+            +stackItem(
+              'Database',
+              [
+                {
+                  img: 'moor',
+                  title: 'Moor',
+                },
+                {
+                  img:'sqlite',
+                  title: 'SQLite',
+                },
+                {
+                  img:'realm',
+                  title: 'Realm',
+                },
+                {
+                  img:'room',
+                  title: 'Room',
+                },
+                {
+                  img:'core-data',
+                  title: 'Core data',
+                },
+                {
+                  img:'obj-box',
+                  title: 'ObjectBox',
+                },
+              ],
+              'stack__item--wide'
+            )
+            +stackItem(
+              'Cross platform',
+              [
+                {
+                  img: 'skripe',
+                  title: 'Skripe',
+                },
+                {
+                  img:'braintree',
+                  title: 'Braintree',
+                },
+                {
+                  img:'purchase',
+                  title: 'In-app purchases',
+                },
+              ]
+            )
 
     //Process
     section.process.section
@@ -141,7 +294,9 @@ block content
         .container
           .title.title--light
             h2
-              |SEO - поисковая оптимизация сайта
+              |Удивляем.&nbsp;
+              span.title__part-yellow Вдохновляем.&nbsp;
+              span.title__part-red Создаем.
           ol.stages-list(data-spoilers)
             +stagesItem('1', 'Семантическое ядро и контент', 'Широкое семантическое ядро под НЧ, СЧ и ВЧ запросы. Необходимо анализировать тип продвигаемого запроса, страницы и домены конкурентов. Поисковая система Соogle ценит объемные статьи, обильное наличие ключевых слов. ')
             +stagesItem('2', 'Ссылки', 'Один из самых важных факторов ранжирования в Соogle. Основные моменты: плавность простановки ссылок, хорошее качество ссылочных доноров, анкор-листы без переспама. ')
@@ -150,34 +305,11 @@ block content
             +stagesItem('5', 'Коммерческие факторы', 'Имеют низкую степень влияния. По сравнению с Яндексом коммерческие факторы ранжирования в Gоogle имеют низкую степень влияния (для Беларуси и России). ')
             +stagesItem('6', 'Возраст сайта', 'Молодые сайты с большим трудом продвигаются в ТОП-10 Google. Действует фильтр «Песочница», который снимается с возрастом 3-6 месяцев.')
 
+      //Draft
+      +sectionDraft
+
       //About
-      section.about.about--light.about--marginless
-        .container
-          .about__inner
-            .about__img
-              .about__img-wrapper
-                img(src="assets/img/png/about-7.png", width="580", height="470", alt="", loading="lazy")
-            .about__descrip
-              .title.title--light
-                h2
-                  |Search Engine Optimization&nbsp;
-                  span.title__part-red необходимо для
-              .about__list.about__list--light
-                div
-                  img(src="assets/img/svg/idea-7.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Повышения конверсии
-                div
-                  img(src="assets/img/svg/idea-8.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Улучшения юзабилити
-                div
-                  img(src="assets/img/svg/idea-9.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Постоянного контроля
-                div
-                  img(src="assets/img/svg/idea-10.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Стабильного поток клиентов
-                div
-                  img(src="assets/img/svg/idea-11.svg", width="80", height="80", alt="", loading="lazy")
-                  h3 Fixed amound
+      +sectionAboutSolutions
 
       //Offer
       +offer(

@@ -1,4 +1,4 @@
-.aso {
+.process {
   .title {
     margin-bottom: 2rem;
   }
@@ -10,7 +10,7 @@
   }
 }
 
-.aso__faq {
+.process__faq {
   display: grid;
   grid-template-columns: repeat(2, minmax(350px, 500px));
   grid-template-rows: auto;
@@ -106,7 +106,7 @@
   }
 }
 
-.aso__faq-block {
+.process__faq-block {
   div {
     &:not(:last-child) {
       margin-bottom: 10px;

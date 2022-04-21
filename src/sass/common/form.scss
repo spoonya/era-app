@@ -165,8 +165,11 @@ textarea.form__input {
   input[hidden] {
     display: block;
 
+    position: absolute;
+
     top: 13px;
     left: 15px;
+
     opacity: 0;
   }
 

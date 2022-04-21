@@ -1,14 +1,16 @@
 .academy__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 2rem 5rem;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 2rem 5rem;
 
-  li {
-    @include text-triangle-mark;
-  }
+    li {
+      @include text-triangle-mark;
+    }
 
-  @include media-phone-lg {
-    grid-template-columns: repeat(1, 1fr);
+    @include media-phone-lg {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 

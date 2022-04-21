@@ -96,6 +96,10 @@
     }
   }
 
+  @include media-desktop {
+    padding-right: 10rem;
+  }
+
   @include media-laptop {
     padding: 60px 65px 60px 0;
   }

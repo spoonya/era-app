@@ -6,6 +6,7 @@ import { controlLangButton } from './lang-button';
 import { controlModal } from './modal';
 import { controlUploadButton } from './form/upload-button';
 import { controlFooterMenu } from './footer';
+import { controlAnchorLinks } from './anchor';
 
 controlHeaderBurger();
 controlLangButton();
@@ -14,6 +15,7 @@ controlDropwdown();
 controlModal();
 controlUploadButton();
 controlFooterMenu();
+controlAnchorLinks();
 
 Spoiler.init({
   selector: '[data-spoilers]'

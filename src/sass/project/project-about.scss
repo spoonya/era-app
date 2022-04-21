@@ -59,6 +59,16 @@
 .project-about__text {
   padding-left: 5.4rem;
 
+  ul {
+    padding-left: 0;
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   @include media-tablet-sm {
     padding-left: 0;
   }
@@ -80,14 +90,6 @@
   @include media-tablet-lg {
     &:not(:last-of-type) {
       margin-bottom: 15px;
-    }
-  }
-}
-
-.project-about__list {
-  li {
-    &:not(:last-of-type) {
-      margin-bottom: 10px;
     }
   }
 }

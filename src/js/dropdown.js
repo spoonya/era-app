@@ -19,7 +19,7 @@ export function controlDropwdown() {
     optionsList.forEach((option, index) => {
       option.addEventListener('click', () => {
         selectedIndex = index;
-        selected.innerText = option.querySelector('label').textContent;
+        selected.textContent = option.querySelector('label').textContent;
         optionsContainer.classList.remove(CLASSES.active);
         selected.classList.add(CLASSES.active);
       });

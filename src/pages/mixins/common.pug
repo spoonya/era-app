@@ -229,7 +229,7 @@ mixin featureItem(img, title, text)
       p= text
 
 mixin processItem(title, textArr)
-  div
+  li
     details
       summary
         span= title
@@ -301,32 +301,41 @@ mixin contactForm(id)
     .form__control.form__select(tabindex="0" data-form-dropdown)
       .form__options-container(data-form-dropdown-container)
         .form__option(data-form-dropdown-option)
-          input(id=`digital-strategy-${id}` type="radio" name="service" value="digital-strategy")
-          label(for=`digital-strategy-${id}`) Цифровая стратегия
+          label
+            input(type="radio" name="service[]" value="1")
+            |Цифровая стратегия
         .form__option(data-form-dropdown-option)
-          input(id=`optimization-${id}` type="radio" name="service" value="optimization")
-          label(for=`optimization-${id}`) Оптимизация магазина приложений
+          label
+            input(type="radio" name="service[]" value="2")
+            |Оптимизация магазина приложений
         .form__option(data-form-dropdown-option)
-          input(id=`design-${id}` type="radio" name="service" value="design")
-          label(for=`design-${id}`) UI/UX дизайн
+          label
+            input(type="radio" name="service[]" value="3")
+            |UI/UX дизайн
         .form__option(data-form-dropdown-option)
-          input(id=`dev-mobile-${id}` type="radio" name="service" value="dev-mobile")
-          label(for=`dev-mobile-${id}`) Разработка мобильных приложений
+          label
+            input(type="radio" name="service[]" value="4")
+            |Разработка мобильных приложений
         .form__option(data-form-dropdown-option)
-          input(id=`dev-web-${id}` type="radio" name="service" value="dev-web")
-          label(for=`dev-web-${id}`) Разработка  Web-приложений
+          label
+            input(type="radio" name="service[]" value="5")
+            |Разработка  Web-приложений
         .form__option(data-form-dropdown-option)
-          input(id=`design-motion-${id}` type="radio" name="service" value="design-motion")
-          label(for=`design-motion-${id}`) Motion дизайн
+          label
+            input(type="radio" name="service[]" value="6")
+            |Motion дизайн
         .form__option(data-form-dropdown-option)
-          input(id=`support-${id}` type="radio" name="service" value="support")
-          label(for=`support-${id}`) Поддержка, хостинг и управление
+          label
+            input(type="radio" name="service[]" value="7")
+            |Поддержка, хостинг и управление
         .form__option(data-form-dropdown-option)
-          input(id=`dev-ops-${id}` type="radio" name="service" value="dev-ops")
-          label(for=`dev-ops-${id}`) Услуги Dev Ops
+          label
+            input(type="radio" name="service[]" value="8")
+            |Услуги Dev Ops
         .form__option(data-form-dropdown-option)
-          input(id=`testing-${id}` type="radio" name="service" value="testing")
-          label(for=`testing-${id}`) Тестирование
+          label
+            input(type="radio" name="service[]" value="9")
+            |Тестирование
       .form__option-selected.form__input(data-form-dropdown-selected) Выберите услугу
     .form__control.form__control--wide
       textarea.form__input(name="message", placeholder="Расскажите коротко о вашем проекте" maxlength="250")

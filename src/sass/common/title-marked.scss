@@ -18,7 +18,8 @@
 
   h1,
   h2,
-  h3 {
+  h3,
+  p {
     @include text-triangle-mark;
     font-size: inherit;
     font-weight: inherit;
@@ -28,7 +29,8 @@
     color: $color-white-alpha;
 
     h2,
-    h3 {
+    h3,
+    p {
       &::before {
         background-image: url('../img/svg/triangle-shadowed-light.svg');
         background-repeat: no-repeat;

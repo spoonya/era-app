@@ -16,6 +16,16 @@
   grid-template-rows: auto;
   grid-gap: 10px 19rem;
 
+  align-items: flex-start;
+
+  li {
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
   details {
     position: relative;
     display: flex;
@@ -103,13 +113,5 @@
 
   @include media-tablet-sm {
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.process__faq-block {
-  div {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
   }
 }

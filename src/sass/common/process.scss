@@ -15,12 +15,9 @@
   grid-template-columns: repeat(2, minmax(350px, 500px));
   grid-template-rows: auto;
   grid-gap: 10px 19rem;
-
   align-items: flex-start;
 
   li {
-    align-items: flex-start;
-
     &:not(:last-child) {
       margin-bottom: 10px;
     }

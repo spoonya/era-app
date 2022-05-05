@@ -10,19 +10,23 @@ export function controlDropwdown() {
     const optionsContainer = dropdown.querySelector(
       '[data-form-dropdown-container]'
     );
-    const optionsList = dropdown.querySelectorAll(
-      '[data-form-dropdown-option]'
-    );
+    let isSelected = false;
 
-    let selectedIndex = -1;
+    optionsContainer.addEventListener('click', (e) => {
+      // Prevent label click
+      e.preventDefault();
 
-    optionsList.forEach((option, index) => {
-      option.addEventListener('click', () => {
-        selectedIndex = index;
-        selected.textContent = option.querySelector('label').textContent;
-        optionsContainer.classList.remove(CLASSES.active);
-        selected.classList.add(CLASSES.active);
-      });
+      const option = e.target.closest('[data-form-dropdown-option]');
+
+      if (e.target.tagName === 'DIV') {
+        option.querySelector('input').checked = true;
+      }
+
+      selected.textContent = option.querySelector('label').innerText;
+      optionsContainer.classList.remove('active');
+      isSelected = true;
+
+      console.log(option.querySelector('input'));
     });
 
     selected.addEventListener('click', () => {
@@ -39,7 +43,7 @@ export function controlDropwdown() {
         optionsContainer.classList.remove(CLASSES.active);
       }
 
-      if (selectedIndex !== -1) {
+      if (isSelected) {
         selected.classList.add(CLASSES.active);
       }
     });

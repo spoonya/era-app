@@ -1,5 +1,13 @@
 {
   "github": {
     "silent": true
-  }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "x-robots-tag": "noindex, nofollow"
+      }
+    }
+  ]
 }
